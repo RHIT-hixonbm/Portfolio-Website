@@ -18,6 +18,7 @@ export default function Footer() {
             size="lg"
             className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition"
             aria-label="Back to top"
+            onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" });}}
         > 
             Back to Top
         </Button>
