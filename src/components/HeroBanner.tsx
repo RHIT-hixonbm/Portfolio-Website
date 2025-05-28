@@ -9,7 +9,7 @@ export default function HeroBanner() {
       {/* Name and description */}
       <h1 className="text-4xl md:text-6xl font-bold mb-4">Brett M. Hixon</h1>
       <p className="text-lg md:text-xl mb-8 max-w-3xl">
-        Junior Computer Science student student at{" "}
+        Junior Computer Science student at{" "}
         <a
           href="https://www.rose-hulman.edu"
           target="_blank"
