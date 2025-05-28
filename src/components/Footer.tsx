@@ -8,26 +8,28 @@ export default function Footer() {
     <>
       {/* Pushes footer to the bottom */}
       <div className="flex-1" />
-      <footer className="w-full border-t mt-16 py-6 text-sm text-neutral-500 bg-white">
-        <div className="flex flex-col md:flex-row justify-between items-center px-6 py-4 mb-0 shadow-lg rounded-lg w-full max-w-full">
+      <footer className="w-full border-t mt-16 text-sm text-neutral-500 bg-white">
+        <div className="container mx-auto grid grid-cols-3 items-center py-4 px-6 shadow-lg rounded-lg w-full max-w-full">
           {/* Attribution */}
           <p className="mb-2 md:mb-0">
             &copy; {new Date().getFullYear()} Brett M. Hixon. Built with Next.js + Tailwind CSS + shadcn/ui.
           </p>
 
           {/* Back to top button */}
-          <Button
-              variant="outline"
-              size="lg"
-              className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition"
-              aria-label="Back to top"
-              onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" });}}
-          > 
-              Back to Top
-          </Button>
+          <div className="flex justify-center">
+            <Button
+                variant="outline"
+                size="lg"
+                className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition w-max"
+                aria-label="Back to top"
+                onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" });}}
+            > 
+                Back to Top
+            </Button>
+          </div>
 
           {/* Links */}
-          <div className="flex space-x-4">
+          <div className="flex justify-end gap-10">
             <a
               href="mailto:hixonbm@rose-hulman.edu"
               className="flex items-center space-x-2 hover:text-neutral-900"
