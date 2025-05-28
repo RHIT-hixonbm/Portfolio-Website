@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <>
-      <footer className="w-full max-w-full border-t text-sm text-neutral-500 bg-white">
+      <footer className="w-full max-w-full border-t text-sm text-neutral-500 bg-white rounded-lg border-b border-neutral-200">
           <div className="grid grid-cols-3 items-center py-4 px-6 shadow-lg rounded-lg w-full max-w-full">
             {/* Attribution */}
             <p className="mb-2 md:mb-0">
