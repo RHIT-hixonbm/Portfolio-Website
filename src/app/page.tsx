@@ -1,6 +1,7 @@
 import React from "react";
 import "@/components/HeroBanner"
 import HeroBanner from "@/components/HeroBanner";
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
@@ -8,9 +9,7 @@ export default function Home() {
       <HeroBanner />
       {/* Pushes footer to the bottom */}
       <div className="flex-1" />
-      <footer>
-        <p className="text-white">Put stuff here later.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
