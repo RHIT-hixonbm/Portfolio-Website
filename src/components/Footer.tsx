@@ -28,6 +28,7 @@ export default function Footer() {
           <a
             href="mailto:hixonbm@rose-hulman.edu"
             className="flex items-center space-x-2 hover:text-neutral-900"
+            target="_blank"
             aria-label="Email"
           >
             <Mail className="h-5 w-5" />
@@ -36,6 +37,7 @@ export default function Footer() {
           <a
             href="https://github.com/RHIT-hixonbm"
             className="hover:text-neutral-900"
+            target="_blank"
             aria-label="GitHub"
           >
             <Github className="h-5 w-5" />
@@ -43,6 +45,7 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/brett-hixon-a163922a1/"
             className="hover:text-neutral-900"
+            target="_blank"
             aria-label="LinkedIn"
           >
             <Linkedin className="h-5 w-5" />
