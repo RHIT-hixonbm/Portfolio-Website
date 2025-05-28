@@ -4,6 +4,7 @@ import HeroBanner from "@/components/HeroBanner";
 import Footer from "@/components/Footer"
 import Filler from "@/components/dev/Filler";
 import Navbar from "@/components/NavBar";
+import Spacer from "@/components/Spacer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <HeroBanner />
         {/* Filler content to enable scrolling */}
         <Filler />
+        <Spacer height="2rem" />
       </div>
       <Footer />
     </>
