@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <footer className="w-full border-t mt-16 py-6 text-sm text-neutral-500 bg-white">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-4 mb-0 shadow-lg rounded-lg">
         {/* Attribution */}
         <p className="mb-2 md:mb-0">
           &copy; {new Date().getFullYear()} Brett M. Hixon. Built with Next.js + Tailwind CSS + shadcn/ui.
