@@ -34,14 +34,14 @@ export default function Footer() {
             <span>hixonbm@rose-hulman.edu</span>
           </a>
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/RHIT-hixonbm"
             className="hover:text-neutral-900"
             aria-label="GitHub"
           >
             <Github className="h-5 w-5" />
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin-id"
+            href="https://www.linkedin.com/in/brett-hixon-a163922a1/"
             className="hover:text-neutral-900"
             aria-label="LinkedIn"
           >
