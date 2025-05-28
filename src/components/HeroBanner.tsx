@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroBanner() {
   return (
-    <section className="w-full py-10 flex flex-col justify-center items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-300 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-3">
+    <section className="w-full py-10 flex flex-col justify-center items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-300 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-3 mb-5">
       {/* Name and description */}
       <h1 className="text-4xl md:text-6xl font-bold mb-4">Brett M. Hixon</h1>
       <p className="text-lg md:text-xl mb-8 max-w-3xl">
