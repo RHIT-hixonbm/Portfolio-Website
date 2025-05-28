@@ -7,12 +7,15 @@ import Navbar from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <div className="bg-neutral-50 flex min-h-screen flex-col items-center px-4">
+    <>
       <Navbar />
-      <HeroBanner />
-      {/* Filler content to enable scrolling */}
-      <Filler />
+      {/*Main content area*/}
+      <div className="bg-neutral-50 flex min-h-screen flex-col items-center px-4">
+        <HeroBanner />
+        {/* Filler content to enable scrolling */}
+        <Filler />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
