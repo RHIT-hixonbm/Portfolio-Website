@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroBanner() {
   return (
-    <section className="py-10 flex flex-col justify-center items-center text-center px-6 md:px-12 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+    <section className="w-full py-10 flex flex-col justify-center items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-100 to-zinc-300 text-neutral-900">
 
         {/* Name and description */}
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -30,7 +30,7 @@ export default function HeroBanner() {
         <Button
             size="lg"
             variant="outline"
-            className="border-white text-white hover:bg-white hover:text-blue-700 transition"
+            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition"
             onClick={() => {
             document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
             }}
