@@ -33,10 +33,10 @@ export default function HeroBanner() {
       </div>
 
       {/* Mission */}
-      <p className="text-lg md:text-xl max-w-2xl mb-8">
+      <p className="text-lg md:text-xl max-w-3xl mb-8">
         {" "}
         Driven by an innovative and proactive nature; eager to apply my rigorous
-        academic understanding in full-stack and systems development.{" "}
+        academic and industrial understanding in full-stack and systems development{" "}
       </p>
 
       {/* Call to action buttons */}
