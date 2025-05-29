@@ -18,7 +18,7 @@ export default function Footer() {
               <Button
                   variant="outline"
                   size="lg"
-                  className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition w-max"
+                  className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition w-max cursor-pointer"
                   aria-label="Back to top"
                   onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" });}}
               > 

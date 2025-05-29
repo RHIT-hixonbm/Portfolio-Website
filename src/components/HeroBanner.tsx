@@ -45,7 +45,7 @@ export default function HeroBanner() {
         <Button
           size="lg"
           variant="outline"
-          className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition"
+          className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer"
           onClick={() => {
             document
               .getElementById("projects")
@@ -59,7 +59,7 @@ export default function HeroBanner() {
           <Button
             size="lg"
             variant="outline"
-            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition"
+            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer"
           >
             Download Resume
           </Button>
