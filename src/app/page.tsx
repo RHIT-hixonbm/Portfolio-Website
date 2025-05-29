@@ -19,7 +19,7 @@ export default function Home() {
       >
         <HeroBanner />
         {/*Projects*/}
-        <div className="max-w-4xl w-full mt-12 flex flex-col items-center">
+        <div id="projects" className="max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2">
           <h1 className="text-3xl font-bold text-center my-8">
             Featured Projects
           </h1>
