@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
 
             {/* Links */}
-            <div className="flex justify-end gap-10">
+            <div className="flex justify-end gap-5 md:gap-10">
               <a
                 href="mailto:hixonbm@rose-hulman.edu"
                 className="flex items-center space-x-2 hover:text-neutral-900"
@@ -35,7 +35,7 @@ export default function Footer() {
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
-                <span>hixonbm@rose-hulman.edu</span>
+                <span className="hidden md:inline">hixonbm@rose-hulman.edu</span>
               </a>
               <a
                 href="https://github.com/RHIT-hixonbm"
