@@ -8,6 +8,7 @@
         "sourceCodeUrl": "https://example.com/project1",
         "yearAndMonth": "2023-01",
         "demoVideoUrl": "https://example.com/project1-demo-video",
+        "isFeatured": false,
         "additionalDocuments": [
             {
                 "title": "Project Proposal",
@@ -30,6 +31,7 @@
         "sourceCodeUrl": "https://github.com/username/project4",
         "yearAndMonth": "2023-05",
         "demoVideoUrl": "https://example.com/project4-demo-video",
+        "isFeatured": false,
         "additionalDocuments": [
             {
                 "title": "Requirements Specification",
@@ -52,6 +54,7 @@
         "sourceCodeUrl": "https://github.com/username/project5",
         "yearAndMonth": "2022-11",
         "demoVideoUrl": "https://example.com/project5-demo-video",
+        "isFeatured": false,
         "additionalDocuments": [
             {
                 "title": "Design Document",
@@ -74,6 +77,7 @@
         "sourceCodeUrl": "https://github.com/username/project6",
         "yearAndMonth": "2023-03",
         "demoVideoUrl": "https://example.com/project6-demo-video",
+        "isFeatured": false,
         "additionalDocuments": [
             {
                 "title": "Business Plan",

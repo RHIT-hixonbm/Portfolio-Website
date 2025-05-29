@@ -13,6 +13,7 @@ interface Project {
     sourceCodeUrl: string;
     yearAndMonth: string;
     demoVideoUrl: string;
+    isFeatured: boolean;
     additionalDocuments?: Document[];
 }
 
