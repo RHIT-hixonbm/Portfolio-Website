@@ -17,9 +17,8 @@ export default function BasicPage({ children, backgroundColor }: { children: Rea
   //Stop Next.js from throwing an error about window.ethereum being undefined on mobile
   useEffect(() => {
     if (typeof window !== "undefined" && !window.ethereum) {
-      if(window.ethereum) {
-        window.ethereum.selectedAddress = {};
-      }
+      window.ethereum = {};
+      window.ethereum.selectedAddress = {};
     }
   }, []);
 
