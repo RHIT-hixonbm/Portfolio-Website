@@ -76,7 +76,7 @@
         "title": "Project Six",
         "description": "An e-commerce platform for local artisans.",
         "technologies": ["Angular", "Express.js", "MongoDB"],
-        "image": "/images/project6.jpg",
+        "image": "/images/missing.jpg",
         "sourceCodeUrl": "https://github.com/username/project6",
         "startYearAndMonth": "2023-03",
         "endYearAndMonth": "2023-03",
