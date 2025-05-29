@@ -1,7 +1,7 @@
-export default function Spacer({ height = "1rem", backgroundColor = "white" }: { height?: string, backgroundColor?: string }) {
+export default function Spacer({ height = "1rem" }: { height?: string }) {
   return (
     <div
-      style={{ height, backgroundColor }}
+      style={{ height, backgroundColor: "transparent" }}
       className={"w-full"}
       aria-hidden="true"
     />
