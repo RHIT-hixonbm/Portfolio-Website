@@ -13,7 +13,7 @@ import SimpleProjectCard from "./SimpleProjectCard";
 export default function ProjectCarousel() {
   const projects: Project[] = useMemo(() => getProjects(), []);
   return (
-    <Carousel className="w-full max-w-2xs md:max-w-3xl">
+    <Carousel className="w-full max-w-2xs md:max-w-3xl mb-6">
       <CarouselContent>
         {projects.filter((project) => project.isFeatured)
         .map((project) => (
