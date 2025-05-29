@@ -1,7 +1,6 @@
 import React from "react";
 import "@/components/HeroBanner";
 import HeroBanner from "@/components/HeroBanner";
-import Filler from "@/components/dev/Filler";
 import BasicPage from "@/components/BasicPage";
 import { Metadata } from "next";
 import ProjectCarousel from "@/components/ProjectCarousel";
