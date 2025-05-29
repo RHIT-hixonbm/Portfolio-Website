@@ -4,6 +4,7 @@ import HeroBanner from "@/components/HeroBanner";
 import BasicPage from "@/components/BasicPage";
 import { Metadata } from "next";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import { Heading } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Brett M. Hixon | Home",
@@ -17,7 +18,13 @@ export default function Home() {
         className="flex min-h-screen flex-col items-center px-4"
       >
         <HeroBanner />
-        <ProjectCarousel />
+        {/*Projects*/}
+        <div className="max-w-4xl w-full mt-12 flex flex-col items-center">
+          <h1 className="text-3xl font-bold text-center my-8">
+            Featured Projects
+          </h1>
+          <ProjectCarousel />
+        </div>
       </div>
     </BasicPage>
   );
