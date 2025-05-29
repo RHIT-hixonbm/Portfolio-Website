@@ -15,7 +15,9 @@ export default function ProjectCarousel() {
   return (
     <Carousel className="w-full max-w-2xs md:max-w-3xl mx-auto my-8 border-2 border-black rounded-lg shadow-lg">
       <CarouselContent>
-        {projects.map((project) => (
+        {projects
+        .filter((project) => project.isFeatured)
+        .map((project) => (
           <CarouselItem key={project.id}>
             <SimpleProjectCard project={project} />
           </CarouselItem>
