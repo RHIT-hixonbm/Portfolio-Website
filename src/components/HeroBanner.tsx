@@ -32,19 +32,42 @@ export default function HeroBanner() {
         />
       </div>
 
-      {/* View projects */}
-      <Button
-        size="lg"
-        variant="outline"
-        className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition"
-        onClick={() => {
-          document
-            .getElementById("projects")
-            ?.scrollIntoView({ behavior: "smooth" });
-        }}
-      >
-        View My Work
-      </Button>
+      {/* Mission */}
+      <p className="text-lg md:text-xl max-w-2xl mb-8">
+        {" "}
+        Driven by an innovative and proactive nature; eager to apply my rigorous
+        academic understanding in full-stack and systems development.{" "}
+      </p>
+
+      {/* Call to action buttons */}
+      <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+        {/* View projects */}
+        <Button
+          size="lg"
+          variant="outline"
+          className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition"
+          onClick={() => {
+            document
+              .getElementById("projects")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          View My Work
+        </Button>
+        {/* Download Resume */}
+        <Button
+          size="lg"
+          variant="outline"
+          className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition"
+          onClick={() => {
+            document
+              .getElementById("projects")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Download Resume
+        </Button>
+      </div>
     </section>
   );
 }
