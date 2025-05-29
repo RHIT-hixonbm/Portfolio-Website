@@ -1,9 +1,9 @@
 [
     {
-        "id": "project1",
-        "title": "Project One",
-        "description": "This is the first project in my portfolio.",
-        "technologies": ["HTML", "CSS", "JavaScript"],
+        "id": "gamesniper",
+        "title": "Game Sniper",
+        "description": "This desktop MS SQL-enabled application allows users to track and manage their gaming library, providing features like relevant game filtering, reviews, and mock purchases. Developers can easily add new games and manage existing ones through a user-friendly interface.",
+        "technologies": ["Java", "TypeScript", "SQL"],
         "image": "/images/project1.jpg",
         "sourceCodeUrl": "https://example.com/project1",
         "yearAndMonth": "2023-01",
