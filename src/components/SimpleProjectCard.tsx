@@ -1,7 +1,7 @@
 import { Card, CardTitle, CardHeader, CardContent, CardDescription } from "@/components/ui/card";
 import { Project } from "@/data/types";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function SimpleProjectCard({ project }: { project: Project }) {
   return (
     <Card>
       <CardHeader>

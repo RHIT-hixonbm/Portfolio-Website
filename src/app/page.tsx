@@ -4,6 +4,7 @@ import HeroBanner from "@/components/HeroBanner";
 import Filler from "@/components/dev/Filler";
 import BasicPage from "@/components/BasicPage";
 import { Metadata } from "next";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 export const metadata: Metadata = {
   title: "Brett M. Hixon | Home",
@@ -17,8 +18,7 @@ export default function Home() {
         className="flex min-h-screen flex-col items-center px-4"
       >
         <HeroBanner />
-        {/* Filler content to enable scrolling */}
-        <Filler />
+        <ProjectCarousel />
       </div>
     </BasicPage>
   );
