@@ -13,7 +13,7 @@ import SimpleProjectCard from "./SimpleProjectCard";
 export default function ProjectCarousel() {
   const projects: Project[] = useMemo(() => getProjects(), []);
   return (
-    <Carousel className="w-full max-w-xs md:max-w-3xl mx-auto my-8 border-2 border-black rounded-lg shadow-lg">
+    <Carousel className="w-full max-w-2xs md:max-w-3xl mx-auto my-8 border-2 border-black rounded-lg shadow-lg">
       <CarouselContent>
         {projects.map((project) => (
           <CarouselItem key={project.id}>
