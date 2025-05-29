@@ -1,9 +1,6 @@
 import React from "react";
-import "@/components/Home/HeroBanner";
-import HeroBanner from "@/components/Home/HeroBanner";
-import BasicPage from "@/components/PageSetup/BasicPage";
 import { Metadata } from "next";
-import ProjectCarousel from "@/components/Home/ProjectCarousel";
+import HomeComponent from "@/components/Home/Home";
 
 export const metadata: Metadata = {
   title: "Brett M. Hixon | Home",
@@ -12,19 +9,6 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <BasicPage backgroundColor={"#f5f5f5"}>
-      <div
-        className="flex min-h-screen flex-col items-center px-4"
-      >
-        <HeroBanner />
-        {/*Projects*/}
-        <div id="projects" className="max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2">
-          <h1 className="text-3xl font-bold text-center my-8">
-            Featured Projects
-          </h1>
-          <ProjectCarousel />
-        </div>
-      </div>
-    </BasicPage>
+    <HomeComponent />
   );
 }

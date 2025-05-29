@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-export default function HeroBanner() {
+export default function HeroBanner({ handleScrollToProjects }: { handleScrollToProjects?: () => void }) {
   return (
     <section className="w-full py-10 flex flex-col justify-center items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-200 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-15.5 mb-5 border-2">
       {/* Name and description */}
@@ -46,11 +46,7 @@ export default function HeroBanner() {
           size="lg"
           variant="outline"
           className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer"
-          onClick={() => {
-            document
-              .getElementById("projects")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
+          onClick={handleScrollToProjects}
         >
           View My Work
         </Button>

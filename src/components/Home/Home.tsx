@@ -1,0 +1,40 @@
+"use client";
+
+import React, { useRef, useState, useCallback } from "react";
+import "@/components/Home/HeroBanner";
+import HeroBanner from "@/components/Home/HeroBanner";
+import BasicPage from "@/components/PageSetup/BasicPage";
+import ProjectCarousel from "@/components/Home/ProjectCarousel";
+
+export default function HomeComponent() {
+  //Pulse effect for projects section
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const [pulse, setPulse] = useState(false);
+  const handleScrollToProjects = useCallback(() => {
+    if (projectsRef.current) {
+      console.log("hey");
+      projectsRef.current.scrollIntoView({ behavior: "smooth" });
+      setPulse(true);
+    }
+  }, []);
+
+  return (
+    <BasicPage backgroundColor={"#f5f5f5"}>
+      <div className="flex min-h-screen flex-col items-center px-4">
+        <HeroBanner handleScrollToProjects={handleScrollToProjects}/>
+        {/*Projects*/}
+        <div
+          id="projects"
+          className={`max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2 ${pulse ? "animate-[pulse_1s_ease-in-out_1]" : ""}`}
+          ref={projectsRef}
+          onAnimationEnd={() => setPulse(false)}
+        >
+          <h1 className="text-3xl font-bold text-center my-8">
+            Featured Projects
+          </h1>
+          <ProjectCarousel />
+        </div>
+      </div>
+    </BasicPage>
+  );
+}
