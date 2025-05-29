@@ -1,6 +1,6 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/NavBar";
-import Spacer from "@/components/Spacer";
+import Footer from "@/components/PageSetup/Footer";
+import Navbar from "@/components/PageSetup/NavBar";
+import Spacer from "@/components/PageSetup/Spacer";
 
 export default function PageSetup({
   children,

@@ -1,9 +1,9 @@
 import React from "react";
-import "@/components/HeroBanner";
-import HeroBanner from "@/components/HeroBanner";
-import BasicPage from "@/components/BasicPage";
+import "@/components/Home/HeroBanner";
+import HeroBanner from "@/components/Home/HeroBanner";
+import BasicPage from "@/components/PageSetup/BasicPage";
 import { Metadata } from "next";
-import ProjectCarousel from "@/components/ProjectCarousel";
+import ProjectCarousel from "@/components/Home/ProjectCarousel";
 
 export const metadata: Metadata = {
   title: "Brett M. Hixon | Home",
