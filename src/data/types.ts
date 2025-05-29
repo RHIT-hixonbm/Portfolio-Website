@@ -11,7 +11,8 @@ interface Project {
     technologies: string[];
     image: string;
     sourceCodeUrl: string;
-    yearAndMonth: string;
+    startYearAndMonth: string;
+    endYearAndMonth: string;
     demoVideoUrl: string;
     isFeatured: boolean;
     additionalDocuments?: Document[];

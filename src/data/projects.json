@@ -6,7 +6,8 @@
         "technologies": ["Java", "TypeScript", "SQL"],
         "image": "/images/project1.jpg",
         "sourceCodeUrl": "https://example.com/project1",
-        "yearAndMonth": "2023-01",
+        "startYearAndMonth": "2025-04",
+        "endYearAndMonth": "2025-05",
         "demoVideoUrl": "https://example.com/project1-demo-video",
         "isFeatured": true,
         "additionalDocuments": [
@@ -29,7 +30,8 @@
         "technologies": ["Vue.js", "Firebase", "Chart.js"],
         "image": "/images/project4.jpg",
         "sourceCodeUrl": "https://github.com/username/project4",
-        "yearAndMonth": "2023-05",
+        "startYearAndMonth": "2023-05",
+        "endYearAndMonth": "2023-05",
         "demoVideoUrl": "https://example.com/project4-demo-video",
         "isFeatured": false,
         "additionalDocuments": [
@@ -52,7 +54,8 @@
         "technologies": ["Flutter", "Dart", "SQLite"],
         "image": "/images/project5.jpg",
         "sourceCodeUrl": "https://github.com/username/project5",
-        "yearAndMonth": "2022-11",
+        "startYearAndMonth": "2022-11",
+        "endYearAndMonth": "2022-11",
         "demoVideoUrl": "https://example.com/project5-demo-video",
         "isFeatured": false,
         "additionalDocuments": [
@@ -75,7 +78,8 @@
         "technologies": ["Angular", "Express.js", "MongoDB"],
         "image": "/images/project6.jpg",
         "sourceCodeUrl": "https://github.com/username/project6",
-        "yearAndMonth": "2023-03",
+        "startYearAndMonth": "2023-03",
+        "endYearAndMonth": "2023-03",
         "demoVideoUrl": "https://example.com/project6-demo-video",
         "isFeatured": true,
         "additionalDocuments": [
