@@ -4,7 +4,6 @@ import HeroBanner from "@/components/HeroBanner";
 import BasicPage from "@/components/BasicPage";
 import { Metadata } from "next";
 import ProjectCarousel from "@/components/ProjectCarousel";
-import { Heading } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Brett M. Hixon | Home",
