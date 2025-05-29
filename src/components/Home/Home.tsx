@@ -25,7 +25,7 @@ export default function HomeComponent() {
         {/*Projects*/}
         <div
           id="projects"
-          className={`max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2 ${pulse ? "animate-[pulse_1s_ease-in-out_1]" : ""}`}
+          className={`max-w-4xl xl:max-w-7xl lg:max-w-5xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2 ${pulse ? "animate-[pulse_1s_ease-in-out_1]" : ""}`}
           ref={projectsRef}
           onAnimationEnd={() => setPulse(false)}
         >
