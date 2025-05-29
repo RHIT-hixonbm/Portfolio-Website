@@ -1,10 +1,14 @@
-"use client";
-
 import React from "react";
 import "@/components/HeroBanner";
 import HeroBanner from "@/components/HeroBanner";
 import Filler from "@/components/dev/Filler";
 import BasicPage from "@/components/BasicPage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Brett M. Hixon | Home",
+  description: "Portfolio website of Brett M. Hixon, showcasing projects and skills in software development.",
+}
 
 export default function Home() {
   return (
