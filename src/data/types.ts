@@ -8,7 +8,7 @@ interface Project {
     id: string;
     title: string;
     description: string;
-    tehcnologies: string[];
+    technologies: string[];
     image: string;
     sourceCodeUrl: string;
     yearAndMonth: string;
