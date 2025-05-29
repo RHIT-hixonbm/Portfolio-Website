@@ -1,86 +1,90 @@
 [
-  {
-    "id": "project1",
-    "title": "Project One",
-    "description": "This is the first project in my portfolio.",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "image": "/images/project1.jpg",
-    "sourceCodeUrl": "https://example.com/project1",
-    "yearAndMonth": "2023-01",
-    "additionalDocuments": [
-      {
-        "title": "Project Proposal",
-        "url": "/docs/project1_proposal.pdf",
-        "description": "This document outlines the initial proposal for Project One."
-      },
-      {
-        "title": "Final Report",
-        "url": "/docs/project1_final_report.pdf",
-        "description": "This document contains the final report and outcomes of Project One."
-      }
-    ]
-  },
-  {
-    "id": "project4",
-    "title": "Project Four",
-    "description": "A web application for managing personal finances.",
-    "technologies": ["Vue.js", "Firebase", "Chart.js"],
-    "image": "/images/project4.jpg",
-    "sourceCodeUrl": "https://github.com/username/project4",
-    "yearAndMonth": "2023-05",
-    "additionalDocuments": [
-      {
-        "title": "Requirements Specification",
-        "url": "/docs/project4_requirements.pdf",
-        "description": "Detailed requirements for the finance management app."
-      },
-      {
-        "title": "User Guide",
-        "url": "/docs/project4_user_guide.pdf",
-        "description": "Instructions for using the application."
-      }
-    ]
-  },
-  {
-    "id": "project5",
-    "title": "Project Five",
-    "description": "A mobile app for tracking fitness activities.",
-    "technologies": ["Flutter", "Dart", "SQLite"],
-    "image": "/images/project5.jpg",
-    "sourceCodeUrl": "https://github.com/username/project5",
-    "yearAndMonth": "2022-11",
-    "additionalDocuments": [
-      {
-        "title": "Design Document",
-        "url": "/docs/project5_design.pdf",
-        "description": "App design and architecture details."
-      },
-      {
-        "title": "Testing Report",
-        "url": "/docs/project5_testing.pdf",
-        "description": "Results and methodology of app testing."
-      }
-    ]
-  },
-  {
-    "id": "project6",
-    "title": "Project Six",
-    "description": "An e-commerce platform for local artisans.",
-    "technologies": ["Angular", "Express.js", "MongoDB"],
-    "image": "/images/project6.jpg",
-    "sourceCodeUrl": "https://github.com/username/project6",
-    "yearAndMonth": "2023-03",
-    "additionalDocuments": [
-      {
-        "title": "Business Plan",
-        "url": "/docs/project6_business_plan.pdf",
-        "description": "Business plan for the e-commerce platform."
-      },
-      {
-        "title": "Deployment Guide",
-        "url": "/docs/project6_deployment.pdf",
-        "description": "Steps to deploy the platform."
-      }
-    ]
-  }
+    {
+        "id": "project1",
+        "title": "Project One",
+        "description": "This is the first project in my portfolio.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "image": "/images/project1.jpg",
+        "sourceCodeUrl": "https://example.com/project1",
+        "yearAndMonth": "2023-01",
+        "demoVideoUrl": "https://example.com/project1-demo-video",
+        "additionalDocuments": [
+            {
+                "title": "Project Proposal",
+                "url": "/docs/project1_proposal.pdf",
+                "description": "This document outlines the initial proposal for Project One."
+            },
+            {
+                "title": "Final Report",
+                "url": "/docs/project1_final_report.pdf",
+                "description": "This document contains the final report and outcomes of Project One."
+            }
+        ]
+    },
+    {
+        "id": "project4",
+        "title": "Project Four",
+        "description": "A web application for managing personal finances.",
+        "technologies": ["Vue.js", "Firebase", "Chart.js"],
+        "image": "/images/project4.jpg",
+        "sourceCodeUrl": "https://github.com/username/project4",
+        "yearAndMonth": "2023-05",
+        "demoVideoUrl": "https://example.com/project4-demo-video",
+        "additionalDocuments": [
+            {
+                "title": "Requirements Specification",
+                "url": "/docs/project4_requirements.pdf",
+                "description": "Detailed requirements for the finance management app."
+            },
+            {
+                "title": "User Guide",
+                "url": "/docs/project4_user_guide.pdf",
+                "description": "Instructions for using the application."
+            }
+        ]
+    },
+    {
+        "id": "project5",
+        "title": "Project Five",
+        "description": "A mobile app for tracking fitness activities.",
+        "technologies": ["Flutter", "Dart", "SQLite"],
+        "image": "/images/project5.jpg",
+        "sourceCodeUrl": "https://github.com/username/project5",
+        "yearAndMonth": "2022-11",
+        "demoVideoUrl": "https://example.com/project5-demo-video",
+        "additionalDocuments": [
+            {
+                "title": "Design Document",
+                "url": "/docs/project5_design.pdf",
+                "description": "App design and architecture details."
+            },
+            {
+                "title": "Testing Report",
+                "url": "/docs/project5_testing.pdf",
+                "description": "Results and methodology of app testing."
+            }
+        ]
+    },
+    {
+        "id": "project6",
+        "title": "Project Six",
+        "description": "An e-commerce platform for local artisans.",
+        "technologies": ["Angular", "Express.js", "MongoDB"],
+        "image": "/images/project6.jpg",
+        "sourceCodeUrl": "https://github.com/username/project6",
+        "yearAndMonth": "2023-03",
+        "demoVideoUrl": "https://example.com/project6-demo-video",
+        "additionalDocuments": [
+            {
+                "title": "Business Plan",
+                "url": "/docs/project6_business_plan.pdf",
+                "description": "Business plan for the e-commerce platform."
+            },
+            {
+                "title": "Deployment Guide",
+                "url": "/docs/project6_deployment.pdf",
+                "description": "Steps to deploy the platform."
+            }
+        ]
+    }
 ]
