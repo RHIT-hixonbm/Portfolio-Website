@@ -16,7 +16,7 @@ export default function ExperienceLinks() {
             />
           )}
           {/* Node */}
-          <div className="relative w-full flex justify-center">
+          <div className="relative">
             <ExperienceNode experience={experience} />
           </div>
         </div>
