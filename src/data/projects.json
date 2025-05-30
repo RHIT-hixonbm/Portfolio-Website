@@ -6,7 +6,6 @@
         "longDescription": "Game Sniper is a comprehensive desktop application designed for gaming enthusiasts and developers. It integrates with MS SQL to provide robust data management for game libraries. Users can filter games based on various criteria, write and read reviews, and simulate purchases to manage their collections. The developer interface streamlines the process of adding new games and updating existing entries, ensuring the library remains current and relevant. The application emphasizes usability and efficiency, making it a valuable tool for both casual gamers and developers.",
         "technologies": ["Java", "TypeScript", "SQL"],
         "image": "/images/gamesniper.png",
-        "sourceCodeUrl": "https://example.com/project1",
         "startYearAndMonth": "2025-04",
         "endYearAndMonth": "2025-05",
         "demoVideoUrl": "https://example.com/project1-demo-video",

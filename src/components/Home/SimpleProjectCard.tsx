@@ -34,12 +34,19 @@ export default function SimpleProjectCard({ project }: { project: Project }) {
         </div>
         <p>{project.shortDescription}</p>
       </CardContent>
-      <CardFooter>
-        {project.technologies.map((tech, index) => (
-          <Badge key={index} className="mr-2 mb-2">
-            {tech}
-          </Badge>
-        ))}
+      <CardFooter className="flex flex-col md:flex-row flex-wrap justify-between items-center pt-4">
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map((tech, index) => (
+            <Badge key={index} className="mb-2">
+              {tech}
+            </Badge>
+          ))}
+        </div>
+        {project.sourceCodeUrl && (
+          <div className="text-xs text-gray-500 font-medium">
+            Source code available
+          </div>
+        )}
       </CardFooter>
     </Card>
   );
