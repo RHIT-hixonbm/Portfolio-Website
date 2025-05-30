@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, {
+  useEffect,
+  useMemo,
+  useState,
+  useCallback,
+  useRef,
+} from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
@@ -35,9 +41,7 @@ export default function BasicPage({
 
   // Initialize particles
   const [init, setInit] = useState(false);
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
+  const containerRef = useRef<Container>(null);
   // Call the particle engine intialization function
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -117,6 +121,32 @@ export default function BasicPage({
     }),
     []
   );
+  // Sets the container reference when particles are loaded
+  const particlesLoaded = useCallback(async (container?: Container) => {
+    if (!container) {
+      return;
+    }
+    containerRef.current = container;
+  }, []);
+  // Effect to limit the number of particles
+  useEffect(() => {
+    const PARTICLE_LIMIT = 150;
+    const interval = setInterval(() => {
+      if (!containerRef.current) {
+        return;
+      }
+      const particleCount = containerRef.current.particles.count;
+      if (particleCount > PARTICLE_LIMIT) {
+        containerRef.current.particles.removeQuantity(
+          particleCount - PARTICLE_LIMIT
+        );
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return !init ? (
     <PageSetup backgroundColor={backgroundColor}>{children}</PageSetup>
