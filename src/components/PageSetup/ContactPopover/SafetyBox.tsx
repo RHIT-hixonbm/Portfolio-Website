@@ -9,14 +9,15 @@ const calculateSafetyBoxStyle = (contentRect: DOMRect): React.CSSProperties => {
 
     //Calculate the safety box top position based on the content rectangle and a box sizing multiplier
     const contentRectYCenter = contentRect.top + contentRect.height / 2;
-    const safetyBoxYCenter = contentRect.top + (contentRect.height * boxSizingMultiplier / 2);
+    const heightAdditional = 20; // Add an offset to the height to ensure the safety box covers the area around the popover trigger
+    const safetyBoxYCenter = contentRect.top + heightAdditional + (contentRect.height * boxSizingMultiplier / 2);
     const safetyBoxTop = contentRect.top - (safetyBoxYCenter - contentRectYCenter);
 
     return {
         left: safetyBoxLeft,
         top: safetyBoxTop,
         width: contentRect.width * boxSizingMultiplier,
-        height: contentRect.height * boxSizingMultiplier,
+        height: contentRect.height * boxSizingMultiplier + heightAdditional,
         zIndex: 12,
     }
 }
