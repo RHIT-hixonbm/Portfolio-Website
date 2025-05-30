@@ -28,55 +28,61 @@ export default function ContactPopover() {
   };
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger
-        id="contact"
-        onMouseEnter={handleMouseEnterButton}
-        onMouseLeave={handleMouseLeaveButton}
-      >
-        <div className="text-neutral-700 hover:text-neutral-900 transition text-lg font-bold cursor-pointer">
-          Contact
-        </div>
-      </PopoverTrigger>
+    <>
       {/* Safety box used to determine when the user has exited */}
-      <SafetyBox popoverContentRef={popoverContentRef} open={open} setOpen={setOpen} />
-      <PopoverContent ref={popoverContentRef} style={{ zIndex: 11 }}>
-        <div className="text-sm text-neutral-800">
-          <p className="font-medium mb-1">Brett M. Hixon</p>
-          <p className="mb-2">Rose-Hulman Institute of Technology</p>
-          <p className="mb-1">
-            <span className="font-semibold">Email:</span>{" "}
-            <a
-              href="mailto:hixonbm@rose-hulman.edu"
-              className="text-blue-600 underline"
-            >
-              hixonbm@rose-hulman.edu
-            </a>
-          </p>
-          <p className="mb-1">
-            <span className="font-semibold">GitHub:</span>{" "}
-            <a
-              href="https://github.com/RHIT-hixonbm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline"
-            >
-              github.com/RHIT-hixonbm
-            </a>
-          </p>
-          <p>
-            <span className="font-semibold">LinkedIn:</span>{" "}
-            <a
-              href="https://www.linkedin.com/in/hixonbm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline"
-            >
-              linkedin.com/in/hixonbm
-            </a>
-          </p>
-        </div>
-      </PopoverContent>
-    </Popover>
+      <SafetyBox
+        popoverContentRef={popoverContentRef}
+        open={open}
+        setOpen={setOpen}
+      />
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger
+          id="contact"
+          onMouseEnter={handleMouseEnterButton}
+          onMouseLeave={handleMouseLeaveButton}
+        >
+          <div className="text-neutral-700 hover:text-neutral-900 transition text-lg font-bold cursor-pointer">
+            Contact
+          </div>
+        </PopoverTrigger>
+        <PopoverContent ref={popoverContentRef} style={{ zIndex: 12 }}>
+          <div className="text-sm text-neutral-800">
+            <p className="font-medium mb-1">Brett M. Hixon</p>
+            <p className="mb-2">Rose-Hulman Institute of Technology</p>
+            <p className="mb-1">
+              <span className="font-semibold">Email:</span>{" "}
+              <a
+                href="mailto:hixonbm@rose-hulman.edu"
+                className="text-blue-600 underline"
+              >
+                hixonbm@rose-hulman.edu
+              </a>
+            </p>
+            <p className="mb-1">
+              <span className="font-semibold">GitHub:</span>{" "}
+              <a
+                href="https://github.com/RHIT-hixonbm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
+                github.com/RHIT-hixonbm
+              </a>
+            </p>
+            <p>
+              <span className="font-semibold">LinkedIn:</span>{" "}
+              <a
+                href="https://www.linkedin.com/in/hixonbm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
+                linkedin.com/in/hixonbm
+              </a>
+            </p>
+          </div>
+        </PopoverContent>
+      </Popover>
+    </>
   );
 }

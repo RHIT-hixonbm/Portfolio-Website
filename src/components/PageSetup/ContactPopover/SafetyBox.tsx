@@ -5,7 +5,7 @@ const calculateSafetyBoxStyle = (contentRect: DOMRect): React.CSSProperties => {
     const boxSizingMultiplier = 1.3; // Adjust this multiplier to increase the size of the safety box
     const contentRectXCenter = contentRect.left + contentRect.width / 2;
     const safetyBoxXCenter = contentRect.left + (contentRect.width * boxSizingMultiplier / 2);
-    const safetyBoxLeft = contentRect.left - (safetyBoxXCenter -contentRectXCenter);
+    const safetyBoxLeft = contentRect.left - (safetyBoxXCenter - contentRectXCenter);
 
     //Calculate the safety box top position based on the content rectangle and a box sizing multiplier
     const contentRectYCenter = contentRect.top + contentRect.height / 2;
@@ -17,6 +17,7 @@ const calculateSafetyBoxStyle = (contentRect: DOMRect): React.CSSProperties => {
         top: safetyBoxTop,
         width: contentRect.width * boxSizingMultiplier,
         height: contentRect.height * boxSizingMultiplier,
+        zIndex: 12,
     }
 }
 
@@ -56,7 +57,6 @@ export default function SafetyBox({
     <>
       {open && (
         <div
-          className="z-11"
           style={{ ...safetyBoxStyle, pointerEvents: "auto", position: "fixed" }}
           onMouseLeave={handleMouseSafetyArea}
           id="safety-box"
