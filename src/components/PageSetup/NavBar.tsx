@@ -9,11 +9,11 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import ContactPopover from "./ContactPopover";
+import ContactPopover from "./ContactPopover/ContactPopover";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 mb-3 rounded-lg border-b border-neutral-200">
+    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 mb-3 rounded-lg border-b border-neutral-200" style={{ zIndex: 11 }}>
       <div className="container mx-auto flex justify-start md:justify-center items-center py-4 px-6 md:px-12">
         {/* Logo or site name
         <Link href="/" className="text-2xl font-bold text-neutral-900">
