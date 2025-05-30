@@ -36,7 +36,7 @@ export default function HomeComponent() {
           <ProjectCarousel />
         </div>
         {/*Experience*/}
-        <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2">
+        <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center my-8">
             Experience
           </h1>
