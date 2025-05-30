@@ -17,9 +17,11 @@ export default function SimpleProjectCard({ project }: { project: Project }) {
       <CardHeader>
         <CardTitle>{project.title}</CardTitle>
         <CardDescription>
-          {formatDate(project.startYearAndMonth) +
-            " - " +
-            formatDate(project.endYearAndMonth)}
+          {project.startYearAndMonth !== project.endYearAndMonth
+            ? formatDate(project.startYearAndMonth) +
+              " - " +
+              formatDate(project.endYearAndMonth)
+            : formatDate(project.startYearAndMonth)}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-1">
