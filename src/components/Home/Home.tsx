@@ -5,8 +5,7 @@ import "@/components/Home/HeroBanner";
 import HeroBanner from "@/components/Home/HeroBanner";
 import BasicPage from "@/components/PageSetup/BasicPage";
 import ProjectCarousel from "@/components/Home/ProjectCarousel";
-import ExperienceNode from "./ExperienceNode";
-import { getExperiences } from "@/data/data";
+import ExperienceLinks from "./ExperienceLinks";
 
 export default function HomeComponent() {
   //Pulse effect for projects section
@@ -37,7 +36,12 @@ export default function HomeComponent() {
           <ProjectCarousel />
         </div>
         {/*Experience*/}
-        <ExperienceNode experience={getExperiences()[0]} />
+        <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2">
+          <h1 className="text-3xl font-bold text-center my-8">
+            Experience
+          </h1>
+          <ExperienceLinks />
+        </div>
       </div>
     </BasicPage>
   );
