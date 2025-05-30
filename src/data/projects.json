@@ -22,7 +22,8 @@
                 "description": "This document contains the final report and outcomes of Project One."
             }
         ],
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "myContributions": []
     },
     {
         "id": "project4",
@@ -48,7 +49,8 @@
                 "description": "Instructions for using the application."
             }
         ],
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "myContributions": []
     },
     {
         "id": "project5",
@@ -74,7 +76,8 @@
                 "description": "Results and methodology of app testing."
             }
         ],
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "myContributions": []
     },
     {
         "id": "project6",
@@ -100,6 +103,7 @@
                 "description": "Steps to deploy the platform."
             }
         ],
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "myContributions": []
     }
 ]
