@@ -29,5 +29,56 @@
             "Debugging"
         ],
         "icon": "BookOpen"
+    },
+    {
+        "id": 3,
+        "title": "Web Developer",
+        "company": "Freelance",
+        "location": "Remote",
+        "startYearAndMonth": "2023-06",
+        "endYearAndMonth": "2023-12",
+        "shortDescription": "Designed and built responsive websites for small businesses. Focused on user experience and SEO optimization.",
+        "longDescription": "As a freelance web developer, I collaborated with small business owners to design and build responsive websites tailored to their needs. I emphasized user experience, accessibility, and SEO best practices to help clients grow their online presence. My work included both front-end and back-end development, as well as ongoing maintenance and support.",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "SEO"
+        ],
+        "icon": "Globe"
+    },
+    {
+        "id": 4,
+        "title": "Data Science Intern",
+        "company": "Acme Analytics",
+        "location": "Indianapolis, IN",
+        "startYearAndMonth": "2024-05",
+        "endYearAndMonth": "2024-08",
+        "shortDescription": "Analyzed large datasets and built predictive models to support business decisions.",
+        "longDescription": "During my internship at Acme Analytics, I worked with large datasets to uncover insights and trends. I developed predictive models using Python and machine learning libraries, and presented findings to stakeholders to inform business strategies. My role also involved data cleaning, visualization, and collaborating with other data professionals.",
+        "skills": [
+            "Python",
+            "Pandas",
+            "Machine Learning",
+            "Data Visualization"
+        ],
+        "icon": "BarChart2"
+    },
+    {
+        "id": 5,
+        "title": "IT Support Specialist",
+        "company": "Tech Solutions Inc.",
+        "location": "Bloomington, IN",
+        "startYearAndMonth": "2022-08",
+        "endYearAndMonth": "2023-05",
+        "shortDescription": "Provided technical support and troubleshooting for hardware and software issues.",
+        "longDescription": "As an IT Support Specialist at Tech Solutions Inc., I assisted employees with technical issues related to hardware, software, and networking. I managed help desk tickets, performed system upgrades, and documented solutions for recurring problems. My proactive approach helped minimize downtime and improve overall productivity.",
+        "skills": [
+            "Technical Support",
+            "Windows",
+            "Networking",
+            "Customer Service"
+        ],
+        "icon": "Headphones"
     }
 ]
