@@ -18,6 +18,7 @@ interface Project {
     isFeatured: boolean;
     additionalDocuments?: Document[];
     additionalInformation?: string;
+    myContributions?: string[];
 }
 
 interface Experience {

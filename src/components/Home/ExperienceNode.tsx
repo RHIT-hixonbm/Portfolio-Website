@@ -14,7 +14,7 @@ import formatDate from "@/data/utilities/formatDate";
 export default function ExperienceNode({ experience }: { experience: Experience }) {
   const IconComponent = icons[experience.icon as keyof typeof icons] || icons.Briefcase;
   return (
-    <Card className="flex flex-col rounded-full border-4 border-black shadow-lg mt-8 justify-center" style={{ width: "22.7rem", height: "22.7rem" }}>
+    <Card className="flex flex-col justify-between rounded-full border-4 border-black shadow-lg mt-8 gap-2" style={{ width: "22.7rem", height: "22.7rem" }}>
         <CardHeader className="mt-3">
             <CardTitle className="text-center text-md">{experience.title}</CardTitle>
             <CardDescription className="text-center">
