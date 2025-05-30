@@ -14,11 +14,11 @@ import formatDate from "@/data/utilities/formatDate";
 export default function ExperienceNode({ experience }: { experience: Experience }) {
   const IconComponent = icons[experience.icon as keyof typeof icons] || icons.Briefcase;
   return (
-    <Card className="rounded-full border-4 border-black shadow-lg mt-8" style={{ width: "22.2rem", height: "22.2rem" }}>
+    <Card className="flex flex-col rounded-full border-4 border-black shadow-lg mt-8 justify-center" style={{ width: "22.7rem", height: "22.7rem" }}>
         <CardHeader className="mt-3">
             <CardTitle className="text-center text-md">{experience.title}</CardTitle>
             <CardDescription className="text-center">
-            <div className="text-xs">{experience.company} - {experience.location}</div>
+            <div className="text-xs px-3">{experience.company} - {experience.location}</div>
             <p className="mt-2 text-sm text-gray-800 text-center">
                 {formatDate(experience.startYearAndMonth)} -{" "}
                 {experience.endYearAndMonth ? formatDate(experience.endYearAndMonth) : "Present"}
