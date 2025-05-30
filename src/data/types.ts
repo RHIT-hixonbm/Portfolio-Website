@@ -7,15 +7,17 @@ interface Document {
 interface Project {
     id: string;
     title: string;
-    description: string;
+    shortDescription: string;
+    longDescription: string;
     technologies: string[];
     image: string;
-    sourceCodeUrl: string;
+    sourceCodeUrl?: string;
     startYearAndMonth: string;
     endYearAndMonth: string;
     demoVideoUrl: string;
     isFeatured: boolean;
     additionalDocuments?: Document[];
+    additionalInformation?: string;
 }
 
 export type { Document, Project };

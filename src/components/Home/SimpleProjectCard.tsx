@@ -32,7 +32,7 @@ export default function SimpleProjectCard({ project }: { project: Project }) {
             className="rounded-lg mb-4"
           />
         </div>
-        <p>{project.description}</p>
+        <p>{project.shortDescription}</p>
       </CardContent>
       <CardFooter>
         {project.technologies.map((tech, index) => (
