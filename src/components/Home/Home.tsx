@@ -13,8 +13,11 @@ export default function HomeComponent() {
   const [pulse, setPulse] = useState(false);
   const handleScrollToProjects = useCallback(() => {
     if (projectsRef.current) {
-      console.log("hey");
-      projectsRef.current.scrollIntoView({ behavior: "smooth" });
+      projectsRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
       setPulse(true);
     }
   }, []);
@@ -22,11 +25,13 @@ export default function HomeComponent() {
   return (
     <BasicPage backgroundColor={"#f5f5f5"}>
       <div className="flex min-h-screen flex-col items-center px-4">
-        <HeroBanner handleScrollToProjects={handleScrollToProjects}/>
+        <HeroBanner handleScrollToProjects={handleScrollToProjects} />
         {/*Projects*/}
         <div
           id="projects"
-          className={`max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2 ${pulse ? "animate-[pulse_1s_ease-in-out_1]" : ""}`}
+          className={`max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2 ${
+            pulse ? "animate-[pulse_1s_ease-in-out_1]" : ""
+          }`}
           ref={projectsRef}
           onAnimationEnd={() => setPulse(false)}
         >
@@ -37,9 +42,7 @@ export default function HomeComponent() {
         </div>
         {/*Experience*/}
         <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
-          <h1 className="text-3xl font-bold text-center my-8">
-            Experience
-          </h1>
+          <h1 className="text-3xl font-bold text-center my-8">Experience</h1>
           <ExperienceLinks />
         </div>
       </div>
