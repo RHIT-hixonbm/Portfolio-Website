@@ -29,6 +29,8 @@ interface Experience {
     endYearAndMonth?: string;
     shortDescription: string;
     longDescription: string;
+    skills: string[];
+    icon: string;
 }
 
 export type { Document, Project, Experience };

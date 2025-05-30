@@ -1,21 +1,33 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "title": "Software Engineer Intern",
-        "company": "Rose=Hulman Ventures",
+        "company": "Rose-Hulman Ventures",
         "location": "Terre Haute, IN",
         "startYearAndMonth": "2025-01",
         "endYearAndMonth": "2025-05",
         "shortDescription": "Developed and maintained web applications using React and Node.js. Created internal documentation and participated in code reviews.",
         "longDescription": "As a Software Engineer Intern at Rose-Hulman Ventures, I was responsible for developing and maintaining web applications using React and Node.js. My role involved creating internal documentation to facilitate knowledge sharing among team members and participating in code reviews to ensure code quality and adherence to best practices. I collaborated with cross-functional teams to deliver high-quality software solutions that met client requirements.",
+        "skills": [
+            "React",
+            "Node.js",
+            "TypeScript"
+        ],
+        "icon": "Laptop"
     },
     {
-        "id": "2",
+        "id": 2,
         "title": "Teaching Assistant",
         "company": "Rose-Hulman Institute of Technology",
         "location": "Terre Haute, IN",
         "startYearAndMonth": "2024-09",
         "shortDescription": "Assisted students in laboratory for introductory systems programming course. Provided support in understanding concepts and debugging code.",
         "longDescription": "In my role as a Teaching Assistant at Rose-Hulman Institute of Technology, I assisted students in the laboratory for an introductory systems programming course. My responsibilities included providing support to students in understanding complex programming concepts, debugging code, and guiding them through practical exercises.",
+        "skills": [
+            "C",
+            "Linux",
+            "Debugging"
+        ],
+        "icon": "BookOpen"
     }
 ]
