@@ -72,12 +72,9 @@ export default function Navbar() {
                 >
                   Projects
                 </Link>
-                <Link
-                  href="/contact"
-                  className="text-lg font-bold text-neutral-700 hover:text-neutral-900"
-                >
-                  Contact
-                </Link>
+                <div>
+                  <ContactPopover /> {/* BONUS: This a mobile friendly hover card :) */}
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
