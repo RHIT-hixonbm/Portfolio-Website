@@ -20,4 +20,15 @@ interface Project {
     additionalInformation?: string;
 }
 
-export type { Document, Project };
+interface Experience {
+    id: number;
+    title: string;
+    company: string;
+    location: string;
+    startYearAndMonth: string;
+    endYearAndMonth?: string;
+    shortDescription: string;
+    longDescription: string;
+}
+
+export type { Document, Project, Experience };
