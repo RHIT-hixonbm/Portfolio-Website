@@ -50,14 +50,14 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
         >
           View My Work
         </Button>
-        {/* Download Resume */}
-        <a href="/documents/resume.pdf" download>
+        {/* View Resume */}
+        <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer">
           <Button
             size="lg"
             variant="outline"
             className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer"
           >
-            Download Resume
+            View Resume
           </Button>
         </a>
       </div>
