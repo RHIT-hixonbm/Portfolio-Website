@@ -9,11 +9,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
+import ContactPopover from "./ContactPopover";
 
 export default function Navbar() {
   return (
@@ -44,50 +40,7 @@ export default function Navbar() {
           >
             Projects
           </Link>
-          <HoverCard>
-            <HoverCardTrigger>
-              <div className="text-neutral-700 hover:text-neutral-900 transition text-lg font-bold cursor-default">
-                Contact
-              </div>
-            </HoverCardTrigger>
-            <HoverCardContent>
-              <div className="text-sm text-neutral-800">
-                <p className="font-medium mb-1">Brett M. Hixon</p>
-                <p className="mb-2">Rose-Hulman Institute of Technology</p>
-                <p className="mb-1">
-                  <span className="font-semibold">Email:</span>{" "}
-                  <a
-                    href="mailto:hixonbm@rose-hulman.edu"
-                    className="text-blue-600 underline"
-                  >
-                    hixonbm@rose-hulman.edu
-                  </a>
-                </p>
-                <p className="mb-1">
-                  <span className="font-semibold">GitHub:</span>{" "}
-                  <a
-                    href="https://github.com/RHIT-hixonbm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 underline"
-                  >
-                    github.com/RHIT-hixonbm
-                  </a>
-                </p>
-                <p>
-                  <span className="font-semibold">LinkedIn:</span>{" "}
-                  <a
-                    href="https://www.linkedin.com/in/hixonbm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 underline"
-                  >
-                    linkedin.com/in/hixonbm
-                  </a>
-                </p>
-              </div>
-            </HoverCardContent>
-          </HoverCard>
+          <ContactPopover />
         </div>
 
         {/* Mobile Menu Button */}
