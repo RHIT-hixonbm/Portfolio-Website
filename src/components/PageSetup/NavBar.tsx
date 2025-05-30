@@ -24,19 +24,19 @@ export default function Navbar() {
         <div className="space-x-6 hidden md:flex gap-20">
           <Link
             href="/"
-            className="text-neutral-700 hover:text-neutral-900 transition text-lg font-bold"
+            className="text-neutral-700 hover:text-neutral-900 transition text-2xl font-bold"
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="text-neutral-700 hover:text-neutral-900 transition text-lg font-bold"
+            className="text-neutral-700 hover:text-neutral-900 transition text-2xl font-bold"
           >
             About
           </Link>
           <Link
             href="/projects"
-            className="text-neutral-700 hover:text-neutral-900 transition text-lg font-bold"
+            className="text-neutral-700 hover:text-neutral-900 transition text-2xl font-bold"
           >
             Projects
           </Link>
