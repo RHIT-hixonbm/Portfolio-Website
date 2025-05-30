@@ -51,24 +51,24 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="left" className="w-64 px-4">
               <SheetHeader>
-                <SheetTitle className="text-lg font-bold">Menu</SheetTitle>
+                <SheetTitle className="text-4xl font-bold"><u>Menu</u></SheetTitle>
               </SheetHeader>
-              <nav className="mt-8 flex flex-col space-y-4">
+              <nav className="ml-4.5 mt-1.7 flex flex-col space-y-4">
                 <Link
                   href="/"
-                  className="text-lg font-bold text-neutral-700 hover:text-neutral-900"
+                  className="text-2xl font-bold text-neutral-700 hover:text-neutral-900"
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="text-lg font-bold text-neutral-700 hover:text-neutral-900"
+                  className="text-2xl font-bold text-neutral-700 hover:text-neutral-900"
                 >
                   About
                 </Link>
                 <Link
                   href="/projects"
-                  className="text-lg font-bold text-neutral-700 hover:text-neutral-900"
+                  className="text-2xl font-bold text-neutral-700 hover:text-neutral-900"
                 >
                   Projects
                 </Link>

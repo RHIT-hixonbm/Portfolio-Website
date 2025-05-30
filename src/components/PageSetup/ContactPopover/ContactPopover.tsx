@@ -41,7 +41,7 @@ export default function ContactPopover() {
           onMouseEnter={handleMouseEnterButton}
           onMouseLeave={handleMouseLeaveButton}
         >
-          <div className="text-neutral-700 hover:text-neutral-900 transition text-lg font-bold cursor-pointer">
+          <div className="text-neutral-700 hover:text-neutral-900 transition text-2xl font-bold cursor-pointer">
             Contact
           </div>
         </PopoverTrigger>

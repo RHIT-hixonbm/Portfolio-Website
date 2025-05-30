@@ -20,7 +20,7 @@ export default function ExperienceNode({
     icons[experience.icon as keyof typeof icons] || icons.Briefcase;
   return (
     <Card className="flex flex-col justify-between rounded-full border-4 border-black shadow-lg mt-8 gap-2 w-[22.7rem] h-[22.7rem] lg:w-[30rem] lg:h-[30rem]">
-      <CardHeader className="mt-3">
+      <CardHeader className="mt-6">
         <CardTitle className="text-center text-md lg:text-2xl">
           {experience.title}
         </CardTitle>
