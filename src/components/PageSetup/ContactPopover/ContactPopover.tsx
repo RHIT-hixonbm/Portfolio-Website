@@ -45,7 +45,7 @@ export default function ContactPopover() {
             Contact
           </div>
         </PopoverTrigger>
-        <PopoverContent ref={popoverContentRef} style={{ zIndex: 12 }}>
+        <PopoverContent ref={popoverContentRef} style={{ zIndex: 51 }}>
           <div className="text-sm text-neutral-800">
             <p className="font-medium mb-1">Brett M. Hixon</p>
             <p className="mb-2">Rose-Hulman Institute of Technology</p>
