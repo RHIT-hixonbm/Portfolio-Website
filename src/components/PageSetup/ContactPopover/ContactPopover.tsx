@@ -13,11 +13,11 @@ export default function ContactPopover() {
 
   //Additonal hover functionality to delay opening the popover
   const hoverTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
-  // Begins a timeout to open the popover after 700ms when the button is hovered
+  // Begins a timeout to open the popover after 400ms when the button is hovered
   const handleMouseEnterButton = () => {
     hoverTimeoutRef.current = setTimeout(() => {
       setOpen(true);
-    }, 700);
+    }, 400);
   };
   // Clears the timeout if the button is no longer hovered before the timeout completes
   const handleMouseLeaveButton = () => {
