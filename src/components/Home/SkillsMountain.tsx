@@ -35,7 +35,7 @@ export default function SkillsMountain() {
       <div className={`grid ${"grid-cols-4"} gap-1 justify-center opacity-0 ${inView && "animate-fade-up"}`} style={inView ? { animationDelay: "1s" } : {}}>
         {top_skills.map((skill: Skill) => {
           return (
-            <Card key={skill.priority} className="bg-black text-md">
+            <Card key={skill.priority} className="bg-black text-md xl:text-[1.8rem]">
               <CardContent>
                 <p className="text-center text-white font-bold">{skill.name}</p>
               </CardContent>
@@ -47,9 +47,9 @@ export default function SkillsMountain() {
       <div className={`grid ${"grid-cols-4"} gap-3 justify-center py-2 opacity-0 ${inView && "animate-fade-up"}`} style={inView ? { animationDelay: "0.5s" } : {}}>
         {mid_skills.map((skill: Skill) => {
           return (
-            <Card key={skill.priority} className="bg-black text-2xl">
+            <Card key={skill.priority} className="bg-black xl:text-[2.5rem] text-2xl">
               <CardContent>
-                <p className="text-center text-white font-bold text">{skill.name}</p>
+                <p className="text-center text-white font-bold">{skill.name}</p>
               </CardContent>
             </Card>
           );
@@ -59,9 +59,9 @@ export default function SkillsMountain() {
       <div  ref={ref} className={`grid ${"grid-cols-3"} gap-2 justify-center py-2 opacity-0 ${inView && "animate-fade-up"}`} style={inView ? { animationDelay: "0s" } : {}}>
         {base_skills.map((skill: Skill) => {
           return (
-            <Card key={skill.priority} className="bg-black text-5xl px-12">
+            <Card key={skill.priority} className="bg-black text-5xl xl:text-[6rem] px-12">
               <CardContent>
-                <p className="text-center text-white font-bold text">{skill.name}</p>
+                <p className="text-center text-white font-bold">{skill.name}</p>
               </CardContent>
             </Card>
           );
