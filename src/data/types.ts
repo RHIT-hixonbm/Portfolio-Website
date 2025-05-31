@@ -34,4 +34,9 @@ interface Experience {
     icon: string;
 }
 
-export type { Document, Project, Experience };
+interface Skill {
+    name: string;
+    priority: number;
+}
+
+export type { Document, Project, Experience, Skill };
