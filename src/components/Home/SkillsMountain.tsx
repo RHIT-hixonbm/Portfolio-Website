@@ -5,7 +5,6 @@ import {
   CardContent,
 } from "@/components/ui/card"
 import { useInView } from "react-intersection-observer";
-import { animate } from "@tsparticles/engine";
 
 export default function SkillsMountain() {
     const { ref, inView } = useInView({
