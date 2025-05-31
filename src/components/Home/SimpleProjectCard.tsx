@@ -10,10 +10,14 @@ import { Project } from "@/data/types";
 import { Badge } from "@/components/ui/badge";
 import formatDate from "@/data/utilities/formatDate";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 export default function SimpleProjectCard({ project }: { project: Project }) {
+  //Observer to activate animations
+  const { ref, inView, entry } = useInView();
+
   return (
-    <Card className="border-2 border-black rounded-lg shadow-lg h-full animate-shake">
+    <Card ref={ref} className={`border-2 border-black rounded-lg shadow-lg h-full ${inView && "animate-shake" }`}>
       <CardHeader>
         <CardTitle>{project.title}</CardTitle>
         <CardDescription>
