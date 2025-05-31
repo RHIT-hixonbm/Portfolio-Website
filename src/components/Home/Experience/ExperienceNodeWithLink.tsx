@@ -11,9 +11,9 @@ export default function ExperienceNodeWithLink({experience}: {experience: Experi
     return (
         <div ref={ref}>
             <span 
-                className={`absolute opacity-0 left-1/2 top-8 -translate-x-1/2 w-2 h-full bg-black ${inView && "animate-fly-in"}`}
+                className={`absolute left-1/2 top-8 -translate-x-1/2 w-2 h-0 bg-black ${inView && "animate-grow-down"}`}
                 aria-hidden="true"
-                style={{ animationDelay: "500ms" }}
+                style={{ animationDelay: "200ms" }}
             />
             <ExperienceNode experience={experience} />
         </div>
