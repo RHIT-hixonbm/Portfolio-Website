@@ -14,7 +14,7 @@ import { useInView } from "react-intersection-observer";
 export default function ProjectCarousel() {
   //Observer to activate animations
   const { ref, inView } = useInView({
-    delay: 1000,
+    delay: 2000,
     triggerOnce: true,
     threshold: 0.8,
     initialInView: false,
