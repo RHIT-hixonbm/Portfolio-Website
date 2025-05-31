@@ -1,14 +1,14 @@
 [
-    { "name": "React", "priority": 1 },
-    { "name": "Java", "priority": 2 },
-    { "name": "C", "priority": 3 },
-    { "name": "HTML5", "priority": 4 },
-    { "name": "ARM Asm", "priority": 5 },
-    { "name": "SQL", "priority": 6 },
-    { "name": "Python", "priority": 7 },
-    { "name": "Lua", "priority": 8 },
-    { "name": "Verilog", "priority": 9 },
-    { "name": ".NET Core", "priority": 10 },
-    { "name": "Git", "priority": 11 },
-    { "name": "Leadership", "priority": 12 }
+    { "name": "React", "priority": 1, "description": "A JavaScript library for building user interfaces, especially single-page applications." },
+    { "name": "Java", "priority": 2, "description": "A versatile, object-oriented programming language used for web, desktop, and mobile applications." },
+    { "name": "C", "priority": 3, "description": "A foundational programming language used for system software, embedded systems, and performance-critical applications." },
+    { "name": "HTML5", "priority": 4, "description": "The latest version of the standard markup language for creating web pages and web applications." },
+    { "name": "ARM Asm", "priority": 5, "description": "Assembly language for ARM processors, used in embedded systems and low-level programming." },
+    { "name": "SQL", "priority": 6, "description": "A domain-specific language for managing and querying relational databases." },
+    { "name": "Python", "priority": 7, "description": "A high-level, interpreted programming language used for web development, automation, data analysis, and more." },
+    { "name": "Lua", "priority": 8, "description": "A lightweight scripting language often used for embedded systems and game development." },
+    { "name": "Verilog", "priority": 9, "description": "A hardware description language used to model electronic systems and design digital circuits." },
+    { "name": ".NET Core", "priority": 10, "description": "A cross-platform, open-source framework for building modern web, desktop, and cloud applications." },
+    { "name": "Git", "priority": 11, "description": "A distributed version control system for tracking changes in source code during software development." },
+    { "name": "Leadership", "priority": 12, "description": "The ability to guide teams, manage projects, and drive successful outcomes in collaborative environments." }
 ]
