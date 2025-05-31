@@ -14,7 +14,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function SimpleProjectCard({ project }: { project: Project }) {
   //Observer to activate animations
-  const { ref, inView, entry } = useInView();
+  const { ref, inView } = useInView();
 
   return (
     <Card ref={ref} className={`border-2 border-black rounded-lg shadow-lg h-full ${inView && "animate-shake" }`}>

@@ -26,7 +26,6 @@ export default function HomeComponent() {
     <BasicPage backgroundColor={"#f5f5f5"}>
       <div className="flex min-h-screen flex-col items-center px-4">
         <HeroBanner handleScrollToProjects={handleScrollToProjects} />
-        <div className="bg-test-pink">Do I have a pink background?</div>
         {/*Projects*/}
         <div
           id="projects"
