@@ -2,12 +2,7 @@ import { getSkills } from "@/data/data";
 import { Skill } from "@/data/types";
 import {
   Card,
-  CardAction,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 
 export default function SkillsMountain() {
