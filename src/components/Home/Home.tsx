@@ -6,6 +6,7 @@ import HeroBanner from "@/components/Home/HeroBanner";
 import BasicPage from "@/components/PageSetup/BasicPage";
 import ProjectCarousel from "@/components/Home/ProjectCarousel";
 import ExperienceLinks from "./Experience/ExperienceLinks";
+import SkillsMountain from "./SkillsMountain";
 
 export default function HomeComponent() {
   //Pulse effect for projects section
@@ -44,6 +45,11 @@ export default function HomeComponent() {
         <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center my-8">Experience</h1>
           <ExperienceLinks />
+        </div>
+        {/* Skills */}
+        <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
+          <h1 className="text-3xl font-bold text-center my-8">Skills</h1>
+          <SkillsMountain />
         </div>
       </div>
     </BasicPage>
