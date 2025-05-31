@@ -10,16 +10,22 @@ import {
 import { icons } from "lucide-react";
 
 import formatDate from "@/data/utilities/formatDate";
+import { useInView } from "react-intersection-observer";
 
 export default function ExperienceNode({
   experience,
 }: {
   experience: Experience;
 }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.9,
+  })
+
   const IconComponent =
     icons[experience.icon as keyof typeof icons] || icons.Briefcase;
   return (
-    <Card className="flex flex-col justify-between rounded-full border-4 border-black shadow-lg mt-8 gap-2 w-[22.7rem] h-[22.7rem] lg:w-[30rem] lg:h-[30rem]">
+    <Card ref={ref} className={`flex flex-col opacity-0 justify-between rounded-full border-4 border-black shadow-lg mt-8 gap-2 w-[22.7rem] h-[22.7rem] lg:w-[30rem] lg:h-[30rem] ${inView && "animate-fly-in"}`}>
       <CardHeader className="mt-6">
         <CardTitle className="text-center text-md lg:text-2xl">
           {experience.title}

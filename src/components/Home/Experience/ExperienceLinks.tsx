@@ -1,6 +1,7 @@
 import { getExperiences } from "@/data/data";
 import { Experience } from "@/data/types";
 import ExperienceNode from "./ExperienceNode";
+import ExperienceNodeWithLink from "./ExperienceNodeWithLink";
 
 export default function ExperienceLinks() {
   const experiences: Experience[] = getExperiences();
@@ -9,16 +10,11 @@ export default function ExperienceLinks() {
       {experiences.map((experience: Experience, idx: number) => (
         <div className="relative flex items-start w-full" key={experience.id}>
           {/* Vertical line */}
-          {idx < experiences.length - 1 && (
-            <span
-              className="absolute left-1/2 top-8 -translate-x-1/2 w-2 h-full bg-black"
-              aria-hidden="true"
-            />
-          )}
-          {/* Node */}
-          <div className="relative">
+          {idx < experiences.length - 1 ? (
+            <ExperienceNodeWithLink experience={experience} />
+          ) : (
             <ExperienceNode experience={experience} />
-          </div>
+          )}
         </div>
       ))}
     </div>
