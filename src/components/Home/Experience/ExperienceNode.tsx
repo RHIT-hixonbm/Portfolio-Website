@@ -25,7 +25,7 @@ export default function ExperienceNode({
   const IconComponent =
     icons[experience.icon as keyof typeof icons] || icons.Briefcase;
   return (
-    <Card ref={ref} className={`flex flex-col opacity-0 justify-between rounded-full border-4 border-black shadow-lg mt-8 gap-2 w-[22.7rem] h-[22.7rem] lg:w-[30rem] lg:h-[30rem] ${inView && "animate-fly-in"}`}>
+    <Card ref={ref} className={`flex flex-col opacity-0 justify-between rounded-full border-4 border-black shadow-lg mt-8 gap-2 w-[22.7rem] h-[22.7rem] lg:w-[30rem] lg:h-[30rem] transform transition-transform duration-200 ease-out hover:scale-105 ${inView && "animate-fly-in"} cursor-pointer`}>
       <CardHeader className="mt-6">
         <CardTitle className="text-center text-md lg:text-2xl">
           {experience.title}
