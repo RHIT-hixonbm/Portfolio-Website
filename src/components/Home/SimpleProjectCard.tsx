@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function SimpleProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="border-2 border-black rounded-lg shadow-lg h-full">
+    <Card className="border-2 border-black rounded-lg shadow-lg h-full animate-shake">
       <CardHeader>
         <CardTitle>{project.title}</CardTitle>
         <CardDescription>
