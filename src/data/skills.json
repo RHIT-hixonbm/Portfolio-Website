@@ -8,7 +8,7 @@
     { "name": "Python", "priority": 7 },
     { "name": "Lua", "priority": 8 },
     { "name": "Verilog", "priority": 9 },
-    { "name": ".NET CORE", "priority": 10 },
+    { "name": ".NET Core", "priority": 10 },
     { "name": "Git", "priority": 11 },
     { "name": "Leadership", "priority": 12 }
 ]
