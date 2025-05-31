@@ -27,8 +27,9 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
         <Image
           src="/images/bust.png"
           alt="Brett M. Hixon"
-          width={250}
-          height={250}
+          width={144}
+          height={144}
+          className="object-cover w-full h-full" 
           priority
         />
       </div>
