@@ -59,7 +59,7 @@ export default function SkillsMountain() {
       <div  ref={ref} className={`grid ${"grid-cols-3"} gap-2 justify-center py-2 opacity-0 ${inView && "animate-fade-up"}`} style={inView ? { animationDelay: "0s" } : {}}>
         {base_skills.map((skill: Skill) => {
           return (
-            <Card key={skill.priority} className="bg-black text-5xl">
+            <Card key={skill.priority} className="bg-black text-5xl px-12">
               <CardContent>
                 <p className="text-center text-white font-bold text">{skill.name}</p>
               </CardContent>
