@@ -5,7 +5,7 @@ import "@/components/Home/HeroBanner";
 import HeroBanner from "@/components/Home/HeroBanner";
 import BasicPage from "@/components/PageSetup/BasicPage";
 import ProjectCarousel from "@/components/Home/ProjectCarousel";
-import ExperienceLinks from "./ExperienceLinks";
+import ExperienceLinks from "./Experience/ExperienceLinks";
 
 export default function HomeComponent() {
   //Pulse effect for projects section
