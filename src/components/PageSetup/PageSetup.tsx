@@ -21,7 +21,7 @@ export default function PageSetup({
       
       {/* Spacer to push footer down a bit */}
       <div className="relative z-10">
-        <Spacer height="2rem" />
+        <Spacer height="8rem" />
         <Footer />
       </div>
     </div>
