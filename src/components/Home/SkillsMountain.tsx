@@ -4,8 +4,15 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card"
+import { useInView } from "react-intersection-observer";
+import { animate } from "@tsparticles/engine";
 
 export default function SkillsMountain() {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.9,
+    })
+
   const skills = getSkills().sort(
     (a: Skill, b: Skill) => a.priority - b.priority
   );
@@ -26,7 +33,7 @@ export default function SkillsMountain() {
     //TODO: RENDER THESE DYNAMICALLY AT SOME POINT
     <div className="flex flex-col items-center">
       {/* Top */}
-      <div className={`grid ${"grid-cols-4"} gap-1 justify-center`}>
+      <div className={`grid ${"grid-cols-4"} gap-1 justify-center opacity-0 ${inView && "animate-fade-up"}`} style={inView ? { animationDelay: "1s" } : {}}>
         {top_skills.map((skill: Skill) => {
           return (
             <Card key={skill.priority} className="bg-black text-md">
@@ -38,7 +45,7 @@ export default function SkillsMountain() {
         })}
       </div>
       {/* Middle */}
-      <div className={`grid ${"grid-cols-4"} gap-3 justify-center py-2`}>
+      <div className={`grid ${"grid-cols-4"} gap-3 justify-center py-2 opacity-0 ${inView && "animate-fade-up"}`} style={inView ? { animationDelay: "0.5s" } : {}}>
         {mid_skills.map((skill: Skill) => {
           return (
             <Card key={skill.priority} className="bg-black text-2xl">
@@ -50,7 +57,7 @@ export default function SkillsMountain() {
         })}
       </div>
       {/* Base */}
-      <div className={`grid ${"grid-cols-3"} gap-2 justify-center py-2`}>
+      <div  ref={ref} className={`grid ${"grid-cols-3"} gap-2 justify-center py-2 opacity-0 ${inView && "animate-fade-up"}`} style={inView ? { animationDelay: "0s" } : {}}>
         {base_skills.map((skill: Skill) => {
           return (
             <Card key={skill.priority} className="bg-black text-5xl">
