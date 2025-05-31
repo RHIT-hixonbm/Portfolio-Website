@@ -5,17 +5,19 @@ import { useInView } from "react-intersection-observer"
 export default function ExperienceNodeWithLink({experience}: {experience: Experience}) {
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0.9,
     })
 
     return (
         <div ref={ref}>
             <span 
-                className={`absolute left-1/2 top-8 -translate-x-1/2 w-2 h-0 bg-black ${inView && "animate-grow-down"}`}
+                className={`absolute left-1/2 top-full -translate-x-1/2 w-2 h-0 bg-black  ${inView && "animate-grow-down"}`}
                 aria-hidden="true"
                 style={{ animationDelay: "200ms" }}
             />
-            <ExperienceNode experience={experience} />
+            <div>
+                <ExperienceNode experience={experience} />
+            </div>
         </div>
     )
 }
