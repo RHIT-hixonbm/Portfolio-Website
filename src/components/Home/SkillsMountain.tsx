@@ -28,9 +28,10 @@ export default function SkillsMountain() {
   );
 
   return (
-    <>
+    //TODO: RENDER THESE DYNAMICALLY AT SOME POINT
+    <div className="flex flex-col items-center">
       {/* Top */}
-      <div className={`grid grid-cols-4 gap-1 justify-center`}>
+      <div className={`grid ${"grid-cols-4"} gap-1 justify-center`}>
         {top_skills.map((skill: Skill) => {
           return (
             <Card key={skill.priority} className="bg-black text-md">
@@ -65,6 +66,6 @@ export default function SkillsMountain() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
