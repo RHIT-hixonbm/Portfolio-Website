@@ -7,6 +7,7 @@ import BasicPage from "@/components/PageSetup/BasicPage";
 import ProjectCarousel from "@/components/Home/ProjectCarousel";
 import ExperienceLinks from "./Experience/ExperienceLinks";
 import SkillsMountain from "./SkillsMountain";
+import MobileSkillHinges from "./MobileSkillHingeCollection";
 
 export default function HomeComponent() {
   //Pulse effect for projects section
@@ -50,6 +51,7 @@ export default function HomeComponent() {
         <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center my-8">Skills & Frameworks</h1>
           <SkillsMountain />
+          <MobileSkillHinges />
         </div>
       </div>
     </BasicPage>
