@@ -37,6 +37,7 @@ interface Experience {
 interface Skill {
     name: string;
     priority: number;
+    description: string;
 }
 
 export type { Document, Project, Experience, Skill };
