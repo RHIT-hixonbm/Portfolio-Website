@@ -30,7 +30,7 @@ export default function SkillsMountain() {
 
   return (
     //TODO: RENDER THESE DYNAMICALLY AT SOME POINT
-    <div className="flex flex-col items-center">
+    <div className="hidden md:flex flex-col items-center">
       {/* Top */}
       <div className={`grid ${"grid-cols-4"} gap-1 justify-center opacity-0 ${inView && "animate-fade-up"}`} style={inView ? { animationDelay: "1s" } : {}}>
         {top_skills.map((skill: Skill) => {
