@@ -4,10 +4,30 @@
 @custom-variant dark (&:is(.dark *));
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes fly-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* start slightly to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* end at the normal position */
+  }
 }
 
 @theme inline {
@@ -134,5 +154,9 @@
 @layer utilities {
   .animate-shake {
     animation: shake 0.5s ease-in-out;
+  }
+
+  .animate-fly-in {
+    animation: fly-in 0.5s ease-out forwards;
   }
 }
