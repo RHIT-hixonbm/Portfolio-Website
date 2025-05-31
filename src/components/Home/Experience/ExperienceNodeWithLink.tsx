@@ -5,8 +5,8 @@ import { useInView } from "react-intersection-observer"
 export default function ExperienceNodeWithLink({experience}: {experience: Experience}) {
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.9,
-        delay: 600,
+        threshold: 0.95,
+        delay: 200,
     })
 
     return (
