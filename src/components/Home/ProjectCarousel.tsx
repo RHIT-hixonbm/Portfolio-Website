@@ -9,12 +9,21 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import SimpleProjectCard from "./SimpleProjectCard";
+import { useInView } from "react-intersection-observer";
 
 export default function ProjectCarousel() {
+  //Observer to activate animations
+  const { ref, inView } = useInView({
+    delay: 1000,
+    triggerOnce: true,
+    threshold: 0.8,
+    initialInView: false,
+  });
+
   const projects: Project[] = useMemo(() => getProjects(), []);
   return (
     <Carousel className="w-full max-w-2xs xl:max-w-6xl lg:max-w-3xl md:max-w-3xl mb-6">
-      <CarouselContent>
+      <CarouselContent ref={ref} className={`${inView && "animate-shake" }`}>
         {projects.filter((project) => project.isFeatured)
         .map((project) => (
           <CarouselItem key={project.id}>
