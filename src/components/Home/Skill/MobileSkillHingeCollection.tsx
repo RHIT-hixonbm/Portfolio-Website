@@ -15,7 +15,7 @@ export default function MobileSkillHinges() {
       <div ref={ref} className="flex md:hidden flex-col items-center gap-3">
         {
           skills.map((skill: Skill, idx: number) => (
-            <SkillCard key={skill.priority} skill={skill} minWidth="[13rem]" textSize="md" inView={inView} additionalStyles={{ animationDelay: (idx * 200) + "ms" }} />
+            <SkillCard key={skill.priority} skill={skill} minWidth="[13rem]" textSize="md" inView={inView} startingOpacity={0} additionalStyles={{ animationDelay: (idx * 200) + "ms" }} />
           ))
         }
       </div>
