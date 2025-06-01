@@ -1,9 +1,5 @@
 import { getSkills } from "@/data/data";
 import { Skill } from "@/data/types";
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card"
 import { useInView } from "react-intersection-observer";
 import SkillCard from "./SkillCard";
 
