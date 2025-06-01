@@ -6,8 +6,8 @@ import HeroBanner from "@/components/Home/HeroBanner";
 import BasicPage from "@/components/PageSetup/BasicPage";
 import ProjectCarousel from "@/components/Home/ProjectCarousel";
 import ExperienceLinks from "./Experience/ExperienceLinks";
-import SkillsMountain from "./SkillsMountain";
-import MobileSkillHinges from "./MobileSkillHingeCollection";
+import SkillsMountain from "./Skill/SkillsMountain";
+import MobileSkillHinges from "./Skill/MobileSkillHingeCollection";
 
 export default function HomeComponent() {
   //Pulse effect for projects section

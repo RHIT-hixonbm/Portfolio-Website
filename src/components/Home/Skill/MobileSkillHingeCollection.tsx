@@ -5,6 +5,7 @@ import {
   CardContent,
 } from "@/components/ui/card"
 import { useInView } from "react-intersection-observer";
+import SkillCard from "./SkillCard";
 
 export default function MobileSkillHinges() {
     const { ref, inView } = useInView({
@@ -18,11 +19,7 @@ export default function MobileSkillHinges() {
       <div ref={ref} className="flex md:hidden flex-col items-center gap-3">
         {
           skills.map((skill: Skill, idx: number) => (
-            <Card key={skill.priority} className={`bg-black min-w-[13rem] opacity-0 ${inView && "animate-hinge-spin"}`} style={{ animationDelay: (idx * 200) + "ms" }}>
-              <CardContent className="text-white text-center font-bold text-md">
-                {skill.name}
-              </CardContent>
-            </Card>
+            <SkillCard key={skill.priority} skill={skill} minWidth="[13rem]" textSize="md" inView={inView} additionalStyles={{ animationDelay: (idx * 200) + "ms" }} />
           ))
         }
       </div>
