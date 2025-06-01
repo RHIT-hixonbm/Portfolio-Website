@@ -37,7 +37,7 @@ export default function SkillsMountain() {
       >
         {top_skills.map((skill: Skill) => {
           return (
-            <SkillCard key={skill.priority} skill={skill} textSize="md" largeTextSize="[1.8rem]" />
+            <SkillCard key={skill.priority} skill={skill} textSize="text-md" largeTextSize="xl:text-[1.8rem]" />
           );
         })}
       </div>
@@ -50,7 +50,7 @@ export default function SkillsMountain() {
       >
         {mid_skills.map((skill: Skill) => {
           return (
-            <SkillCard key={skill.priority} skill={skill} textSize="2xl" largeTextSize="[2.5rem]" />
+            <SkillCard key={skill.priority} skill={skill} textSize="text-2xl" largeTextSize="xl:text-[2.5rem]" />
           );
         })}
       </div>
@@ -63,7 +63,7 @@ export default function SkillsMountain() {
       >
         {base_skills.map((skill: Skill) => {
           return (
-            <SkillCard key={skill.priority} skill={skill} textSize="5xl" largeTextSize="[6rem]" px={12} />
+            <SkillCard key={skill.priority} skill={skill} textSize="text-5xl" largeTextSize="xl:text-[6rem]" px={"px-12"} />
           );
         })}
       </div>
