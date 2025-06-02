@@ -6,7 +6,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export default function SkillCard({ skill, textSize, largeTextSize, px, minWidth, inView, additionalStyles, startingOpacity }: { skill: Skill, textSize: string, largeTextSize?: string, px?: string, minWidth?: string, inView?: boolean, additionalStyles?: React.CSSProperties, startingOpacity: string; }) {
+export default function SkillCard({ skill, textSize, largeTextSize, px, minWidth, inView, additionalStyles, startingOpacity }: { skill: Skill, textSize: string, largeTextSize?: string, px?: string, minWidth?: string, inView?: boolean, additionalStyles?: React.CSSProperties, startingOpacity?: string; }) {
     return (
             <Popover>
               <PopoverTrigger>
