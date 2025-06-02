@@ -1,3 +1,5 @@
+import AboutComponent from "@/components/About";
+
 export default function About() {
-  return <div className="text-9xl">Test</div>;
+  return <AboutComponent />
 }
