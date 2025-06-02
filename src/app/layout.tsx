@@ -22,6 +22,7 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import { ViewTransitions } from "next-view-transitions"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -163,36 +164,38 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="flex flex-col min-h-screen" style={{ backgroundColor }}>
-          <Navbar />
-          {/* Main content area */}{" "}
-          {particlesEnabled && init && (
-            <>
-              {/* Particles background */}
-              <div className="fixed inset-0 z-0 pointer-events-none">
-                <Particles
-                  id="tsparticles"
-                  particlesLoaded={particlesLoaded}
-                  options={options}
-                />
-              </div>
-            </>
-          )}
-          <div className="relative z-10">
-            <main className="flex-1">{children}</main>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <div className="flex flex-col min-h-screen" style={{ backgroundColor }}>
+            <Navbar />
+            {/* Main content area */}{" "}
+            {particlesEnabled && init && (
+              <>
+                {/* Particles background */}
+                <div className="fixed inset-0 z-0 pointer-events-none">
+                  <Particles
+                    id="tsparticles"
+                    particlesLoaded={particlesLoaded}
+                    options={options}
+                  />
+                </div>
+              </>
+            )}
+            <div className="relative z-10">
+              <main className="flex-1">{children}</main>
+            </div>
+            {/* Push the footer down */}
+            <div className="flex-1" />
+            <div className="relative z-10">
+              <Spacer height="6.5rem" />
+              <Footer />
+            </div>
           </div>
-          {/* Push the footer down */}
-          <div className="flex-1" />
-          <div className="relative z-10">
-            <Spacer height="6.5rem" />
-            <Footer />
-          </div>
-        </div>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import ContactPopover from "./ContactPopover/ContactPopover";
+import TransitionLink from "./TransitionLink";
 
 export default function Navbar() {
   return (
@@ -22,24 +23,9 @@ export default function Navbar() {
 
         {/* Navigation Links For Desktop*/}
         <div className="space-x-6 hidden md:flex gap-20">
-          <Link
-            href="/"
-            className="text-neutral-700 hover:text-neutral-900 transition text-2xl font-bold"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-neutral-700 hover:text-neutral-900 transition text-2xl font-bold"
-          >
-            About
-          </Link>
-          <Link
-            href="/projects"
-            className="text-neutral-700 hover:text-neutral-900 transition text-2xl font-bold"
-          >
-            Projects
-          </Link>
+          <TransitionLink href="/">Home</TransitionLink>
+          <TransitionLink href="/about">About</TransitionLink>
+          <TransitionLink href="/projects">Projects</TransitionLink>
           <ContactPopover />
         </div>
 
