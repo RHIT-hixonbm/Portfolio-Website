@@ -2,24 +2,31 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import AnimatedText from "../utilities/AnimatedText";
+import { useState } from "react";
 
 export default function HeroBanner({ handleScrollToProjects }: { handleScrollToProjects?: () => void }) {
+  const [nameFinishedAnimating, setNameFinishedAnimating] = useState(false);
+  const [titleOneFinishedAnimating, setTitleOneFinishedAnimating] = useState(false);
+  const [titleTwoFinishedAnimating, setTitleTwoFinishedAnimating] = useState(false);
+  const [titleThreeFinishedAnimating, setTitleThreeFinishedAnimating] = useState(false);
+
   return (
     <section className="h-[50rem] w-full py-10 flex flex-col justify-between items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-200 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-15.5 mb-5 border-2">
       {/* Name and description */}
       <div>
-        <h1 className="text-4xl md:text-7xl font-bold mb-4">Brett M. Hixon</h1>
+        <h1 className="text-4xl md:text-7xl font-bold mb-4"><AnimatedText setFinishedAnimating={setNameFinishedAnimating} textSpeed={0.06}>Brett M. Hixon</AnimatedText></h1>
         <p className="text-lg md:text-3xl mb-8 max-w-6xl">
-          Junior Computer Science student at{" "}
+          <AnimatedText setFinishedAnimating={setTitleOneFinishedAnimating} textSpeed={0.01}>Junior Computer Science student at</AnimatedText>{" "}
           <a
             href="https://www.rose-hulman.edu"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
-            Rose-Hulman
+            <AnimatedText setFinishedAnimating={setTitleTwoFinishedAnimating} previousDone={titleOneFinishedAnimating} textSpeed={0.01}>Rose-Hulman</AnimatedText>
           </a>{" "}
-          & Software Developer
+          <AnimatedText setFinishedAnimating={setTitleThreeFinishedAnimating} previousDone={titleTwoFinishedAnimating} textSpeed={0.01}>& Software Developer</AnimatedText>
         </p>
       </div>
       {/* Profile picture */}
@@ -37,8 +44,10 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
       {/* Mission */}
       <p className="text-lg md:text-2xl max-w-6xl mb-8">
         {" "}
-        Driven by an innovative and proactive nature; eager to apply my rigorous
-        academic and industrial understanding in full-stack and systems development{" "}
+        <AnimatedText textSpeed={0.005}>
+          Driven by an innovative and proactive nature; eager to apply my rigorous
+          academic and industrial understanding in full-stack and systems development
+        </AnimatedText>
       </p>
 
       {/* Call to action buttons */}
