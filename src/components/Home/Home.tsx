@@ -3,7 +3,6 @@
 import React, { useRef, useState, useCallback } from "react";
 import "@/components/Home/HeroBanner";
 import HeroBanner from "@/components/Home/HeroBanner";
-import BasicPage from "@/components/PageSetup/BasicPage";
 import ProjectCarousel from "@/components/Home/Project/ProjectCarousel";
 import ExperienceLinks from "./Experience/ExperienceLinks";
 import SkillsMountain from "./Skill/SkillsMountain";
@@ -25,7 +24,7 @@ export default function HomeComponent() {
   }, []);
 
   return (
-    <BasicPage backgroundColor={"#f5f5f5"} particlesEnabled={true}>
+    <div>
       <HeroBanner handleScrollToProjects={handleScrollToProjects} />
       <div className="flex min-h-screen flex-col items-center px-4">
         {/*Projects*/}
@@ -54,6 +53,6 @@ export default function HomeComponent() {
           <MobileSkillHinges />
         </div>
       </div>
-    </BasicPage>
+    </div>
   );
 }
