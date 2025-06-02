@@ -17,50 +17,41 @@ export default function TransitionLink({
     e.preventDefault();
 
     //Make sure this browser supports view transitions
-    if(!((document as any).startViewTransition)) {
-        router.push(href)
-        return;
+    if (!(document as any).startViewTransition) {
+      router.push(href);
+      return;
     }
 
-    router.push(href, { onTransitionReady() {
+    router.push(href, {
+      onTransitionReady() {
         document.documentElement.animate(
-            [
-                {
-                    opacity: 1,
-                    transform: "translateY(0)",
-                },
-                {
-                    opacity: 0.2,
-                    transform: "translateY(-35%)",
-                }
-            ],
-            {
-                duration: 1500,
-                easing: "cubic-bezier(0.87, 0, 0.15, 1)",
-                fill: "forwards",
-                pseudoElement: "::view-transition-old(root)",
-            }
-        )
+          [
+            { opacity: 1, transform: "scale(1)" },
+            { opacity: 0, transform: "scale(0.9)" },
+          ],
+          {
+            duration: 600,
+            easing: "ease-in",
+            fill: "forwards",
+            pseudoElement: "::view-transition-old(root)",
+          }
+        );
 
         document.documentElement.animate(
-            [
-                {
-                    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
-                },
-                {
-                    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
-                }
-            ],
-            {
-                duration: 1500,
-                easing: "cubic-bezier(0.87, 0, 0.15, 1)",
-                fill: "forwards",
-                pseudoElement: "::view-transition-new(root)",
-            }
-        )
-    }, })
-}
-
+          [
+            { opacity: 0, transform: "scale(1.1)" },
+            { opacity: 1, transform: "scale(1)" },
+          ],
+          {
+            duration: 600,
+            easing: "ease-out",
+            fill: "forwards",
+            pseudoElement: "::view-transition-new(root)",
+          }
+        );
+      },
+    });
+  };
 
   return (
     <Link
