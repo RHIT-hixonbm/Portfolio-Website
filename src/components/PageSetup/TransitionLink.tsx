@@ -16,6 +16,12 @@ export default function TransitionLink({
   const performClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
 
+    //Make sure this browser supports view transitions
+    if(!((document as any).startViewTransition)) {
+        router.push(href)
+        return;
+    }
+
     router.push(href, { onTransitionReady() {
         document.documentElement.animate(
             [
