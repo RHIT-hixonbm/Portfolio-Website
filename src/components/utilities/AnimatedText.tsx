@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import React from "react";
 
 export default function AnimatedText({
   children,
@@ -46,9 +47,8 @@ export default function AnimatedText({
       {/* Do it by word instead of letter because by letter causes words
       on the boundary to get separated, leading to harder reading */}
       {words.map((word: string, wordIdx: number) => (
-        <>
+        <React.Fragment key={wordIdx}>
           <span
-            key={wordIdx}
             style={{
               display: "inline-block",
               whiteSpace: "nowrap",
@@ -67,7 +67,7 @@ export default function AnimatedText({
             ))}
           </span>
           {wordIdx < words.length - 1 && <span> </span>}
-        </>
+        </React.Fragment>
       ))}
     </motion.span>
   );
