@@ -30,7 +30,7 @@ export default function TransitionLink({
             { opacity: 0, transform: "scale(0.9)" },
           ],
           {
-            duration: 600,
+            duration: 300,
             easing: "ease-in",
             fill: "forwards",
             pseudoElement: "::view-transition-old(root)",
@@ -43,7 +43,7 @@ export default function TransitionLink({
             { opacity: 1, transform: "scale(1)" },
           ],
           {
-            duration: 600,
+            duration: 300,
             easing: "ease-out",
             fill: "forwards",
             pseudoElement: "::view-transition-new(root)",
