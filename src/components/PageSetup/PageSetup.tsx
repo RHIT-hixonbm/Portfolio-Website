@@ -20,7 +20,7 @@ export default function PageSetup({
       </div>
       
       {/* Push the footer down */}
-      <div className="flex-1"> </div>
+      <div className="flex-1" />
       <div className="relative z-10">
         <Spacer height="6.5rem" />
         <Footer />
