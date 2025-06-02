@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import AnimatedText from "../utilities/AnimatedText";
 import { useState } from "react";
+import { easeOut, motion } from "framer-motion"
 
 export default function HeroBanner({ handleScrollToProjects }: { handleScrollToProjects?: () => void }) {
   const [nameFinishedAnimating, setNameFinishedAnimating] = useState(false);
@@ -30,16 +31,16 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
         </p>
       </div>
       {/* Profile picture */}
-      <div className="mb-8 rounded-full overflow-hidden w-50 h-50 mx-auto shadow-lg border-4 border-white">
+      <motion.div className="opacity-0 mb-8 rounded-full overflow-hidden w-50 h-50 mx-auto shadow-lg border-4 border-white" initial={{ scale: 0, opacity: 0 }} animate={{scale: nameFinishedAnimating ? 1 : 0, opacity: nameFinishedAnimating ? 1 : 0}} transition={{duration: 0.2, ease: easeOut}}>
         <Image
           src="/images/bust.png"
           alt="Brett M. Hixon"
-          width={144}
-          height={144}
+          width={512}
+          height={512}
           className="object-cover w-full h-full" 
           priority
         />
-      </div>
+      </motion.div>
 
       {/* Mission */}
       <p className="text-lg md:text-2xl max-w-6xl mb-8">
@@ -53,16 +54,19 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
       {/* Call to action buttons */}
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
         {/* View projects */}
-        <Button
-          size="lg"
-          variant="outline"
-          className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer"
-          onClick={handleScrollToProjects}
-        >
-          View My Work
-        </Button>
+        <motion.div initial={{scaleY: 0}} animate={{scaleY: nameFinishedAnimating ? 1 : 0}} transition={{duration: 0.5, ease: "easeOut"}} style={{overflow: "hidden"}}>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer"
+            onClick={handleScrollToProjects}
+          >
+            View My Work
+          </Button>
+        </motion.div>
         {/* View Resume */}
         <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <motion.div initial={{scaleY: 0}} animate={{scaleY: nameFinishedAnimating ? 1 : 0}} transition={{duration: 0.5, ease: "easeOut"}} style={{overflow: "hidden"}}>
           <Button
             size="lg"
             variant="outline"
@@ -70,6 +74,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
           >
             View Resume
           </Button>
+        </motion.div>
         </a>
       </div>
     </section>
