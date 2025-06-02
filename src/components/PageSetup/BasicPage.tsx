@@ -27,9 +27,11 @@ declare global {
 export default function BasicPage({
   children,
   backgroundColor = "white",
+  particlesEnabled = false,
 }: {
   children: React.ReactNode;
   backgroundColor?: string;
+  particlesEnabled?: boolean;
 }) {
   //Stop Next.js from throwing an error about window.ethereum being undefined on mobile
   useEffect(() => {
@@ -44,12 +46,14 @@ export default function BasicPage({
   const containerRef = useRef<Container>(null);
   // Call the particle engine intialization function
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
+    if(particlesEnabled) {
+      initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      }).then(() => {
+        setInit(true);
+      });
+    }
+  }, [particlesEnabled]);
   // Particles options
   const options: ISourceOptions = useMemo(
     () => ({
@@ -148,7 +152,7 @@ export default function BasicPage({
     };
   }, []);
 
-  return !init ? (
+  return !init || !particlesEnabled ? (
     <PageSetup backgroundColor={backgroundColor}>{children}</PageSetup>
   ) : (
     <>

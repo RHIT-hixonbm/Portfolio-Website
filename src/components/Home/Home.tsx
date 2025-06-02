@@ -25,7 +25,7 @@ export default function HomeComponent() {
   }, []);
 
   return (
-    <BasicPage backgroundColor={"#f5f5f5"}>
+    <BasicPage backgroundColor={"#f5f5f5"} particlesEnabled={true}>
       <HeroBanner handleScrollToProjects={handleScrollToProjects} />
       <div className="flex min-h-screen flex-col items-center px-4">
         {/*Projects*/}
