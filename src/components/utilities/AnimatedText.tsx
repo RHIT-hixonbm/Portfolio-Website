@@ -11,7 +11,7 @@ export default function AnimatedText({
   previousDone?: boolean;
   textSpeed?: number;
 }) {
-  const letters = children.split("");
+  const words = children.split(" ");
   const container = {
     hidden: {},
     visible: {
@@ -43,14 +43,31 @@ export default function AnimatedText({
       style={{ display: "inline-block", overflow: "hidden" }}
       onAnimationComplete={() => setFinishedAnimating(true)}
     >
-      {letters.map((char: string, idx: number) => (
-        <motion.span
-          key={idx}
-          variants={child}
-          style={{ display: "inline-block", whiteSpace: "pre" }}
-        >
-          {char}
-        </motion.span>
+      {/* Do it by word instead of letter because by letter causes words
+      on the boundary to get separated, leading to harder reading */}
+      {words.map((word: string, wordIdx: number) => (
+        <>
+          <span
+            key={wordIdx}
+            style={{
+              display: "inline-block",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+            }}
+          >
+            {/* The actual child is the letter, animate each one */}
+            {word.split("").map((char, charIdx) => (
+              <motion.span
+                key={`${wordIdx}-${charIdx}`}
+                variants={child}
+                style={{ display: "inline-block", whiteSpace: "pre" }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span>
+          {wordIdx < words.length - 1 && <span> </span>}
+        </>
       ))}
     </motion.span>
   );
