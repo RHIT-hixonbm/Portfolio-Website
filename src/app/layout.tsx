@@ -169,36 +169,22 @@ export default function RootLayout({
       >
         <div className="flex flex-col min-h-screen" style={{ backgroundColor }}>
           <Navbar />
-
-          {/* Main content area */}
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.div
-              key={pathname}
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -100, opacity: 0 }}
-              className="absolute inset-0 w-full h-full"
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-            >
-              {" "}
-              {particlesEnabled && init && (
-                <>
-                  {/* Particles background */}
-                  <div className="fixed inset-0 z-0 pointer-events-none">
-                    <Particles
-                      id="tsparticles"
-                      particlesLoaded={particlesLoaded}
-                      options={options}
-                    />
-                  </div>
-                </>
-              )}
-              <div className="relative z-10">
-                <main className="flex-1">{children}</main>
+          {/* Main content area */}{" "}
+          {particlesEnabled && init && (
+            <>
+              {/* Particles background */}
+              <div className="fixed inset-0 z-0 pointer-events-none">
+                <Particles
+                  id="tsparticles"
+                  particlesLoaded={particlesLoaded}
+                  options={options}
+                />
               </div>
-            </motion.div>
-          </AnimatePresence>
-
+            </>
+          )}
+          <div className="relative z-10">
+            <main className="flex-1">{children}</main>
+          </div>
           {/* Push the footer down */}
           <div className="flex-1" />
           <div className="relative z-10">
