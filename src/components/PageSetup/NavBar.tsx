@@ -11,8 +11,11 @@ import {
 import { Menu } from "lucide-react";
 import ContactPopover from "./ContactPopover/ContactPopover";
 import TransitionLink from "./TransitionLink";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState<boolean>(false);
+  
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 mb-3 rounded-lg border-b border-neutral-200" style={{ zIndex: 11 }}>
       <div className="container mx-auto flex justify-start md:justify-center items-center py-4 px-6 md:px-12">
@@ -31,7 +34,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger>
               <Menu className="w-6 h-6 text-neutral-900" />
             </SheetTrigger>
@@ -40,24 +43,9 @@ export default function Navbar() {
                 <SheetTitle className="text-4xl font-bold"><u>Menu</u></SheetTitle>
               </SheetHeader>
               <nav className="ml-4.5 mt-1.7 flex flex-col space-y-4">
-                <Link
-                  href="/"
-                  className="text-2xl font-bold text-neutral-700 hover:text-neutral-900"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  className="text-2xl font-bold text-neutral-700 hover:text-neutral-900"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/projects"
-                  className="text-2xl font-bold text-neutral-700 hover:text-neutral-900"
-                >
-                  Projects
-                </Link>
+                <TransitionLink href="/" setOpen={setOpen}>Home</TransitionLink>
+                <TransitionLink href="/about" setOpen={setOpen}>About</TransitionLink>
+                <TransitionLink href="/projects" setOpen={setOpen}>Projects</TransitionLink>
                 <div>
                   <ContactPopover /> {/* BONUS: This a mobile friendly hover card :) */}
                 </div>

@@ -9,9 +9,11 @@ import React from "react";
 export default function TransitionLink({
   href,
   children,
+  setOpen,
 }: {
   href: string;
   children: React.ReactNode;
+  setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const router = useTransitionRouter();
   const pathname = usePathname();
@@ -23,6 +25,11 @@ export default function TransitionLink({
     if (!(document as any).startViewTransition) {
       router.push(href);
       return;
+    }
+
+    //Close the mobile sheet if applicable
+    if (setOpen) {
+      setOpen(false);
     }
 
     router.push(href, {
@@ -57,15 +64,15 @@ export default function TransitionLink({
   };
 
   return (
-    <Link
-      href={href}
-      className={`${
-        pathname === href
-          ? "text-neutral-900 font-extrabold"
-          : "text-neutral-700"
-      } ${
-        pathname !== href ? "hover:text-neutral-900" : ""
-      } transition text-2xl font-bold  relative
+    <Link href={href} onClick={performClick}>
+      <span
+        className={`${
+          pathname === href
+            ? "text-neutral-900 font-extrabold"
+            : "text-neutral-700"
+        } ${
+          pathname !== href ? "hover:text-neutral-900" : ""
+        } transition text-2xl font-bold  relative
         text-neutral-700
         hover:text-neutral-900
         after:absolute
@@ -78,9 +85,9 @@ export default function TransitionLink({
         after:transition-all
         after:ease-in-out
         after:duration-300`}
-      onClick={performClick}
-    >
-      {children}
+      >
+        {children}
+      </span>
     </Link>
   );
 }
