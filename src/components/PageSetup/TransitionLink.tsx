@@ -9,11 +9,9 @@ import React from "react";
 export default function TransitionLink({
   href,
   children,
-  setOpen,
 }: {
   href: string;
   children: React.ReactNode;
-  setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const router = useTransitionRouter();
   const pathname = usePathname();
@@ -25,11 +23,6 @@ export default function TransitionLink({
     if (!(document as any).startViewTransition) {
       router.push(href);
       return;
-    }
-
-    //Close the mobile sheet if applicable
-    if (setOpen) {
-      setOpen(false);
     }
 
     router.push(href, {

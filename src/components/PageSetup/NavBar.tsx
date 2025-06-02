@@ -43,9 +43,9 @@ export default function Navbar() {
                 <SheetTitle className="text-4xl font-bold"><u>Menu</u></SheetTitle>
               </SheetHeader>
               <nav className="ml-4.5 mt-1.7 flex flex-col space-y-4">
-                <TransitionLink href="/" setOpen={setOpen}>Home</TransitionLink>
-                <TransitionLink href="/about" setOpen={setOpen}>About</TransitionLink>
-                <TransitionLink href="/projects" setOpen={setOpen}>Projects</TransitionLink>
+                <Link href="/" onClick={() => setOpen(false)} className={`text-neutral-700 cursor-pointer "hover:text-neutral-900" transition text-2xl font-bold relativetext-neutral-700 hover:text-neutral-900`}>Home</Link>
+                <Link href="/about" onClick={() => setOpen(false)} className={`text-neutral-700 cursor-pointer "hover:text-neutral-900" transition text-2xl font-bold relativetext-neutral-700 hover:text-neutral-900`}>About</Link>
+                <Link href="/projects" onClick={() => setOpen(false)} className={`text-neutral-700 cursor-pointer "hover:text-neutral-900" transition text-2xl font-bold relativetext-neutral-700 hover:text-neutral-900`}>Projects</Link>
                 <div>
                   <ContactPopover /> {/* BONUS: This a mobile friendly hover card :) */}
                 </div>
