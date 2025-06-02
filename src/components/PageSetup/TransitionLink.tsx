@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 // CREDIT Codegrid at https://www.youtube.com/watch?v=hpt7SsZUCbs&t=136s
@@ -13,6 +14,8 @@ export default function TransitionLink({
   children: React.ReactNode;
 }) {
   const router = useTransitionRouter();
+  const pathname = usePathname();
+
   const performClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
 
@@ -56,7 +59,25 @@ export default function TransitionLink({
   return (
     <Link
       href={href}
-      className="text-neutral-700 hover:text-neutral-900 transition text-2xl font-bold"
+      className={`${
+        pathname === href
+          ? "text-neutral-900 font-extrabold"
+          : "text-neutral-700"
+      } ${
+        pathname !== href ? "hover:text-neutral-900" : ""
+      } transition text-2xl font-bold  relative
+        text-neutral-700
+        hover:text-neutral-900
+        after:absolute
+        after:left-0
+        after:-bottom-1
+        after:h-[0.2rem]
+        after:w-0
+        after:bg-black
+        hover:after:w-full
+        after:transition-all
+        after:ease-in-out
+        after:duration-300`}
       onClick={performClick}
     >
       {children}
