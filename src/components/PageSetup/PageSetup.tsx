@@ -19,7 +19,8 @@ export default function PageSetup({
         <main className="flex-1">{children}</main>
       </div>
       
-      {/* Spacer to push footer down a bit */}
+      {/* Push the footer down */}
+      <div className="flex-1"> </div>
       <div className="relative z-10">
         <Spacer height="6.5rem" />
         <Footer />
