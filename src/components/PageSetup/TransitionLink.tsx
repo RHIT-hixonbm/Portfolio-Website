@@ -18,18 +18,26 @@ export default function TransitionLink({
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const update = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+    if (typeof window !== "undefined") {
+      const update = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
 
-    update(); // run once on mount
-    window.addEventListener("resize", update);
+      update(); // run once on mount
+      window.addEventListener("resize", update);
 
-    return () => window.removeEventListener("resize", update);
+      return () => window.removeEventListener("resize", update);
+    }
   }, []);
 
   const performClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
+
+    // Only run on client-side
+    if (typeof document === "undefined") {
+      router.push(href);
+      return;
+    }
 
     //Make sure this browser supports view transitions
     if (!(document as any).startViewTransition) {
@@ -39,6 +47,9 @@ export default function TransitionLink({
 
     router.push(href, {
       onTransitionReady() {
+        // Only run animations on client-side
+        if (typeof document === "undefined") return;
+
         const desktopEase = "cubic-bezier(0.25, 0.1, 0.25, 1)"; // Optimized for smoothness
         const mobileEase = "cubic-bezier(0.87, 0, 0.13, 1)";
 
@@ -48,8 +59,8 @@ export default function TransitionLink({
         if (!isMobile) {
           document.documentElement.animate(
             [
-              { opacity: 1, transform: "tranzlateZ(0) scale(1)" },
-              { opacity: 0, transform: "tranzlateZ(0) scale(0.95)" },
+              { opacity: 1, transform: "translateZ(0) scale(1)" },
+              { opacity: 0, transform: "translateZ(0) scale(0.95)" },
             ],
             {
               duration: 600,

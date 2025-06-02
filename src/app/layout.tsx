@@ -5,7 +5,6 @@ import "./globals.css";
 import Footer from "@/components/PageSetup/Footer";
 import Navbar from "@/components/PageSetup/NavBar";
 import Spacer from "@/components/PageSetup/Spacer";
-import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React, {
   useEffect,
@@ -22,7 +21,23 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
-import { ViewTransitions } from "next-view-transitions"
+import { ViewTransitions } from "next-view-transitions";
+
+declare global {
+  interface EthereumProvider {
+    isMetaMask?: boolean;
+    isConnected(): boolean;
+    request(args: { method: string; params?: unknown[] }): Promise<unknown>;
+    on(eventName: string, listener: (...args: any[]) => void): void;
+    removeListener(eventName: string, listener: (...args: any[]) => void): void;
+    selectedAddress: string | null;
+  }
+
+  interface Window {
+    ethereum?: EthereumProvider;
+  }
+}
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,11 +59,23 @@ export default function RootLayout({
   const pathname = usePathname();
   const particlesEnabled = pathname === "/";
 
-  //Stop Next.js from throwing an error about window.ethereum being undefined on mobile
+  //Stop Next.js from throwing an error about window.ethereum being undefined on Brave browser
   useEffect(() => {
-    if (typeof window !== "undefined" && !window.ethereum) {
-      window.ethereum = {};
-      window.ethereum.selectedAddress = {};
+    if (typeof document === "undefined") return;
+
+    if (!window.ethereum) {
+      window.ethereum = {
+        selectedAddress: null,
+        isMetaMask: false,
+        request: async () => {},
+        on: () => {},
+        removeListener: () => {},
+        isConnected: () => false,
+      }; 
+    }
+
+    if (!window.ethereum.selectedAddress) {
+      window.ethereum.selectedAddress = null;
     }
   }, []);
 
@@ -169,7 +196,10 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <div className="flex flex-col min-h-screen" style={{ backgroundColor }}>
+          <div
+            className="flex flex-col min-h-screen"
+            style={{ backgroundColor }}
+          >
             <Navbar />
             {/* Main content area */}{" "}
             {particlesEnabled && init && (
