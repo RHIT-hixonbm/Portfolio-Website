@@ -167,19 +167,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {" "}
-        {particlesEnabled && init && (
-          <>
-            {/* Particles background */}
-            <div className="fixed inset-0 z-0 pointer-events-none">
-              <Particles
-                id="tsparticles"
-                particlesLoaded={particlesLoaded}
-                options={options}
-              />
-            </div>
-          </>
-        )}
         <div className="flex flex-col min-h-screen" style={{ backgroundColor }}>
           <Navbar />
 
@@ -190,8 +177,22 @@ export default function RootLayout({
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -100, opacity: 0 }}
+              className="absolute inset-0 w-full h-full"
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
+              {" "}
+              {particlesEnabled && init && (
+                <>
+                  {/* Particles background */}
+                  <div className="fixed inset-0 z-0 pointer-events-none">
+                    <Particles
+                      id="tsparticles"
+                      particlesLoaded={particlesLoaded}
+                      options={options}
+                    />
+                  </div>
+                </>
+              )}
               <div className="relative z-10">
                 <main className="flex-1">{children}</main>
               </div>
