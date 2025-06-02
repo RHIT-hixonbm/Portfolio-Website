@@ -11,10 +11,15 @@ import {
 import { Menu } from "lucide-react";
 import ContactPopover from "./ContactPopover/ContactPopover";
 import TransitionLink from "./TransitionLink";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname])
   
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 mb-3 rounded-lg border-b border-neutral-200" style={{ zIndex: 11 }}>
@@ -43,9 +48,9 @@ export default function Navbar() {
                 <SheetTitle className="text-4xl font-bold"><u>Menu</u></SheetTitle>
               </SheetHeader>
               <nav className="ml-4.5 mt-1.7 flex flex-col space-y-4">
-                <Link href="/" onClick={() => setOpen(false)} className={`text-neutral-700 cursor-pointer "hover:text-neutral-900" transition text-2xl font-bold relativetext-neutral-700 hover:text-neutral-900`}>Home</Link>
-                <Link href="/about" onClick={() => setOpen(false)} className={`text-neutral-700 cursor-pointer "hover:text-neutral-900" transition text-2xl font-bold relativetext-neutral-700 hover:text-neutral-900`}>About</Link>
-                <Link href="/projects" onClick={() => setOpen(false)} className={`text-neutral-700 cursor-pointer "hover:text-neutral-900" transition text-2xl font-bold relativetext-neutral-700 hover:text-neutral-900`}>Projects</Link>
+                <TransitionLink href="/">Home</TransitionLink>
+                <TransitionLink href="/about">About</TransitionLink>
+                <TransitionLink href="/projects">Projects</TransitionLink>
                 <div>
                   <ContactPopover /> {/* BONUS: This a mobile friendly hover card :) */}
                 </div>

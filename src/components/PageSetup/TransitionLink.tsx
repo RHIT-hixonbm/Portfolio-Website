@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // CREDIT Codegrid at https://www.youtube.com/watch?v=hpt7SsZUCbs&t=136s
 export default function TransitionLink({
@@ -15,6 +15,18 @@ export default function TransitionLink({
 }) {
   const router = useTransitionRouter();
   const pathname = usePathname();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const update = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    update(); // run once on mount
+    window.addEventListener("resize", update);
+
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   const performClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
@@ -27,31 +39,60 @@ export default function TransitionLink({
 
     router.push(href, {
       onTransitionReady() {
-        document.documentElement.animate(
-          [
-            { opacity: 1, transform: "scale(1)" },
-            { opacity: 0, transform: "scale(0.9)" },
-          ],
-          {
-            duration: 300,
-            easing: "ease-in",
-            fill: "forwards",
-            pseudoElement: "::view-transition-old(root)",
-          }
-        );
+        console.log(isMobile);
+        if (!isMobile) {
+          document.documentElement.animate(
+            [
+              { opacity: 1, transform: "scale(1)" },
+              { opacity: 0, transform: "scale(0.9)" },
+            ],
+            {
+              duration: 300,
+              easing: "ease-in",
+              fill: "forwards",
+              pseudoElement: "::view-transition-old(root)",
+            }
+          );
 
-        document.documentElement.animate(
-          [
-            { opacity: 0, transform: "scale(1.1)" },
-            { opacity: 1, transform: "scale(1)" },
-          ],
-          {
-            duration: 300,
-            easing: "ease-out",
-            fill: "forwards",
-            pseudoElement: "::view-transition-new(root)",
-          }
-        );
+          document.documentElement.animate(
+            [
+              { opacity: 0, transform: "scale(1.1)" },
+              { opacity: 1, transform: "scale(1)" },
+            ],
+            {
+              duration: 300,
+              easing: "ease-out",
+              fill: "forwards",
+              pseudoElement: "::view-transition-new(root)",
+            }
+          );
+        } else {
+          document.documentElement.animate(
+            [
+              { opacity: 1, transform: "translateY(0)" },
+              { opacity: 0.2, transform: "translateY(-35%)" },
+            ],
+            {
+              duration: 1000,
+              easing: "cubic-bezier(0.87,  0, 0.13, 1)",
+              fill: "forwards",
+              pseudoElement: "::view-transition-old(root)",
+            }
+          );
+
+          document.documentElement.animate(
+            [
+              { clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" },
+              { clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)" },
+            ],
+            {
+              duration: 1000,
+              easing: "cubic-bezier(0.87,  0, 0.13, 1)",
+              fill: "forwards",
+              pseudoElement: "::view-transition-new(root)",
+            }
+          );
+        }
       },
     });
   };
