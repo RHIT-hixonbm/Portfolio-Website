@@ -39,16 +39,21 @@ export default function TransitionLink({
 
     router.push(href, {
       onTransitionReady() {
-        console.log(isMobile);
+        const desktopEase = "cubic-bezier(0.25, 0.1, 0.25, 1)"; // Optimized for smoothness
+        const mobileEase = "cubic-bezier(0.87, 0, 0.13, 1)";
+
+        // Prepare for GPU acceleration
+        document.documentElement.style.willChange = 'transform, opacity';
+
         if (!isMobile) {
           document.documentElement.animate(
             [
-              { opacity: 1, transform: "scale(1)" },
-              { opacity: 0, transform: "scale(0.9)" },
+              { opacity: 1, transform: "tranzlateZ(0) scale(1)" },
+              { opacity: 0, transform: "tranzlateZ(0) scale(0.95)" },
             ],
             {
-              duration: 300,
-              easing: "ease-in",
+              duration: 600,
+              easing: desktopEase,
               fill: "forwards",
               pseudoElement: "::view-transition-old(root)",
             }
@@ -56,12 +61,12 @@ export default function TransitionLink({
 
           document.documentElement.animate(
             [
-              { opacity: 0, transform: "scale(1.1)" },
-              { opacity: 1, transform: "scale(1)" },
+              { opacity: 0, transform: "translateZ(0) scale(1.05)" },
+              { opacity: 1, transform: "translateZ(0) scale(1)" },
             ],
             {
-              duration: 300,
-              easing: "ease-out",
+              duration: 600,
+              easing: desktopEase,
               fill: "forwards",
               pseudoElement: "::view-transition-new(root)",
             }
@@ -74,7 +79,7 @@ export default function TransitionLink({
             ],
             {
               duration: 1000,
-              easing: "cubic-bezier(0.87,  0, 0.13, 1)",
+              easing: mobileEase,
               fill: "forwards",
               pseudoElement: "::view-transition-old(root)",
             }
@@ -87,7 +92,7 @@ export default function TransitionLink({
             ],
             {
               duration: 1000,
-              easing: "cubic-bezier(0.87,  0, 0.13, 1)",
+              easing: mobileEase,
               fill: "forwards",
               pseudoElement: "::view-transition-new(root)",
             }
