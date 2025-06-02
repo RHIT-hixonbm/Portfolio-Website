@@ -1,26 +1,32 @@
 import React, { useState } from "react";
 
 const calculateSafetyBoxStyle = (contentRect: DOMRect): React.CSSProperties => {
-    //Calculate the safety box left position based on the content rectangle and a box sizing multiplier
-    const boxSizingMultiplier = 1.3; // Adjust this multiplier to increase the size of the safety box
-    const contentRectXCenter = contentRect.left + contentRect.width / 2;
-    const safetyBoxXCenter = contentRect.left + (contentRect.width * boxSizingMultiplier / 2);
-    const safetyBoxLeft = contentRect.left - (safetyBoxXCenter - contentRectXCenter);
+  // Calculate the safety box left position based on the content rectangle and a box sizing multiplier
+  const boxSizingMultiplier = 1.3; // Adjust this multiplier to increase the size of the safety box
+  const contentRectXCenter = contentRect.left + contentRect.width / 2;
+  const safetyBoxXCenter =
+    contentRect.left + (contentRect.width * boxSizingMultiplier) / 2;
+  const safetyBoxLeft =
+    contentRect.left - (safetyBoxXCenter - contentRectXCenter);
 
-    //Calculate the safety box top position based on the content rectangle and a box sizing multiplier
-    const contentRectYCenter = contentRect.top + contentRect.height / 2;
-    const heightAdditional = 20; // Add an offset to the height to ensure the safety box covers the area around the popover trigger
-    const safetyBoxYCenter = contentRect.top + heightAdditional + (contentRect.height * boxSizingMultiplier / 2);
-    const safetyBoxTop = contentRect.top - (safetyBoxYCenter - contentRectYCenter);
+  // Calculate the safety box top position based on the content rectangle and a box sizing multiplier
+  const contentRectYCenter = contentRect.top + contentRect.height / 2;
+  const heightAdditional = 20; // Add an offset to the height to ensure the safety box covers the area around the popover trigger
+  const safetyBoxYCenter =
+    contentRect.top +
+    heightAdditional +
+    (contentRect.height * boxSizingMultiplier) / 2;
+  const safetyBoxTop =
+    contentRect.top - (safetyBoxYCenter - contentRectYCenter);
 
-    return {
-        left: safetyBoxLeft,
-        top: safetyBoxTop,
-        width: contentRect.width * boxSizingMultiplier,
-        height: contentRect.height * boxSizingMultiplier + heightAdditional,
-        zIndex: 12,
-    }
-}
+  return {
+    left: safetyBoxLeft,
+    top: safetyBoxTop,
+    width: contentRect.width * boxSizingMultiplier,
+    height: contentRect.height * boxSizingMultiplier + heightAdditional,
+    zIndex: 12,
+  };
+};
 
 export default function SafetyBox({
   popoverContentRef,
@@ -35,11 +41,20 @@ export default function SafetyBox({
     React.CSSProperties,
     React.Dispatch<React.SetStateAction<React.CSSProperties>>
   ] = useState({});
-  //Position the safety box to cover the area around the popover
+  // Position the safety box to cover the area around the popover
   React.useEffect(() => {
-    if (popoverContentRef.current) {
-      const contentRect = popoverContentRef.current.getBoundingClientRect();
-      setSafetyBoxStyle(calculateSafetyBoxStyle(contentRect));
+    if (open) {
+      // Doing this in a timeout because on first render we need a little delay
+      // to ensure the content has actually rendered
+      const timeout = setTimeout(() => {
+        if (popoverContentRef.current) {
+          const contentRect = popoverContentRef.current.getBoundingClientRect();
+          setSafetyBoxStyle(calculateSafetyBoxStyle(contentRect));
+        }
+      }, 20);
+      return () => clearTimeout(timeout);
+    } else {
+      setSafetyBoxStyle({ display: "none" })
     }
   }, [open, popoverContentRef]);
   // Handles mouse leave events for the safety area
@@ -58,7 +73,11 @@ export default function SafetyBox({
     <>
       {open && (
         <div
-          style={{ ...safetyBoxStyle, pointerEvents: "auto", position: "fixed" }}
+          style={{
+            ...safetyBoxStyle,
+            pointerEvents: "auto",
+            position: "fixed",
+          }}
           onMouseLeave={handleMouseSafetyArea}
           id="safety-box"
         />
