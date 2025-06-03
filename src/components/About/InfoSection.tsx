@@ -17,6 +17,8 @@ export default function InfoSection({
   imageBorder,
   imageBackground = "bg-transparent",
   imageShadow,
+  imageWidth = "w=20",
+  imageHeight = "h-20",
 }: {
   iconMt?: string;
   imageSrc?: string;
@@ -26,14 +28,16 @@ export default function InfoSection({
   children?: React.ReactNode;
   overflow?: string;
   imageBorder?: string;
-  imageBackground?: string
-  imageShadow?: string
+  imageBackground?: string;
+  imageShadow?: string;
+  imageWidth?: string;
+  imageHeight?: string;
 }) {
   return (
     <Card className="w-full border-4 border-black">
       <CardHeader className="flex flex-col items-center">
         <div
-          className={`w-32 h-32 rounded-full ${imageBorder} ${overflow} border-gray-200 flex items-center justify-center mb-4 ${iconMt} ${imageShadow} ${imageBackground}`}
+          className={`${imageWidth} ${imageHeight} rounded-full ${imageBorder} ${overflow} border-gray-200 flex items-center justify-center mb-4 ${iconMt} ${imageShadow} ${imageBackground}`}
         >
           <Image
             alt={imageAlt}

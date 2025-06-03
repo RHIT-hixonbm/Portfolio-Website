@@ -23,6 +23,8 @@ export default function AboutComponent() {
           iconMt="-mt-20"
           cardDescription={"About Me"}
           overflow="overflow-hidden"
+          imageHeight="h-32"
+          imageWidth="h-32"
           cardContent={
             <div className="space-y-6 text-lg leading-relaxed text-gray-800">
               <p>
@@ -248,6 +250,17 @@ export default function AboutComponent() {
           imageSrc="/images/trophy.png"
           imageAlt="Trophy"
         />
+      </motion.div>
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="w-full"
+      >
+        <InfoSection cardDescription={"Fun Facts"} cardContent={"Fill me out"} imageSrc="/images/star-struck.png" >
+        </InfoSection>
       </motion.div>
     </div>
   );
