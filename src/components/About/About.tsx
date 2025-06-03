@@ -207,8 +207,47 @@ export default function AboutComponent() {
       >
         <InfoSection
           cardDescription={"Awards & Honors"}
-          cardContent={"I'll put stuff here eventually"}
-        ></InfoSection>
+          cardContent={
+            <div className="flex flex-col gap-4">
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded shadow-sm">
+                <h4 className="text-lg font-bold text-yellow-700 flex items-center gap-2">
+                  <span role="img" aria-label="star">
+                    🏆
+                  </span>{" "}
+                  Dean's List
+                </h4>
+                <p className="text-gray-800 mt-1">
+                  Recognized for academic excellence every term at Rose-Hulman
+                  Institute of Technology (2023–Present).
+                </p>
+              </div>
+              <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded shadow-sm">
+                <h4 className="text-lg font-bold text-green-700 flex items-center gap-2">
+                  <span role="img" aria-label="laurel">
+                    🏅
+                  </span>{" "}
+                  Heminway Scholar
+                </h4>
+                <p className="text-gray-800 mt-1">
+                  Given to first-year students who have the highest GPA at the end of the academic year (2025).
+                </p>
+              </div>
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm">
+                <h4 className="text-lg font-bold text-blue-700 flex items-center gap-2">
+                  <span role="img" aria-label="medal">
+                    🥇
+                  </span>{" "}
+                  College Board National Recognition Program Scholar
+                </h4>
+                <p className="text-gray-800 mt-1">
+                  Honored by the College Board for outstanding academic achievement and performance on national assessments (2022).
+                </p>
+              </div>
+            </div>
+          }
+          imageSrc="/images/trophy.png"
+          imageAlt="Trophy"
+        />
       </motion.div>
     </div>
   );
