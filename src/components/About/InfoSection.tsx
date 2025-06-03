@@ -42,7 +42,7 @@ export default function InfoSection({
         <div
           className={`${imageWidth} ${imageHeight} rounded-full ${imageBorder} ${overflow} border-gray-200 flex items-center justify-center mb-4 ${iconMt} ${imageShadow} ${imageBackground}`}
         >
-          <motion.image
+          <motion.div
             initial={{ rotate: -180, opacity: 0 }}
             whileInView={{ rotate: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -55,7 +55,7 @@ export default function InfoSection({
               height={128}
               className="object-cover w-full h-full"
             />
-          </motion.image>
+          </motion.div>
         </div>
         <CardDescription className="flex items-start text-4xl font-bold text-gray-700 mt-2 tracking-wide">
           {cardDescription}
