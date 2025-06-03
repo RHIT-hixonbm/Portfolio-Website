@@ -21,7 +21,7 @@ export default function InfoSection({
   imageBorder,
   imageBackground = "bg-transparent",
   imageShadow,
-  imageWidth = "w=20",
+  imageWidth = "w-20",
   imageHeight = "h-20",
 }: {
   iconMt?: string;

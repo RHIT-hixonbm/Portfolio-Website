@@ -24,7 +24,7 @@ export default function AboutComponent() {
           cardDescription={"About Me"}
           overflow="overflow-hidden"
           imageHeight="h-32"
-          imageWidth="h-32"
+          imageWidth="w-32"
           cardContent={
             <div className="space-y-6 text-lg leading-relaxed text-gray-800">
               <p>
