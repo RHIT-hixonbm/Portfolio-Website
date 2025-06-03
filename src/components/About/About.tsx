@@ -2,6 +2,7 @@
 
 import InfoSection from "./InfoSection";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
 
 export default function AboutComponent() {
   const fadeInUp = {
@@ -46,7 +47,11 @@ export default function AboutComponent() {
                   by my mom in 5th grade and thought moving Angry Birds was kind
                   of cool. Then, my 8th grade STEM teacher Mrs. Sellers made me
                   realize this could be more than just a passion but a career
-                  for life.
+                  for life. I began exploring career paths related to software
+                  development and began digging into early programming concepts
+                  through the platform ROBLOX. Through making games and
+                  realizing the process's potential impact on my future, my
+                  passion grew evemore more fervent.
                 </span>
                 <span className="block mt-2">
                   Now I am a part of Rose-Hulman's class of 2027 pursuing my
@@ -63,19 +68,28 @@ export default function AboutComponent() {
                 <span className="block mt-2">
                   If it's possible, I love to dig into games to understand how
                   they were made and how modern ones are able to program such
-                  complex interactions.
+                  complex interactions. My passion for programming ramped up
+                  exponentially by trying to figure out how video game cheaters
+                  and script injectors were able to accomplish such feats.
                 </span>
                 <span className="block mt-2">
                   Through my studies at Rose-Hulman, I've discovered a passion
                   for low-level concurrency problems and systems programming. In
                   my Operating Systems class, I loved producer-consumer
-                  scenarios, threading, and thinking like an operating system.
-                </span>
-                <span className="block mt-2">
-                  I also was a teaching assistant for our introductory systems
+                  scenarios, threading, and thinking like an operating system. I
+                  was also a teaching assistant for our introductory systems
                   programming course at Rose-Hulman for the entirety of my
                   Sophomore year where I thoroughly enjoyed teaching others
                   these concepts.
+                </span>
+                <span className="block mt-2">
+                  During my internship and Rose-Ventures I learned about various
+                  frameworks such as ASP.NET Core, Entity Framework Core, and
+                  React. I used this as an opportunity to apply my robust
+                  understanding of programming concepts to something that had a
+                  practical application. My time spent in industry has made
+                  realize all the more that this field offers limitless possibly
+                  and incessantly reinvigorates by curiousity.
                 </span>
               </p>
               <p>
@@ -339,6 +353,28 @@ export default function AboutComponent() {
           }
           imageSrc="/images/star-struck.png"
         />
+      </motion.div>
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="w-full flex justify-center mb-5 mt-2"
+      >
+        <a
+          href="/documents/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer text-3xl h-13"
+          >
+            View Full Resume
+          </Button>
+        </a>
       </motion.div>
     </div>
   );

@@ -47,7 +47,7 @@ export default function HomeComponent() {
           <ExperienceLinks />
         </div>
         {/* Skills */}
-        <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
+        <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center mb-8">
           <h1 className="text-3xl font-bold text-center my-8">Skills & Frameworks</h1>
           <SkillsMountain />
           <MobileSkillHinges />
