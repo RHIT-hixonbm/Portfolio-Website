@@ -13,6 +13,10 @@ export default function InfoSection({
   cardDescription,
   cardContent,
   children,
+  overflow,
+  imageBorder,
+  imageBackground = "bg-transparent",
+  imageShadow,
 }: {
   iconMt?: string;
   imageSrc?: string;
@@ -20,14 +24,16 @@ export default function InfoSection({
   cardDescription: string;
   cardContent: React.ReactNode;
   children?: React.ReactNode;
+  overflow?: string;
+  imageBorder?: string;
+  imageBackground?: string
+  imageShadow?: string
 }) {
   return (
     <Card className="w-full border-4 border-black">
       <CardHeader className="flex flex-col items-center">
         <div
-          className={`w-32 h-32 rounded-full overflow-hidden border-4 border-gray-200 flex items-center justify-center mb-4 ${
-            iconMt ?? ""
-          } shadow-lg bg-white`}
+          className={`w-32 h-32 rounded-full ${imageBorder} ${overflow} border-gray-200 flex items-center justify-center mb-4 ${iconMt} ${imageShadow} ${imageBackground}`}
         >
           <Image
             alt={imageAlt}
@@ -37,11 +43,11 @@ export default function InfoSection({
             className="object-cover w-full h-full"
           />
         </div>
-        <CardDescription className="text-4xl font-bold text-gray-700 mt-2 tracking-wide">
+        <CardDescription className="flex items-start text-4xl font-bold text-gray-700 mt-2 tracking-wide">
           {cardDescription}
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col items-start justify-center text-left px-6 py-4">
+      <CardContent className="flex flex-col justify-center px-6 py-4">
         <div className="text-lg text-gray-600 leading-relaxed">
           {cardContent}
         </div>
