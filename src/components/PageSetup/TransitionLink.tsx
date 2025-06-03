@@ -52,8 +52,6 @@ export default function TransitionLink({
 
         const desktopEase = "cubic-bezier(0.25, 0.1, 0.25, 1)"; // Optimized for smoothness
         const mobileEase = "cubic-bezier(0.87, 0, 0.13, 1)";
-        
-        let animation: Animation = null;
 
         if (!isMobile) {
           document.documentElement.animate(
@@ -69,7 +67,7 @@ export default function TransitionLink({
             }
           );
 
-          animation = document.documentElement.animate(
+          document.documentElement.animate(
             [
               { opacity: 0, transform: "translateZ(0) scale(1.05)" },
               { opacity: 1, transform: "translateZ(0) scale(1)" },
@@ -95,7 +93,7 @@ export default function TransitionLink({
             }
           );
 
-          animation = document.documentElement.animate(
+          document.documentElement.animate(
             [
               { clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" },
               { clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)" },
@@ -108,7 +106,6 @@ export default function TransitionLink({
             }
           );
         }
-        
       },
     });
   };
