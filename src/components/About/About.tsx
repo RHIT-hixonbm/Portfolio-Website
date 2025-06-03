@@ -17,7 +17,7 @@ export default function AboutComponent() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-full"
+        className="w-full mt-6"
       >
         <InfoSection
           iconMt="-mt-20"
@@ -315,11 +315,11 @@ export default function AboutComponent() {
                   , and other Japanese cuisine!
                 </span>
               </li>
-              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-yellow-50 rounded-xl p-4 shadow-md border-l-4 border-blue-600">
-                <span className="text-2xl">🈶️</span>
+              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-yellow-50 rounded-xl p-4 shadow-md border-l-4 border-orange-400">
+                <span className="text-2xl">⛩️</span>
                 <span className="text-lg text-gray-800">
                   My favorite Japanese word is{" "}
-                  <span className="font-semibold text-blue-700">
+                  <span className="font-semibold text-orange-400">
                     親子丼 (oyakodon)
                   </span>
                   , which means "chicken and egg rice bowl."
