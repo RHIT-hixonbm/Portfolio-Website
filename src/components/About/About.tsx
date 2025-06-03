@@ -162,55 +162,57 @@ export default function AboutComponent() {
           imageSrc="/images/gradcap.png"
           imageAlt="Graduation Cap"
         >
-          <h4 className="text-lg font-bold mt-5 mb-2 text-blue-700">
+          <h4 className="text-lg md:text-4xl font-bold mt-5 mb-2 text-blue-700 text-center">
             Related Courses
           </h4>
-          <ul className="list-disc list-inside text-left bg-gradient-to-r from-blue-50 via-white to-pink-50 rounded-xl p-6 shadow-md border bor</li>der-blue-200">
-            <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
-              CSSE 280:{" "}
-              <span className="font-normal text-gray-700">
-                Introduction to Web Programming
-              </span>
-            </li>
-            <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
-              CSSE 230:{" "}
-              <span className="font-normal text-gray-700">
-                Data Structures and Algorithm Analysis
-              </span>
-            </li>
-            <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
-              CSSE 332:{" "}
-              <span className="font-normal text-gray-700">
-                Operating Systems
-              </span>
-            </li>
-            <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
-              CSSE 333:{" "}
-              <span className="font-normal text-gray-700">
-                Introduction to Database Systems
-              </span>
-            </li>
-            <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
-              CSSE 232:{" "}
-              <span className="font-normal text-gray-700">
-                Computer Architecture I
-              </span>
-            </li>
-            <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
-              ECE 232:{" "}
-              <span className="font-normal text-gray-700 md:pl-3">
-                Introduction to Digital Systems
-              </span>
-            </li>
-            <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
-              MA 374:{" "}
-              <span className="font-normal text-gray-700 md:pl-3">Combinatorics</span>
-            </li>
-            <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
-              JP 113:{" "}
-              <span className="font-normal text-gray-700 md:pl-7.5">Japanese III</span>
-            </li>
-          </ul>
+            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center w-full max-w-2xl">
+              {[
+              {
+                code: "CSSE 280",
+                name: "Introduction to Web Programming",
+              },
+              {
+                code: "CSSE 230",
+                name: "Data Structures and Algorithm Analysis",
+              },
+              {
+                code: "CSSE 332",
+                name: "Operating Systems",
+              },
+              {
+                code: "CSSE 333",
+                name: "Introduction to Database Systems",
+              },
+              {
+                code: "CSSE 232",
+                name: "Computer Architecture I",
+              },
+              {
+                code: "ECE 232",
+                name: "Introduction to Digital Systems",
+              },
+              {
+                code: "MA 374",
+                name: "Combinatorics",
+              },
+              {
+                code: "JP 113",
+                name: "Japanese III",
+              },
+              ].map((course) => (
+              <div
+                key={course.code}
+                className="mb-2 text-lg md:text-2xl font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200 flex items-center"
+              >
+                <span className="mr-0.5 text-blue-700">•</span>
+                <span className="w-32 md:w-32 text-left">{course.code}:</span>
+                <span className="font-normal text-gray-700 ml-0.5">{course.name}</span>
+              </div>
+              ))}
+            </div>
+
+          </div>
         </InfoSection>
       </motion.div>
       <motion.div
