@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import AnimatedText from "../utilities/AnimatedText";
 
 export default function InfoSection({
   iconMt,
@@ -58,7 +59,7 @@ export default function InfoSection({
           </motion.div>
         </div>
         <CardDescription className="flex items-start text-4xl font-bold text-gray-700 mt-2 tracking-wide">
-          {cardDescription}
+          <AnimatedText textSpeed={0.05}>{cardDescription}</AnimatedText>
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col justify-center px-6 py-4">

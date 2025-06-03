@@ -1,5 +1,7 @@
-import { motion } from "framer-motion";
-import React from "react";
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
 
 export default function AnimatedText({
   children,
@@ -36,11 +38,24 @@ export default function AnimatedText({
     },
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  // Trigger the animation only once when in view and previous is done
+  useEffect(() => {
+    if (isInView && previousDone) {
+      setShouldAnimate(true);
+    }
+  }, [isInView, previousDone]);
+
   return (
     <motion.span
+      ref={ref}
       variants={container}
       initial="hidden"
-      animate={previousDone ? "visible" : "hidden"}
+      whileInView={shouldAnimate ? "visible" : "hidden"}
+      viewport={{ once: true }}
       style={{ display: "inline-block", overflow: "hidden" }}
       onAnimationComplete={() => setFinishedAnimating(true)}
     >
