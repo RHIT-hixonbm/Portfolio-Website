@@ -231,7 +231,8 @@ export default function AboutComponent() {
                   Heminway Scholar
                 </h4>
                 <p className="text-gray-800 mt-1">
-                  Given to first-year students who have the highest GPA at the end of the academic year (2025).
+                  Given to first-year students who have the highest GPA at the
+                  end of the academic year (2025).
                 </p>
               </div>
               <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm">
@@ -242,7 +243,8 @@ export default function AboutComponent() {
                   College Board National Recognition Program Scholar
                 </h4>
                 <p className="text-gray-800 mt-1">
-                  Honored by the College Board for outstanding academic achievement and performance on national assessments (2022).
+                  Honored by the College Board for outstanding academic
+                  achievement and performance on national assessments (2022).
                 </p>
               </div>
             </div>
@@ -259,8 +261,84 @@ export default function AboutComponent() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="w-full"
       >
-        <InfoSection cardDescription={"Fun Facts"} cardContent={"Fill me out"} imageSrc="/images/star-struck.png" >
-        </InfoSection>
+        <InfoSection
+          cardDescription={"Fun Facts"}
+          cardContent={
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 bg-gradient-to-r from-pink-50 via-white to-blue-50 rounded-xl p-4 shadow-md border-l-4 border-pink-400">
+                <span className="text-2xl">🕹️</span>
+                <span className="text-lg text-gray-800">
+                  My favorite retro console is the{" "}
+                  <span className="font-semibold text-pink-700">
+                    Nintendo 64
+                  </span>
+                  .
+                </span>
+              </li>
+              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-green-50 rounded-xl p-4 shadow-md border-l-4 border-blue-400">
+                <span className="text-2xl">🌏</span>
+                <span className="text-lg text-gray-800">
+                  I've visited{" "}
+                  <span className="font-semibold text-blue-700">
+                    Japan, Aruba, The Cayman Islands, Costa Rica
+                  </span>{" "}
+                  and been to{" "}
+                  <span className="font-semibold text-blue-700">Hawai'i</span>.
+                </span>
+              </li>
+              <li className="flex items-start gap-3 bg-gradient-to-r from-yellow-50 via-white to-pink-50 rounded-xl p-4 shadow-md border-l-4 border-yellow-400">
+                <span className="text-2xl">💻</span>
+                <span className="text-lg text-gray-800">
+                  My favorite programming language is{" "}
+                  <span className="font-semibold text-yellow-700">Lua</span>.
+                </span>
+              </li>
+              <li className="flex items-start gap-3 bg-gradient-to-r from-green-50 via-white to-blue-50 rounded-xl p-4 shadow-md border-l-4 border-green-400">
+                <span className="text-2xl">🗣️</span>
+                <span className="text-lg text-gray-800">
+                  Fluently I speak{" "}
+                  <span className="font-semibold text-green-700">English</span>{" "}
+                  but have studied{" "}
+                  <span className="font-semibold text-green-700">Spanish</span>{" "}
+                  for 3 years and{" "}
+                  <span className="font-semibold text-green-700">Japanese</span>{" "}
+                  for 2 years.
+                </span>
+              </li>
+              <li className="flex items-start gap-3 bg-gradient-to-r from-pink-50 via-white to-yellow-50 rounded-xl p-4 shadow-md border-l-4 border-pink-400">
+                <span className="text-2xl">🥢</span>
+                <span className="text-lg text-gray-800">
+                  I{" "}
+                  <span className="font-semibold text-pink-700">
+                    love sushi, tonkatsu, ramen
+                  </span>
+                  , and other Japanese cuisine!
+                </span>
+              </li>
+              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-yellow-50 rounded-xl p-4 shadow-md border-l-4 border-blue-600">
+                <span className="text-2xl">🈶️</span>
+                <span className="text-lg text-gray-800">
+                  My favorite Japanese word is{" "}
+                  <span className="font-semibold text-blue-700">
+                    親子丼 (oyakodon)
+                  </span>
+                  , which means "chicken and egg rice bowl."
+                </span>
+              </li>
+              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-green-50 rounded-xl p-4 shadow-md border-l-4 border-red-500">
+                <span className="text-2xl">💃</span>
+                <span className="text-lg text-gray-800">
+                  I've{" "}
+                  <span className="font-semibold text-red-500">
+                    hula-hooped
+                  </span>{" "}
+                  for 3 hours straight.
+                </span>
+              </li>
+            </ul>
+          }
+          imageSrc="/images/star-struck.png"
+        />
       </motion.div>
     </div>
   );
