@@ -198,17 +198,17 @@ export default function AboutComponent() {
             </li>
             <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
               ECE 232:{" "}
-              <span className="font-normal text-gray-700 pl-3">
+              <span className="font-normal text-gray-700 md:pl-3">
                 Introduction to Digital Systems
               </span>
             </li>
             <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
               MA 374:{" "}
-              <span className="font-normal text-gray-700 pl-3">Combinatorics</span>
+              <span className="font-normal text-gray-700 md:pl-3">Combinatorics</span>
             </li>
             <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
               JP 113:{" "}
-              <span className="font-normal text-gray-700 pl-7.5">Japanese III</span>
+              <span className="font-normal text-gray-700 md:pl-7.5">Japanese III</span>
             </li>
           </ul>
         </InfoSection>
