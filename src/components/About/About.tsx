@@ -162,56 +162,59 @@ export default function AboutComponent() {
           imageSrc="/images/gradcap.png"
           imageAlt="Graduation Cap"
         >
-          <h4 className="text-lg md:text-4xl font-bold mt-5 mb-2 text-blue-700 text-center">
+          <h4 className="text-lg md:text-4xl font-bold mt-5 mb-5 text-blue-700 text-center">
             Related Courses
           </h4>
-            <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center">
             <div className="flex flex-col justify-center w-full max-w-2xl">
               {[
-              {
-                code: "CSSE 280",
-                name: "Introduction to Web Programming",
-              },
-              {
-                code: "CSSE 230",
-                name: "Data Structures and Algorithm Analysis",
-              },
-              {
-                code: "CSSE 332",
-                name: "Operating Systems",
-              },
-              {
-                code: "CSSE 333",
-                name: "Introduction to Database Systems",
-              },
-              {
-                code: "CSSE 232",
-                name: "Computer Architecture I",
-              },
-              {
-                code: "ECE 232",
-                name: "Introduction to Digital Systems",
-              },
-              {
-                code: "MA 374",
-                name: "Combinatorics",
-              },
-              {
-                code: "JP 113",
-                name: "Japanese III",
-              },
+                {
+                  code: "CSSE 280",
+                  name: "Introduction to Web Programming",
+                },
+                {
+                  code: "CSSE 230",
+                  name: "Data Structures and Algorithm Analysis",
+                },
+                {
+                  code: "CSSE 332",
+                  name: "Operating Systems",
+                },
+                {
+                  code: "CSSE 333",
+                  name: "Introduction to Database Systems",
+                },
+                {
+                  code: "CSSE 232",
+                  name: "Computer Architecture I",
+                },
+                {
+                  code: "ECE 232",
+                  name: "Introduction to Digital Systems",
+                },
+                {
+                  code: "MA 374",
+                  name: "Combinatorics",
+                },
+                {
+                  code: "JP 113",
+                  name: "Japanese III",
+                },
               ].map((course) => (
-              <div
-                key={course.code}
-                className="mb-2 text-lg md:text-2xl font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200 flex items-center"
-              >
-                <span className="mr-0.5 text-blue-700">•</span>
-                <span className="w-32 md:w-32 text-left">{course.code}:</span>
-                <span className="font-normal text-gray-700 ml-0.5">{course.name}</span>
-              </div>
+                <div
+                  key={course.code}
+                  className="mb-2 text-sm md:text-2xl font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200 flex items-center"
+                >
+                  <span className="mr-0.5 text-blue-700">•</span>
+                  <div className="flex flex-row gap-2">
+                    <span className="text-left w-18 md:w-27">{course.code}:</span>
+                    <span className="font-normal text-gray-700">
+                      {course.name}
+                    </span>
+                  </div>
+                </div>
               ))}
             </div>
-
           </div>
         </InfoSection>
       </motion.div>
