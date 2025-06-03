@@ -289,7 +289,7 @@ export default function AboutComponent() {
                   .
                 </span>
               </li>
-              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-green-50 rounded-xl p-4 shadow-md border-l-4 border-blue-400">
+              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-yellow-50 rounded-xl p-4 shadow-md border-l-4 border-blue-400">
                 <span className="text-2xl">🌏</span>
                 <span className="text-lg text-gray-800">
                   I've visited{" "}
@@ -300,14 +300,14 @@ export default function AboutComponent() {
                   <span className="font-semibold text-blue-700">Hawai'i</span>.
                 </span>
               </li>
-              <li className="flex items-start gap-3 bg-gradient-to-r from-yellow-50 via-white to-pink-50 rounded-xl p-4 shadow-md border-l-4 border-yellow-400">
+              <li className="flex items-start gap-3 bg-gradient-to-r from-yellow-50 via-white to-green-50 rounded-xl p-4 shadow-md border-l-4 border-yellow-400">
                 <span className="text-2xl">💻</span>
                 <span className="text-lg text-gray-800">
                   My favorite programming language is{" "}
                   <span className="font-semibold text-yellow-700">Lua</span>.
                 </span>
               </li>
-              <li className="flex items-start gap-3 bg-gradient-to-r from-green-50 via-white to-blue-50 rounded-xl p-4 shadow-md border-l-4 border-green-400">
+              <li className="flex items-start gap-3 bg-gradient-to-r from-green-50 via-white to-pink-50 rounded-xl p-4 shadow-md border-l-4 border-green-400">
                 <span className="text-2xl">🗣️</span>
                 <span className="text-lg text-gray-800">
                   Fluently I speak{" "}
@@ -319,7 +319,7 @@ export default function AboutComponent() {
                   for 2 years.
                 </span>
               </li>
-              <li className="flex items-start gap-3 bg-gradient-to-r from-pink-50 via-white to-yellow-50 rounded-xl p-4 shadow-md border-l-4 border-pink-400">
+              <li className="flex items-start gap-3 bg-gradient-to-r from-pink-50 via-white to-orange-50 rounded-xl p-4 shadow-md border-l-4 border-pink-400">
                 <span className="text-2xl">🥢</span>
                 <span className="text-lg text-gray-800">
                   I{" "}
@@ -329,7 +329,7 @@ export default function AboutComponent() {
                   , and other Japanese cuisine!
                 </span>
               </li>
-              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-yellow-50 rounded-xl p-4 shadow-md border-l-4 border-orange-400">
+              <li className="flex items-start gap-3 bg-gradient-to-r from-orange-50 via-white to-red-50 rounded-xl p-4 shadow-md border-l-4 border-orange-400">
                 <span className="text-2xl">⛩️</span>
                 <span className="text-lg text-gray-800">
                   My favorite Japanese word is{" "}
@@ -339,7 +339,7 @@ export default function AboutComponent() {
                   , which means "chicken and egg rice bowl."
                 </span>
               </li>
-              <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-green-50 rounded-xl p-4 shadow-md border-l-4 border-red-500">
+              <li className="flex items-start gap-3 bg-gradient-to-r from-red-50 via-white to-blue-50 rounded-xl p-4 shadow-md border-l-4 border-red-500">
                 <span className="text-2xl">💃</span>
                 <span className="text-lg text-gray-800">
                   I've{" "}
