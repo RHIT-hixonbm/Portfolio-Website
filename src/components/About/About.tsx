@@ -137,22 +137,22 @@ export default function AboutComponent() {
           cardContent={
             <div className="flex flex-col items-center">
               <div>
-                <h3 className="text-xl font-bold mb-2 text-blue-800">
+                <h3 className="text-xl md:text-4xl font-bold mb-2 text-blue-800 mb-7">
                   Rose-Hulman Institute of Technology
                 </h3>
                 <div className="flex flex-col items-start">
-                  <p className="text-lg text-gray-800 mb-2">
+                  <p className="text-lg md:text-3xl text-gray-800 mb-2">
                     <span className="text-left font-semibold">Degree:</span>{" "}
                     B.S. in Computer Science
                   </p>
-                  <p className="text-lg text-gray-800 mb-2">
+                  <p className="text-lg md:text-3xl text-gray-800 mb-2">
                     <span className="font-semibold">Class Year:</span> 2027
                   </p>
-                  <p className="text-lg text-gray-800 mb-2">
+                  <p className="text-lg md:text-3xl text-gray-800 mb-2">
                     <span className="font-semibold">Minor:</span> Japanese (in
                     progress)
                   </p>
-                  <p className="text-lg text-gray-800 mb-4">
+                  <p className="text-lg md:text-3xl text-gray-800 mb-4">
                     <span className="font-semibold">GPA:</span> 3.97
                   </p>
                 </div>
@@ -198,17 +198,17 @@ export default function AboutComponent() {
             </li>
             <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
               ECE 232:{" "}
-              <span className="font-normal text-gray-700">
+              <span className="font-normal text-gray-700 pl-3">
                 Introduction to Digital Systems
               </span>
             </li>
             <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
               MA 374:{" "}
-              <span className="font-normal text-gray-700">Combinatorics</span>
+              <span className="font-normal text-gray-700 pl-3">Combinatorics</span>
             </li>
             <li className="mb-2 text-lg font-semibold text-blue-700 hover:text-pink-600 transition-colors duration-200">
               JP 113:{" "}
-              <span className="font-normal text-gray-700">Japanese III</span>
+              <span className="font-normal text-gray-700 pl-7.5">Japanese III</span>
             </li>
           </ul>
         </InfoSection>
