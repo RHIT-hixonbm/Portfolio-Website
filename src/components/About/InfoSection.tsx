@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -5,6 +7,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function InfoSection({
   iconMt,
@@ -39,13 +42,20 @@ export default function InfoSection({
         <div
           className={`${imageWidth} ${imageHeight} rounded-full ${imageBorder} ${overflow} border-gray-200 flex items-center justify-center mb-4 ${iconMt} ${imageShadow} ${imageBackground}`}
         >
-          <Image
-            alt={imageAlt}
-            src={imageSrc}
-            width={128}
-            height={128}
-            className="object-cover w-full h-full"
-          />
+          <motion.image
+            initial={{ rotate: -180, opacity: 0 }}
+            whileInView={{ rotate: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ type: "spring", stiffness: 120, damping: 12 }}
+          >
+            <Image
+              alt={imageAlt}
+              src={imageSrc}
+              width={128}
+              height={128}
+              className="object-cover w-full h-full"
+            />
+          </motion.image>
         </div>
         <CardDescription className="flex items-start text-4xl font-bold text-gray-700 mt-2 tracking-wide">
           {cardDescription}
