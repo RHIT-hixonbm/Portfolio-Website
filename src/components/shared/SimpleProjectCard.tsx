@@ -27,7 +27,7 @@ export default function SimpleProjectCard({ project }: { project: Project }) {
       <CardContent className="flex-1">
         <div className="flex justify-center items-center mb-4">
           <Image
-            src={project.image}
+            src={project.image.url}
             alt={project.title}
             width={200}
             height={200}
