@@ -56,7 +56,7 @@ export default function DetailsPage({
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="max-w-3xl w-full aspect-video mt-10"
+            className="max-w-lg md:max-w-3xl w-full aspect-video mt-10"
           />
         ) : (
           <div className={`relative max-w-sm w-full ${image.aspect} mt-10`}>
