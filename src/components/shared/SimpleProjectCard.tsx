@@ -40,7 +40,7 @@ export default function SimpleProjectCard({
         </div>
         {showLink && (
           <div
-            className="text-blue-600 hover:underline cursor-pointer font-medium"
+            className="text-blue-600 hover:underline cursor-pointer text-sm"
             onClick={(e) => performTransition(e, `/projects/${project.id}`)}
             role="button"
           >

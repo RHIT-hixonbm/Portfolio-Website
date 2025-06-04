@@ -42,16 +42,16 @@ export default function HomeComponent() {
             <h1 className="text-3xl font-bold text-center">
               Featured Projects
             </h1>
-            <div
-              className="absolute right-8 top-1/2 -translate-y-1/2 text-md text-blue-600 hover:underline cursor-pointer select-none"
-              role="button"
-              aria-label="View all projects"
-              onClick={(e) => performTransition(e, "/projects")}
-            >
-              View all projects
-            </div>
           </div>
           <ProjectCarousel />
+          <div
+            className="text-lg text-blue-600 hover:underline cursor-pointer select-none mb-10"
+            role="button"
+            aria-label="View all projects"
+            onClick={(e) => performTransition(e, "/projects")}
+          >
+            View all projects
+          </div>
         </div>
         {/*Experience*/}
         <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
