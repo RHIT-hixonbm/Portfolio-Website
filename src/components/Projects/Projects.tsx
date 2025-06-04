@@ -1,11 +1,15 @@
+"use client";
+
 import SimpleProjectCard from "../shared/SimpleProjectCard";
 import { Project } from "@/data/types";
 import { getProjects } from "@/data/data";
 import { useMemo } from "react";
 import FadeUp from "../utilities/FadeUp";
+import usePerformTransition from "@/hooks/usePerformTransition";
 
 export default function ProjectsComponent() {
   const projects: Project[] = useMemo(() => getProjects(), []);
+  const performTransition = usePerformTransition();
 
   return (
     <>
@@ -14,7 +18,10 @@ export default function ProjectsComponent() {
         {projects.map((project: Project, idx: number) => {
           return (
             <FadeUp key={idx}>
-              <div className="transform transition-transform duration-200 ease-out hover:scale-105 cursor-pointer">
+              <div
+                className="transform transition-transform duration-200 ease-out hover:scale-105 cursor-pointer"
+                onClick={(e) => performTransition(e, `/projects/${project.id}`)}
+              >
                 <SimpleProjectCard project={project} />
               </div>
             </FadeUp>
