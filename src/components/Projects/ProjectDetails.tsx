@@ -14,6 +14,7 @@ export default function ProjectDetails({ project }: { project: Project }) {
       endDate={formatDate(project.endYearAndMonth)}
       badges={project.technologies}
       contributions={project.myContributions}
+      additionalInformation={project.additionalInformation}
     />
   );
 }

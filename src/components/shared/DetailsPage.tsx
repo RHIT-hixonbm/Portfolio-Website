@@ -12,6 +12,7 @@ export default function DetailsPage({
   endDate,
   badges,
   contributions,
+  additionalInformation,
 }: {
   title: String;
   videoUrl?: string;
@@ -22,6 +23,7 @@ export default function DetailsPage({
   endDate: string;
   badges?: string[];
   contributions?: string[];
+  additionalInformation?: string;
 }) {
   return (
     <div className="flex flex-col justify-center gap-4 mb-10">
@@ -81,6 +83,16 @@ export default function DetailsPage({
               <li key={idx}>{item}</li>
             ))}
           </ul>
+        </div>
+      )}
+      {additionalInformation && (
+        <div className="px-6 md:px-24 py-4">
+          <h2 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+            Additional Information
+          </h2>
+          <div className="text-gray-700 dark:text-gray-200">
+            {additionalInformation}
+          </div>
         </div>
       )}
     </div>

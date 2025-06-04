@@ -3,7 +3,7 @@
     "id": "gamesniper",
     "title": "Game Sniper",
     "shortDescription": "This desktop MS SQL-enabled application allows users to track and manage their gaming library, providing features like relevant game filtering, reviews, and mock purchases. Developers can easily add new games and manage existing ones through a user-friendly interface.",
-    "longDescription": "Game Sniper is a comprehensive desktop application designed for gaming enthusiasts and developers. It integrates with MS SQL to provide robust data management for game libraries. Users can filter games based on various criteria, write and read reviews, and simulate purchases to manage their collections. The developer interface streamlines the process of adding new games and updating existing entries, ensuring the library remains current and relevant. The application emphasizes usability and efficiency, making it a valuable tool for both casual gamers and developers.",
+    "longDescription": "Game Sniper is a comprehensive desktop application designed for gaming enthusiasts and developers. The project was completed in a group alongside James Fusco and XinRui She. It integrates with MS SQL to provide robust data management for game libraries. Users can filter games based on various criteria, write and read reviews, and simulate purchases to manage their collections. The developer interface streamlines the process of adding new games and updating existing entries, ensuring the library remains current and relevant. The application emphasizes usability and efficiency, making it a valuable tool for both casual gamers and developers.",
     "technologies": ["Java", "TypeScript", "SQL"],
     "image": { "url": "/images/gamesniper.png", "aspect": "aspect-[1]" },
     "startYearAndMonth": "2025-04",
@@ -22,7 +22,7 @@
         "description": "This document contains the final report and outcomes of Project One."
       }
     ],
-    "additionalInformation": "",
+    "additionalInformation": "I may put something here...",
     "myContributions": [
       "Node.js population script",
       "Web scraping script for initial data",
@@ -57,7 +57,7 @@
         "description": "Instructions for using the application."
       }
     ],
-    "additionalInformation": "",
+    "additionalInformation": "I might come up with something here.",
     "myContributions": []
   },
   {
