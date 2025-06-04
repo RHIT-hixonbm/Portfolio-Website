@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Badge } from "../ui/badge";
+import { number } from "framer-motion";
 
 export default function DetailsPage({
   title,
@@ -8,6 +10,7 @@ export default function DetailsPage({
   description,
   startDate,
   endDate,
+  badges,
 }: {
   title: String;
   videoUrl?: string;
@@ -16,17 +19,30 @@ export default function DetailsPage({
   description: string;
   startDate: string;
   endDate: string;
+  badges?: string[];
 }) {
   return (
     <div className="flex flex-col justify-center gap-4 mb-10">
       <div className="mt-30 text-center">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">{title}</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
+          {title}
+        </h1>
       </div>
       <p className="text-center text-lg text-gray-500 mt-2">
         {startDate}
         {startDate && endDate && " – "}
         {endDate}
       </p>
+      <div className="flex gap-3 justify-center">
+        {badges &&
+          badges.map((badge: string, idx: number) => {
+            return (
+              <Badge className="bg-black text-white text-sm" key={idx}>
+                {badge}
+              </Badge>
+            );
+          })}
+      </div>
       <div className="flex justify-center">
         {videoUrl ? (
           <iframe
