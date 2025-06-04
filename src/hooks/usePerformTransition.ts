@@ -1,20 +1,12 @@
 "use client";
 import { useTransitionRouter } from "next-view-transitions";
 import React, { useState, useEffect } from "react";
+import useIsMobile from "./useIsMobile";
 
 // CREDIT Codegrid at https://www.youtube.com/watch?v=hpt7SsZUCbs&t=136s
 export default function usePerformTransition() {
   const router = useTransitionRouter();
-  //Determine if this is mobile
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    function update() {
-      setIsMobile(window.innerWidth < 768);
-    }
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
+  const isMobile = useIsMobile();
 
   return function performTransition(
     e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement, MouseEvent>,

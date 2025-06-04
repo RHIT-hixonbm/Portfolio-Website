@@ -10,11 +10,11 @@ interface Project {
     shortDescription: string;
     longDescription: string;
     technologies: string[];
-    image: string;
+    image: {url: string, aspect: string};
     sourceCodeUrl?: string;
     startYearAndMonth: string;
     endYearAndMonth: string;
-    demoVideoUrl: string;
+    demoVideoUrl?: string;
     isFeatured: boolean;
     additionalDocuments?: Document[];
     additionalInformation?: string;

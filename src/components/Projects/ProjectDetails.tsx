@@ -3,6 +3,6 @@ import DetailsPage from "../shared/DetailsPage";
 
 export default function ProjectDetails({ project }: { project: Project }) {
     return (
-        <DetailsPage title={project.title} />
+        <DetailsPage title={project.title} image={project.image} videoUrl={project.demoVideoUrl} />
     )
 }

@@ -5,10 +5,10 @@
         "shortDescription": "This desktop MS SQL-enabled application allows users to track and manage their gaming library, providing features like relevant game filtering, reviews, and mock purchases. Developers can easily add new games and manage existing ones through a user-friendly interface.",
         "longDescription": "Game Sniper is a comprehensive desktop application designed for gaming enthusiasts and developers. It integrates with MS SQL to provide robust data management for game libraries. Users can filter games based on various criteria, write and read reviews, and simulate purchases to manage their collections. The developer interface streamlines the process of adding new games and updating existing entries, ensuring the library remains current and relevant. The application emphasizes usability and efficiency, making it a valuable tool for both casual gamers and developers.",
         "technologies": ["Java", "TypeScript", "SQL"],
-        "image": "/images/gamesniper.png",
+        "image": {"url": "/images/gamesniper.png", "aspect": "aspect-[1]"},
         "startYearAndMonth": "2025-04",
         "endYearAndMonth": "2025-05",
-        "demoVideoUrl": "https://example.com/project1-demo-video",
+        "demoVideoUrl": "https://www.youtube.com/embed/yyhUBmKvA2o",
         "isFeatured": true,
         "additionalDocuments": [
             {
@@ -31,11 +31,10 @@
         "shortDescription": "A web application for managing personal finances.",
         "longDescription": "Project Four is a web-based solution that helps users manage their personal finances efficiently. Built with Vue.js and Firebase, it offers features such as expense tracking, budgeting, and financial analytics powered by Chart.js. Users can visualize their spending habits, set financial goals, and generate reports to gain insights into their financial health. The intuitive interface ensures that users of all backgrounds can easily navigate and utilize the application's features.",
         "technologies": ["Vue.js", "Firebase", "Chart.js"],
-        "image": "/images/project4.jpg",
+        "image": {"url": "/images/missing.png", "aspect": "aspect-[1]"},
         "sourceCodeUrl": "https://github.com/username/project4",
         "startYearAndMonth": "2023-05",
         "endYearAndMonth": "2023-05",
-        "demoVideoUrl": "https://example.com/project4-demo-video",
         "isFeatured": false,
         "additionalDocuments": [
             {
@@ -58,11 +57,10 @@
         "shortDescription": "A mobile app for tracking fitness activities.",
         "longDescription": "Project Five is a mobile application developed with Flutter and Dart, designed to help users monitor and analyze their fitness activities. The app allows users to log workouts, track progress over time, and set personal fitness goals. Data is stored locally using SQLite, ensuring privacy and offline access. The user-friendly interface and detailed analytics empower users to stay motivated and make informed decisions about their health and fitness routines.",
         "technologies": ["Flutter", "Dart", "SQLite"],
-        "image": "/images/project5.jpg",
+        "image": {"url": "/images/missing.png", "aspect": "aspect-[1]"},
         "sourceCodeUrl": "https://github.com/username/project5",
         "startYearAndMonth": "2022-11",
         "endYearAndMonth": "2022-11",
-        "demoVideoUrl": "https://example.com/project5-demo-video",
         "isFeatured": false,
         "additionalDocuments": [
             {
@@ -85,11 +83,10 @@
         "shortDescription": "An e-commerce platform for local artisans.",
         "longDescription": "Project Six is an e-commerce platform built to support local artisans in showcasing and selling their handmade products. Developed using Angular, Express.js, and MongoDB, the platform offers features such as product listings, secure checkout, and order management. Artisans can easily create and manage their online stores, while customers benefit from a seamless shopping experience. The platform aims to foster a community-driven marketplace that empowers small businesses and promotes unique, handcrafted goods.",
         "technologies": ["Angular", "Express.js", "MongoDB"],
-        "image": "/images/missing.jpg",
+        "image": {"url": "/images/gamesniper.png", "aspect": "aspect-[1]"},
         "sourceCodeUrl": "https://github.com/username/project6",
         "startYearAndMonth": "2023-03",
         "endYearAndMonth": "2023-03",
-        "demoVideoUrl": "https://example.com/project6-demo-video",
         "isFeatured": true,
         "additionalDocuments": [
             {
