@@ -3,23 +3,12 @@
 import InfoSection from "./InfoSection";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+import FadeUp from "../utilities/FadeUp";
 
 export default function AboutComponent() {
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <div className="flex flex-col items-start mt-30 w-full px-4 gap-4">
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-full mt-6"
-      >
+      <FadeUp>
         <InfoSection
           iconMt="-mt-20"
           cardDescription={"About Me"}
@@ -123,15 +112,8 @@ export default function AboutComponent() {
           imageAlt="Brett Hixon Profile Picture"
           imageShadow="shadow-lg"
         />
-      </motion.div>
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-full"
-      >
+      </FadeUp>
+      <FadeUp>
         <InfoSection
           cardDescription={"Education"}
           cardContent={
@@ -207,7 +189,9 @@ export default function AboutComponent() {
                 >
                   <span className="mr-0.5 text-blue-700">•</span>
                   <div className="flex flex-row gap-2">
-                    <span className="text-left w-18 md:w-27">{course.code}:</span>
+                    <span className="text-left w-18 md:w-27">
+                      {course.code}:
+                    </span>
                     <span className="font-normal text-gray-700">
                       {course.name}
                     </span>
@@ -217,15 +201,8 @@ export default function AboutComponent() {
             </div>
           </div>
         </InfoSection>
-      </motion.div>
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-full"
-      >
+      </FadeUp>
+      <FadeUp>
         <InfoSection
           cardDescription={"Awards & Honors"}
           cardContent={
@@ -271,15 +248,8 @@ export default function AboutComponent() {
           imageSrc="/images/trophy.png"
           imageAlt="Trophy"
         />
-      </motion.div>
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-full"
-      >
+      </FadeUp>
+      <FadeUp>
         <InfoSection
           cardDescription={"Fun Facts"}
           cardContent={
@@ -358,29 +328,24 @@ export default function AboutComponent() {
           }
           imageSrc="/images/star-struck.png"
         />
-      </motion.div>
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-full flex justify-center mb-5 mt-2"
-      >
-        <a
-          href="/documents/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer text-3xl h-13"
+      </FadeUp>
+      <FadeUp>
+        <div className="flex justify-center mb-10">
+          <a
+            href="/documents/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            View Full Resume
-          </Button>
-        </a>
-      </motion.div>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer text-3xl h-13"
+            >
+              View Full Resume
+            </Button>
+          </a>
+        </div>
+      </FadeUp>
     </div>
   );
 }
