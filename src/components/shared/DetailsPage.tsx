@@ -11,6 +11,7 @@ export default function DetailsPage({
   startDate,
   endDate,
   badges,
+  contributions,
 }: {
   title: String;
   videoUrl?: string;
@@ -20,6 +21,7 @@ export default function DetailsPage({
   startDate: string;
   endDate: string;
   badges?: string[];
+  contributions?: string[];
 }) {
   return (
     <div className="flex flex-col justify-center gap-4 mb-10">
@@ -69,6 +71,18 @@ export default function DetailsPage({
           {description}
         </div>
       </div>
+      {contributions && contributions.length > 0 && (
+        <div className="px-6 md:px-24 py-4">
+          <h2 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+            My Contributions
+          </h2>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-200">
+            {contributions.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
