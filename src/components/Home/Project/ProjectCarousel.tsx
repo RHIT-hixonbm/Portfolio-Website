@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import SimpleProjectCard from "./SimpleProjectCard";
+import SimpleProjectCard from "../../shared/SimpleProjectCard";
 
 export default function ProjectCarousel() {
   const ref = useRef<HTMLDivElement | null>(null);

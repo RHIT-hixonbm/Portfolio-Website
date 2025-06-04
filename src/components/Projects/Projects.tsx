@@ -1,4 +1,4 @@
-import SimpleProjectCard from "../Home/Project/SimpleProjectCard";
+import SimpleProjectCard from "../shared/SimpleProjectCard";
 import { Project } from "@/data/types";
 import { getProjects } from "@/data/data";
 import { useMemo } from "react";
