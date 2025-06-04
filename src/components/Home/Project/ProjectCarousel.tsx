@@ -47,7 +47,7 @@ export default function ProjectCarousel() {
           .filter((project) => project.isFeatured)
           .map((project) => (
             <CarouselItem key={project.id}>
-              <SimpleProjectCard project={project} />
+              <SimpleProjectCard project={project} showLink={true} />
             </CarouselItem>
           ))}
       </CarouselContent>
