@@ -13,7 +13,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
   const [titleThreeFinishedAnimating, setTitleThreeFinishedAnimating] = useState(false);
 
   return (
-    <section className="h-screen w-full py-10 flex flex-col justify-between items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-200 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-15.5 mb-5 border-2">
+    <section className="h-screen w-full py-0 md:py-10 flex flex-col justify-between items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-200 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-15.5 mb-5 border-2">
       {/* Name and description */}
       <div>
         <h1 className="text-4xl md:text-7xl font-bold mb-4"><AnimatedText setFinishedAnimating={setNameFinishedAnimating} textSpeed={0.06}>Brett M. Hixon</AnimatedText></h1>
@@ -31,12 +31,11 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
         </p>
       </div>
       {/* Profile picture */}
-      <motion.div className="opacity-0 mb-8 rounded-full overflow-hidden w-50 h-50 mx-auto shadow-lg border-4 border-white" initial={{ scale: 0, opacity: 0 }} animate={{scale: nameFinishedAnimating ? 1 : 0, opacity: nameFinishedAnimating ? 1 : 0}} transition={{duration: 0.2, ease: easeOut}}>
+      <motion.div className="relative opacity-0 mb-8 rounded-full overflow-hidden w-full max-w-[9rem] md:max-w-[13rem] aspect-[1] mx-auto shadow-lg border-4 border-white" initial={{ scale: 0, opacity: 0 }} animate={{scale: nameFinishedAnimating ? 1 : 0, opacity: nameFinishedAnimating ? 1 : 0}} transition={{duration: 0.2, ease: easeOut}}>
         <Image
           src="/images/bust.png"
           alt="Brett M. Hixon"
-          width={512}
-          height={512}
+          fill
           className="object-cover w-full h-full" 
           priority
         />
