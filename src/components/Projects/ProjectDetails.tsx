@@ -15,6 +15,7 @@ export default function ProjectDetails({ project }: { project: Project }) {
       badges={project.technologies}
       contributions={project.myContributions}
       additionalInformation={project.additionalInformation}
+      additionalDocuments={project.additionalDocuments}
     />
   );
 }

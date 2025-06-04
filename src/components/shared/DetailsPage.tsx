@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Badge } from "../ui/badge";
-import { number } from "framer-motion";
+import { Document } from "@/data/types";
 
 export default function DetailsPage({
   title,
@@ -13,6 +13,7 @@ export default function DetailsPage({
   badges,
   contributions,
   additionalInformation,
+  additionalDocuments,
 }: {
   title: String;
   videoUrl?: string;
@@ -24,6 +25,7 @@ export default function DetailsPage({
   badges?: string[];
   contributions?: string[];
   additionalInformation?: string;
+  additionalDocuments?: Document[];
 }) {
   return (
     <div className="flex flex-col justify-center gap-4 mb-10">
@@ -93,6 +95,30 @@ export default function DetailsPage({
           <div className="text-gray-700 dark:text-gray-200">
             {additionalInformation}
           </div>
+        </div>
+      )}
+      {additionalDocuments && additionalDocuments.length > 0 && (
+        <div className="px-6 md:px-24 py-4">
+          <h2 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+            Additional Documents
+          </h2>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-200">
+            {additionalDocuments.map((doc, idx) => (
+              <li key={idx}>
+                <a
+                  href={doc.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-200"
+                >
+                  {doc.title}
+                </a>
+                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  {doc.description}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>

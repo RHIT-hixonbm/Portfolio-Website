@@ -12,14 +12,19 @@
     "isFeatured": true,
     "additionalDocuments": [
       {
-        "title": "Project Proposal",
-        "url": "/docs/project1_proposal.pdf",
-        "description": "This document outlines the initial proposal for Project One."
+        "title": "Conceptual ER Diagram",
+        "url": "https://docs.google.com/document/d/1An4iu7keTYoUNFbCQovgeB_g6_DQuzBMayl0MGYVPDE/edit?usp=sharing",
+        "description": "This document showcases the Entity Relationship (ER) diagram as it pertains to how the entities would interact outside the database."
       },
       {
-        "title": "Final Report",
-        "url": "/docs/project1_final_report.pdf",
-        "description": "This document contains the final report and outcomes of Project One."
+        "title": "Technical ER Diagram",
+        "url": "https://docs.google.com/document/d/1GSVaakRi0p5CiwLJGCsaChKmBq6SFE0yQWJfbu8sPQs/edit?usp=sharing",
+        "description": "This document showcases the Entity Relationship (ER) diagram as it pertains to how the entities interact inside the database. This is the implemented version."
+      },
+      {
+        "title": "Relational Schema",
+        "url": "https://docs.google.com/document/d/1GLlQ0EgjJZPuL5P8cOeiCBL9zkSGwaVGA3PNX4xVS_4/edit?usp=sharing",
+        "description": "This document showcases the relational model inputted into MS SQL Server."
       }
     ],
     "additionalInformation": "I may put something here...",
