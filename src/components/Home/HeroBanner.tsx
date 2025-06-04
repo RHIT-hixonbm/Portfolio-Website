@@ -13,7 +13,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
   const [titleThreeFinishedAnimating, setTitleThreeFinishedAnimating] = useState(false);
 
   return (
-    <section className="h-screen w-full py-20 flex flex-col justify-between items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-200 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-15.5 mb-5 border-2">
+    <section className="h-screen w-full py-10 flex flex-col justify-between items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-200 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-15.5 mb-5 border-2">
       {/* Name and description */}
       <div>
         <h1 className="text-4xl md:text-7xl font-bold mb-4"><AnimatedText setFinishedAnimating={setNameFinishedAnimating} textSpeed={0.06}>Brett M. Hixon</AnimatedText></h1>
