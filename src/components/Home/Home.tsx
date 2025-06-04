@@ -7,6 +7,7 @@ import ProjectCarousel from "@/components/Home/Project/ProjectCarousel";
 import ExperienceLinks from "./Experience/ExperienceLinks";
 import SkillsMountain from "./Skill/SkillsMountain";
 import MobileSkillHinges from "./Skill/MobileSkillHingeCollection";
+import usePerformTransition from "@/hooks/usePerformTransition";
 
 export default function HomeComponent() {
   //Pulse effect for projects section
@@ -22,6 +23,7 @@ export default function HomeComponent() {
       setPulse(true);
     }
   }, []);
+  const performTransition = usePerformTransition();
 
   return (
     <div>
@@ -36,9 +38,19 @@ export default function HomeComponent() {
           ref={projectsRef}
           onAnimationEnd={() => setPulse(false)}
         >
-          <h1 className="text-3xl font-bold text-center my-8">
-            Featured Projects
-          </h1>
+          <div className="relative w-full my-8">
+            <h1 className="text-3xl font-bold text-center">
+              Featured Projects
+            </h1>
+            <div
+              className="absolute right-8 top-1/2 -translate-y-1/2 text-md text-blue-600 hover:underline cursor-pointer select-none"
+              role="button"
+              aria-label="View all projects"
+              onClick={(e) => performTransition(e, "/projects")}
+            >
+              View all projects
+            </div>
+          </div>
           <ProjectCarousel />
         </div>
         {/*Experience*/}
@@ -48,7 +60,9 @@ export default function HomeComponent() {
         </div>
         {/* Skills */}
         <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center mb-8">
-          <h1 className="text-3xl font-bold text-center my-8">Skills & Frameworks</h1>
+          <h1 className="text-3xl font-bold text-center my-8">
+            Skills & Frameworks
+          </h1>
           <SkillsMountain />
           <MobileSkillHinges />
         </div>
