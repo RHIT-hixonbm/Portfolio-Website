@@ -12,6 +12,8 @@ export default function ExperienceDetails({ experience }: { experience: Experien
       startDate={formatDate(experience.startYearAndMonth)}
       endDate={formatDate(experience.endYearAndMonth || "")}
       badges={experience.skills}
+      location={experience.location}
+      role={experience.title}
     />
   );
 }

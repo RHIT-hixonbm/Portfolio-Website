@@ -15,6 +15,7 @@ export default function DetailsPage({
   additionalInformation,
   additionalDocuments,
   location,
+  role,
 }: {
   title: String;
   videoUrl?: string;
@@ -28,6 +29,7 @@ export default function DetailsPage({
   additionalInformation?: string;
   additionalDocuments?: Document[];
   location?: string;
+  role?: string;
 }) {
   return (
     <div className="flex flex-col justify-center gap-4 mb-10">
@@ -36,6 +38,11 @@ export default function DetailsPage({
           {title}
         </h1>
       </div>
+      {role && (
+        <p className="text-center text-xl font-medium text-gray-700 dark:text-gray-300 mt-2">
+          {role}
+        </p>
+      )}
       <p className="text-center text-lg text-gray-500 mt-2">
         {startDate}
         {startDate && endDate && " – "}
