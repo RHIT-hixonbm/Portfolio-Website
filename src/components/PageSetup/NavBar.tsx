@@ -34,6 +34,7 @@ export default function Navbar() {
           <TransitionLink href="/">Home</TransitionLink>
           <TransitionLink href="/about">About</TransitionLink>
           <TransitionLink href="/projects">Projects</TransitionLink>
+          <TransitionLink href="/experience">Experience</TransitionLink>
           <ContactPopover />
         </div>
 
@@ -51,6 +52,7 @@ export default function Navbar() {
                 <TransitionLink href="/">Home</TransitionLink>
                 <TransitionLink href="/about">About</TransitionLink>
                 <TransitionLink href="/projects">Projects</TransitionLink>
+                <TransitionLink href="/experience">Experience</TransitionLink>
                 <div>
                   <ContactPopover /> {/* BONUS: This a mobile friendly hover card :) */}
                 </div>
