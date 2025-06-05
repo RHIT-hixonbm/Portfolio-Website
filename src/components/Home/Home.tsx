@@ -4,7 +4,7 @@ import React, { useRef, useState, useCallback } from "react";
 import "@/components/Home/HeroBanner";
 import HeroBanner from "@/components/Home/HeroBanner";
 import ProjectCarousel from "@/components/Home/Project/ProjectCarousel";
-import ExperienceLinks from "./Experience/ExperienceLinks";
+import ExperienceLinks from "../shared/Experience/ExperienceLinks";
 import SkillsMountain from "./Skill/SkillsMountain";
 import MobileSkillHinges from "./Skill/MobileSkillHingeCollection";
 import usePerformTransition from "@/hooks/usePerformTransition";
