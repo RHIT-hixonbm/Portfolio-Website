@@ -14,6 +14,7 @@ export default function DetailsPage({
   contributions,
   additionalInformation,
   additionalDocuments,
+  location,
 }: {
   title: String;
   videoUrl?: string;
@@ -26,6 +27,7 @@ export default function DetailsPage({
   contributions?: string[];
   additionalInformation?: string;
   additionalDocuments?: Document[];
+  location?: string;
 }) {
   return (
     <div className="flex flex-col justify-center gap-4 mb-10">
@@ -39,6 +41,11 @@ export default function DetailsPage({
         {startDate && endDate && " – "}
         {endDate}
       </p>
+      {location && (
+        <p className="text-center text-md text-gray-600 dark:text-gray-300">
+          <span className="font-medium">{location}</span>
+        </p>
+      )}
       <div className="flex gap-3 justify-center">
         {badges &&
           badges.map((badge: string, idx: number) => {

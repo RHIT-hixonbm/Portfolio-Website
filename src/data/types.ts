@@ -33,6 +33,7 @@ interface Experience {
     skills: string[];
     icon: string;
     featured: boolean;
+    image: {url: string, aspect: string};
 }
 
 interface Skill {

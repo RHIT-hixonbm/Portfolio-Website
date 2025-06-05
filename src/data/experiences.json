@@ -14,7 +14,8 @@
             "TypeScript"
         ],
         "icon": "Laptop",
-        "featured": true
+        "featured": true,
+        "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" }
     },
     {
         "id": "roseventures",
@@ -30,7 +31,8 @@
             "Debugging"
         ],
         "icon": "BookOpen",
-        "featured": true
+        "featured": true,
+        "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" }
     },
     {
         "id": "kidkare",
@@ -47,7 +49,8 @@
             "Computer Setup"
         ],
         "icon": "Heart",
-        "featured": true
+        "featured": true,
+        "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" }
     },
     {
         "id": "kidkare2",
@@ -64,6 +67,7 @@
             "Computer Setup"
         ],
         "icon": "Heart",
-        "featured": false
+        "featured": false,
+        "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" }
     }
 ]
