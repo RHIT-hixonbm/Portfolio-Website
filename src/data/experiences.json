@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "teachingassitant",
         "title": "Software Engineer Intern",
         "company": "Rose-Hulman Ventures",
         "location": "Terre Haute, IN",
@@ -13,10 +13,11 @@
             "Node.js",
             "TypeScript"
         ],
-        "icon": "Laptop"
+        "icon": "Laptop",
+        "featured": true
     },
     {
-        "id": 2,
+        "id": "roseventures",
         "title": "Teaching Assistant",
         "company": "Rose-Hulman Institute of Technology",
         "location": "Terre Haute, IN",
@@ -28,10 +29,11 @@
             "Linux",
             "Debugging"
         ],
-        "icon": "BookOpen"
+        "icon": "BookOpen",
+        "featured": true
     },
     {
-        "id": 3,
+        "id": "kidkare",
         "title": "Volunteer",
         "company": "Kid Kare Project, Inc.",
         "location":"Clinton, IN",
@@ -44,6 +46,24 @@
             "Networking",
             "Computer Setup"
         ],
-        "icon": "Heart"
+        "icon": "Heart",
+        "featured": true
+    },
+    {
+        "id": "kidkare2",
+        "title": "Volunteer",
+        "company": "Kid Kare Project, Inc.",
+        "location":"Clinton, IN",
+        "startYearAndMonth": "2021-09",
+        "endYearAndMonth": "2023-05",
+        "shortDescription": "Intalled and set-up workstation computers by intergrating them with existing network infrastructure. Assisted in website development and maintenance via Wix.",
+        "longDescription": "As a Volunteer at Kid Kare Project, Inc., I was responsible for installing and setting up workstation computers, ensuring they were integrated with the existing network infrastructure. Additionally, I assisted in the development and maintenance of the organization's website using Wix, enhancing their online presence and functionality.",
+        "skills": [
+            "Wix",
+            "Networking",
+            "Computer Setup"
+        ],
+        "icon": "Heart",
+        "featured": false
     }
 ]

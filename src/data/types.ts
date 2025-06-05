@@ -22,7 +22,7 @@ interface Project {
 }
 
 interface Experience {
-    id: number;
+    id: string;
     title: string;
     company: string;
     location: string;
@@ -32,6 +32,7 @@ interface Experience {
     longDescription: string;
     skills: string[];
     icon: string;
+    featured: boolean;
 }
 
 interface Skill {
