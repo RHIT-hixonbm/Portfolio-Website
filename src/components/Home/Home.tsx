@@ -57,6 +57,14 @@ export default function HomeComponent() {
         <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center my-8">Experience</h1>
           <ExperienceLinks featured={true} />
+          <div
+            className="text-lg text-blue-600 hover:underline cursor-pointer select-none mb-10"
+            role="button"
+            aria-label="View all experience"
+            onClick={(e) => performTransition(e, "/experience")}
+          >
+            View all experiences
+          </div>
         </div>
         {/* Skills */}
         <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center mb-8">
