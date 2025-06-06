@@ -16,6 +16,7 @@ export default function DetailsPage({
   additionalDocuments,
   location,
   role,
+  sourceCode,
 }: {
   title: String;
   videoUrl?: string;
@@ -30,6 +31,7 @@ export default function DetailsPage({
   additionalDocuments?: Document[];
   location?: string;
   role?: string;
+  sourceCode?: string;
 }) {
   return (
     <div className="flex flex-col justify-center gap-4 mb-10">
@@ -99,6 +101,18 @@ export default function DetailsPage({
               <li key={idx}>{item}</li>
             ))}
           </ul>
+        </div>
+      )}
+      {sourceCode && (
+        <div className="px-6 md:px-24 py-4">
+          <a
+            href={sourceCode}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-200"
+          >
+            Source Code
+          </a>
         </div>
       )}
       {additionalInformation && (

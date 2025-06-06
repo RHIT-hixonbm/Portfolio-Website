@@ -40,30 +40,35 @@
     ]
   },
   {
-    "id": "project4",
-    "title": "Project Four",
-    "shortDescription": "A web application for managing personal finances.",
-    "longDescription": "Project Four is a web-based solution that helps users manage their personal finances efficiently. Built with Vue.js and Firebase, it offers features such as expense tracking, budgeting, and financial analytics powered by Chart.js. Users can visualize their spending habits, set financial goals, and generate reports to gain insights into their financial health. The intuitive interface ensures that users of all backgrounds can easily navigate and utilize the application's features.",
-    "technologies": ["Vue.js", "Firebase", "Chart.js"],
-    "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" },
-    "sourceCodeUrl": "https://github.com/username/project4",
-    "startYearAndMonth": "2023-05",
-    "endYearAndMonth": "2023-05",
-    "isFeatured": false,
+    "id": "bulletinboard",
+    "title": "Bulletin Board",
+    "shortDescription": "A web application with the goal of replacing a university bulletin board.",
+    "longDescription": "Bulletin Board is a web application designed to serve as a digital alternative to traditional campus bulletin boards. Tailored for college students, it enables users to post and discover campus events, requests, and general announcements in a centralized, accessible platform. Users can create accounts, manage their own posts, and interact with others through features like messaging and following. Posts can include text and images, are categorized for easy browsing, and automatically expire after a set date to keep the board current. Moderation tools, reporting systems, and content filtering help maintain a safe and organized environment. The intuitive interface allows users to search, filter, and engage with posts, making campus communication more efficient and interactive.",
+    "technologies": ["Bootstrap", "Firebase", "HTML", "CSS"],
+    "image": { "url": "/images/bulletinboard.png", "aspect": "aspect-[1]" },
+    "sourceCodeUrl": "https://github.com/RHIT-hixonbm/csse280-bulletinboard",
+    "startYearAndMonth": "2024-06",
+    "endYearAndMonth": "2024-08",
+    "demoVideoUrl": "https://www.youtube.com/embed/eOllsMQuKxw",
+    "isFeatured": true,
     "additionalDocuments": [
       {
-        "title": "Requirements Specification",
-        "url": "/docs/project4_requirements.pdf",
-        "description": "Detailed requirements for the finance management app."
+        "title": "Overview and Planning",
+        "url": "https://docs.google.com/document/d/1v0Yb5GP2h-ubcMkQYOjY2hA6J_R4h0dCO3PHZLxRX70/edit?usp=sharing",
+        "description": "Detailed description and schema for the app and its user interactions."
       },
       {
-        "title": "User Guide",
-        "url": "/docs/project4_user_guide.pdf",
-        "description": "Instructions for using the application."
+        "title": "Mocks",
+        "url": "https://www.figma.com/design/mnSoHAPHl587NWyzkGq5td/App-Preview?m=dev&node-id=0-1",
+        "description": "Figma mock that was the basis of website design and interaction planning in code."
+      },
+      {
+        "title": "Technical Features",
+        "url": "https://docs.google.com/document/d/1oF0ys77LdMQsGwX6T5ltB8XZW027mEhh7wyu_ydxUBg/edit?tab=t.0",
+        "description": "Document that details the special features of the app researched outside of class."
       }
     ],
-    "additionalInformation": "I might come up with something here.",
-    "myContributions": []
+    "additionalInformation": "This project was performed solo."
   },
   {
     "id": "project5",
@@ -101,7 +106,7 @@
     "sourceCodeUrl": "https://github.com/username/project6",
     "startYearAndMonth": "2023-03",
     "endYearAndMonth": "2023-03",
-    "isFeatured": true,
+    "isFeatured": false,
     "additionalDocuments": [
       {
         "title": "Business Plan",

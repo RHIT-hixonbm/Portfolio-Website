@@ -16,6 +16,7 @@ export default function ProjectDetails({ project }: { project: Project }) {
       contributions={project.myContributions}
       additionalInformation={project.additionalInformation}
       additionalDocuments={project.additionalDocuments}
+      sourceCode={project.sourceCodeUrl}
     />
   );
 }
