@@ -8,7 +8,7 @@
     "image": { "url": "/images/gamesniper.png", "aspect": "aspect-[1]" },
     "startYearAndMonth": "2025-04",
     "endYearAndMonth": "2025-05",
-    "demoVideoUrl": "https://www.youtube.com/embed/GzhYjhNCFw4",
+    "demoVideoUrl": "https://www.youtube.com/embed/2_3E-MDyN8I",
     "isFeatured": true,
     "additionalDocuments": [
       {
@@ -27,7 +27,7 @@
         "description": "This document showcases the relational model inputted into MS SQL Server."
       }
     ],
-    "additionalInformation": "I may put something here...",
+    "additionalInformation": "Technical details like connection to the database are handled automatically upon app launch and closure.",
     "myContributions": [
       "Node.js population script",
       "Web scraping script for initial data",
