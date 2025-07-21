@@ -76,7 +76,7 @@
     "shortDescription": "A pthread-like threading library designed for the xv6 operating system.",
     "longDescription": "\"Xthreads\" is a systems level project that implements threading for the xv6 operating system. This project was performed in a group of 3 consisting of me, CK Gallegos Rodriguez, Preksha Sarda. The hallmark of our project was our focus on a seemingly unlimited number of threads that handle all memory management in the kernel, meaning no extra memory allocation work is needed by the user. We also utilized spinlocks at the kernel level to properly synchronize thread execution for things like console printing.",
     "technologies": ["C"],
-    "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" },
+    "image": { "url": "/images/xthreads_logo.png", "aspect": "aspect-[1]" },
     "startYearAndMonth": "2025-01",
     "endYearAndMonth": "2025-02",
     "isFeatured": false,
