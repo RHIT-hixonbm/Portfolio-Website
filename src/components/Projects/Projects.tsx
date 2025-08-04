@@ -12,7 +12,7 @@ export default function ProjectsComponent() {
   const performTransition = usePerformTransition();
   const [currentPage, setCurrentPage] = useState(1);
 
-  const projectsPerPage = 2;
+  const projectsPerPage = 5;
   const totalPages = Math.ceil(projects.length / projectsPerPage);
   const visibleProjects = useMemo(() => {
     return projects.slice(
