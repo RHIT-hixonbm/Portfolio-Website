@@ -54,6 +54,7 @@ export default function ProjectsComponent() {
         </button>
         {Array.from({ length: totalPages }, (_, index) => (
           <div
+            key={index}
             className={`cursor-pointer border-2 rounded-md px-3 py-1 ${
               index + 1 === currentPage ? "bg-gray-300" : ""
             }`}
