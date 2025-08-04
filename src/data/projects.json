@@ -85,29 +85,21 @@
     "demoVideoUrl": "https://www.youtube.com/embed/RaB0j39R8DE"
   },
   {
-    "id": "project6",
-    "title": "Project Six",
-    "shortDescription": "An e-commerce platform for local artisans.",
-    "longDescription": "Project Six is an e-commerce platform built to support local artisans in showcasing and selling their handmade products. Developed using Angular, Express.js, and MongoDB, the platform offers features such as product listings, secure checkout, and order management. Artisans can easily create and manage their online stores, while customers benefit from a seamless shopping experience. The platform aims to foster a community-driven marketplace that empowers small businesses and promotes unique, handcrafted goods.",
-    "technologies": ["Angular", "Express.js", "MongoDB"],
-    "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" },
-    "sourceCodeUrl": "https://github.com/username/project6",
-    "startYearAndMonth": "2023-03",
-    "endYearAndMonth": "2023-03",
+    "id": "pipelineprocessor",
+    "title": "RISC-V Pipeline Processor",
+    "shortDescription": "A 5-stage RISC-V pipeline processor designed to execute the standard 32-bit RISC-V instructions with additional capabilities.",
+    "longDescription": "The RISC-V Pipeline Processor was a collaborative project completed alongside Ethan Harden with help from Duy Le. Over the course of two months we designed and implemented a RISC-V processor (RV32I) in Verilog complete with a stall/hazard detection unit. The processor consisted of the traditional 5-stage pipeline design stages (Instruction Fetch, Instruction Decode, Execute, Memory Access, and Write Back). In addition to the standard RISC-V instructions, we also implemented a custom instruction named subg which accelerates the process of calculating relative primes by aiding the Euclidean algorithm. This reduced cycle counts of relprime(5040) from 51,104 to 40,902. Finally, our processor implememted memory-mapped input/output (MIMO).",
+    "technologies": ["Verilog", "ModelSim"],
+    "image": { "url": "/images/riscv_logo.png", "aspect": "aspect-[1]" },
+    "startYearAndMonth": "2025-04",
+    "endYearAndMonth": "2023-05",
     "isFeatured": false,
-    "additionalDocuments": [
-      {
-        "title": "Business Plan",
-        "url": "/docs/project6_business_plan.pdf",
-        "description": "Business plan for the e-commerce platform."
-      },
-      {
-        "title": "Deployment Guide",
-        "url": "/docs/project6_deployment.pdf",
-        "description": "Steps to deploy the platform."
-      }
-    ],
-    "additionalInformation": "",
-    "myContributions": []
+    "additionalInformation": "Source code unavailable due to academic integrity policies as well as the collaborative nature of the project.",
+    "myContributions": [
+      "Design and implementation of the Verilog logic for subg, including integration with the existing forwarding/hazard detection unit",
+      "Developed the EX/MEM buffer",
+      "Added assembler support for subg and MIMO pseudo-instructions",
+      "Created and adapted unit tests for the relative prime routine, hazard detection, and MIMO",
+      "Headed debugging efforts for the project, especially for a subtle fault found with forwarding logic after adding subg logic"]
   }
 ]
