@@ -101,5 +101,40 @@
     "additionalInformation": "Source code unavailable due to academic integrity policies.",
     "myContributions": ["Printing synchronization", "Kernel memory management model", "Thread cleanup", "Thread joining"],
     "demoVideoUrl": "https://www.youtube.com/embed/RaB0j39R8DE"
-  }
+  },
+  {
+    "id": "propulsionpack",
+    "title": "Propulsion Pack Happy Cruise!",
+    "shortDescription": "A 2-D arcade game created in Java with Swing graphics.",
+    "longDescription": "\"Propulsion Pack Happy Cruise\" is an arcade-style video game developed alongside Eric Stuber and Aron Craft with music design by Jackson Howard. Designed in Java/Swing, the game is a jam-packed underwater treasure-hunting adventure where you play as the hero and use your handy sea jetpack and sea pistol to navigate through 10 unique hand-crafted fully-modular levels full of new challenges. With only 3 lives, dodge sharks, homing sharks, and physical and electric barriers to achieve victory. Additionally, level modularity is supported by an intuitive format and included design guide. On the more technical side, we adhered very closely to the object-oriented design principles (encapsulation, abstraction, inheritance, and polymorphism). For instance, our game pieces like the obstacles and even the player inherit an abstract game object class, implementing object specific methods like how to \"update\" on each tick. The cornerstone of our project was the collision system with physical barriers, the homing attack system, vibrant theme, and unusual sound effect design.",
+    "technologies": ["Java", "Swing"],
+    "image": { "url": "/images/propulsionpack.png", "aspect": "aspect-[1]" },
+    "startYearAndMonth": "2024-01",
+    "endYearAndMonth": "2024-02",
+    "isFeatured": false,
+    "additionalDocuments": [
+      {
+        "title": "Level Design Guide",
+        "url": "https://docs.google.com/document/d/1VEdNAfNYXmIhVahQRmMikdli7wH1qCv29ZPMdjZRs0Q/edit?usp=sharing",
+        "description": "The guide included with the project to create any number of levels."
+      },
+      {
+        "title": "First Level File",
+        "url": "https://docs.google.com/document/d/1c0uv6CkizDx6ra5T7Pl_FQ_AuB5vgKv-VG5tCTAfKlc/edit?usp=sharing",
+        "description": "The raw formating of the first level the player starts at."
+      }
+    ],
+    "myContributions":[
+      "Initial app skeleton to promote object-oritented design principles",
+      "Level format, parsing, and loading logic",
+      "Sound effect technical implementation",
+      "Hero movement",
+      "Menu/end screen",
+      "Scheduled object removal implementation",
+      "Abstract game object design",
+      "Physical collision detection design",
+      "Hero projectiles"
+    ],
+    "additionalInformation": "Source code unavailable due to academic integrity policies as well as the collaborative nature of the project."
+  } 
 ]
