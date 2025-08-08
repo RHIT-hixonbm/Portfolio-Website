@@ -111,6 +111,7 @@
     "image": { "url": "/images/propulsionpack.png", "aspect": "aspect-[1]" },
     "startYearAndMonth": "2024-01",
     "endYearAndMonth": "2024-02",
+    "demoVideoUrl": "https://www.youtube.com/embed/dFkh3r_Szho",
     "isFeatured": false,
     "additionalDocuments": [
       {
