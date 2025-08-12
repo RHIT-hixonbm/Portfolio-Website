@@ -137,5 +137,18 @@
       "Hero projectiles"
     ],
     "additionalInformation": "Source code unavailable due to academic integrity policies as well as the collaborative nature of the project."
+  },
+    {
+    "id": "superherodata",
+    "title": "Superhero Data Analysis",
+    "shortDescription": "Data visualization and statistical anlysis of a superhero related data set.",
+    "longDescription": "This solo project was developed in Python with the goal to parse and identify trends in a relatively large data set consisting of 16000+ Marvel Comics characters. Each character entry of the provided data set included: page id, name, url slug, id, alignment (e.g. good, bad neutral), eye type, hair type, sex, gender/sexual minorty type, alive status, number of appearances, month and year of first appearance, and year of creation. The analysis includes a number of different visualizations including pie charts, line graphs, and bar graphs utilizing matplotlib. The goal of the utility is to allow the user to discover trends in and analyze data that may be useful elsewhere. The flow of the utility is controlled by console input. Some visualizations and presented facts are dynamically based on user-inputted ranges and selections while others are independent of input and are statically based on the provided CSV. Through the analysis tool, the user can discover trends in representation of social diversity such as prevalence of minority-identifying characters and male vs. female representation as well as character popularity and design.",
+    "technologies": ["Python", "Matplotlib"],
+    "image": { "url": "/images/marvellogo.png", "aspect": "aspect-[1]" },
+    "demoVideoUrl": "https://www.youtube.com/embed/ZsQUCD74aWE",
+    "startYearAndMonth": "2023-10",
+    "endYearAndMonth": "2023-11",
+    "isFeatured": false,
+    "additionalInformation": "This project was performed solo. Additionally, the source code is unavailable due to academic integrity policies."
   } 
 ]
