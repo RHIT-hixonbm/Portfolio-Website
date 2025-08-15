@@ -138,7 +138,7 @@
     ],
     "additionalInformation": "Source code unavailable due to academic integrity policies as well as the collaborative nature of the project."
   },
-    {
+  {
     "id": "superherodata",
     "title": "Superhero Data Analysis",
     "shortDescription": "Data visualization and statistical anlysis of a superhero related data set.",
@@ -150,5 +150,18 @@
     "endYearAndMonth": "2023-11",
     "isFeatured": false,
     "additionalInformation": "This project was performed solo. Additionally, the source code is unavailable due to academic integrity policies."
-  } 
+  },
+  {
+    "id": "friendpurge",
+    "title": "Friend Purge",
+    "shortDescription": "A utility for the ROBLOX game platform to prune inactive friends.",
+    "longDescription": "Friend Purge is a utility that allows users of the ROBLOX platform to see which of their friends have been inactive for at least 30 days. Previously, ROBLOX had a 200 friend limit which a user can reach with relative ease since the size of most games' servers are very large. The idea is that the user can use the utility to identify which of their current friends are not playing currently so they can thin their list to open spots for other users. For security reasons, ROBLOX's built in HTTP request service does not allow outgoing requests to ROBLOX API endpoints. Additionally, there is no way to fetch user activity status with ROBLOX's included services for developers. So, to make the utility work as intended, I developed a Python proxy service to make the request to the necessary ROBLOX API endpoint and return the fetched data to the ROBLOX http service. The ROBLOX service would send a list of user IDs to the proxy which would be sent to the ROBLOX API endpoint for further user information. The proxy would return a list of user IDs paired with the UNIX timestamp of when they were last online. After the request is complete, the script inside of ROBLOX studio handles further processing and GUI generation.",
+    "technologies": ["Lua", "Python", "Flask"],
+    "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" },
+    "startYearAndMonth": "2022-06",
+    "endYearAndMonth": "2022-06",
+    "isFeatured": false,
+    "sourceCodeUrl": "",
+    "additionalInformation": "This project was performed solo. Currently, ROBLOX has sunset the API endpoint that allowed the game to retrieve users' last online timestamp, so the game no longer works. The demo video utilizes a mock API that merely simulates the original ROBLOX API.",
+  }
 ]
