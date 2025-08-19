@@ -1,6 +1,6 @@
 [
     {
-        "id": "teachingassitant",
+        "id": "roseventures",
         "title": "Software Engineer Intern",
         "company": "Rose-Hulman Ventures",
         "location": "Terre Haute, IN",
@@ -15,10 +15,10 @@
         ],
         "icon": "Laptop",
         "featured": true,
-        "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" }
+        "image": { "url": "/images/ventures.png", "aspect": "aspect-[1]" }
     },
     {
-        "id": "roseventures",
+        "id": "teachingassistant",
         "title": "Teaching Assistant",
         "company": "Rose-Hulman Institute of Technology",
         "location": "Terre Haute, IN",
@@ -32,7 +32,7 @@
         ],
         "icon": "BookOpen",
         "featured": true,
-        "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" }
+        "image": { "url": "/images/rose-logo.jpg", "aspect": "aspect-[1]" }
     },
     {
         "id": "kidkare",
@@ -50,6 +50,6 @@
         ],
         "icon": "Heart",
         "featured": true,
-        "image": { "url": "/images/missing.jpg", "aspect": "aspect-[1]" }
+        "image": { "url": "/images/kidkare-logo.png", "aspect": "aspect-16/9" }
     }
 ]
