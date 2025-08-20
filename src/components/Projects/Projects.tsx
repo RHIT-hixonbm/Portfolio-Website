@@ -3,16 +3,23 @@
 import SimpleProjectCard from "../shared/SimpleProjectCard";
 import { Project } from "@/data/types";
 import { getProjects } from "@/data/data";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import FadeUp from "../utilities/FadeUp";
 import usePerformTransition from "@/hooks/usePerformTransition";
 
 export default function ProjectsComponent() {
   const projects: Project[] = useMemo(() => getProjects(), []);
   const performTransition = usePerformTransition();
-  const [currentPage, setCurrentPage] = useState(
-    parseInt(sessionStorage.getItem("currentPage") || "1")
-  );
+  const [currentPage, setCurrentPage] = useState(1);
+  //Load session storage page info
+  useEffect(() => {
+    const lastPage = sessionStorage.getItem("currentPage");
+    if(lastPage) {
+      setCurrentPage(parseInt(lastPage));
+    } else {
+      sessionStorage.setItem("currentPage", "1");
+    }
+  }, [])
 
   const projectsPerPage = 5;
   const totalPages = Math.ceil(projects.length / projectsPerPage);
