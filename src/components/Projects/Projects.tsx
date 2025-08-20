@@ -28,7 +28,7 @@ export default function ProjectsComponent() {
       (currentPage - 1) * projectsPerPage,
       currentPage * projectsPerPage
     );
-  }, [currentPage]);
+  }, [currentPage, projects]);
 
   return (
     <>

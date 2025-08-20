@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/PageSetup/Footer";
 import Navbar from "@/components/PageSetup/NavBar";
-import Spacer from "@/components/PageSetup/Spacer";
 import { usePathname } from "next/navigation";
 import React, {
   useEffect,
@@ -22,21 +21,6 @@ import {
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { ViewTransitions } from "next-view-transitions";
-
-declare global {
-  interface EthereumProvider {
-    isMetaMask?: boolean;
-    isConnected(): boolean;
-    request(args: { method: string; params?: unknown[] }): Promise<unknown>;
-    on(eventName: string, listener: (...args: any[]) => void): void;
-    removeListener(eventName: string, listener: (...args: any[]) => void): void;
-    selectedAddress: string | null;
-  }
-
-  interface Window {
-    ethereum?: EthereumProvider;
-  }
-}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,26 +43,6 @@ export default function RootLayout({
   const pathname = usePathname();
   const particlesEnabled = pathname === "/";
   const isProjectRelated = /\/projects(\/|$)/.test(pathname);
-
-  //Stop Next.js from throwing an error about window.ethereum being undefined on Brave browser
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-
-    if (!window.ethereum) {
-      window.ethereum = {
-        selectedAddress: null,
-        isMetaMask: false,
-        request: async () => {},
-        on: () => {},
-        removeListener: () => {},
-        isConnected: () => false,
-      };
-    }
-
-    if (!window.ethereum.selectedAddress) {
-      window.ethereum.selectedAddress = null;
-    }
-  }, []);
 
   //Clear the session storage for project page navigation when the user moves off
   useEffect(() => {

@@ -18,7 +18,7 @@ export default function DetailsPage({
   role,
   sourceCode,
 }: {
-  title: String;
+  title: string;
   videoUrl?: string;
   image: { url: string; aspect: string };
   shortDescription: string;

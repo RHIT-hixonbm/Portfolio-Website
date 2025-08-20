@@ -1,6 +1,6 @@
 "use client";
 import { useTransitionRouter } from "next-view-transitions";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import useIsMobile from "./useIsMobile";
 
 // CREDIT Codegrid at https://www.youtube.com/watch?v=hpt7SsZUCbs&t=136s

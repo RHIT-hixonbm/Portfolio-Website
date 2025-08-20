@@ -13,9 +13,7 @@ import SimpleProjectCard from "../../shared/SimpleProjectCard";
 export default function ProjectCarousel() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const handleMouseEnter = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
+  const handleMouseEnter = () => {
     if (!hasAnimated) {
       setHasAnimated(true);
       setTimeout(() => {

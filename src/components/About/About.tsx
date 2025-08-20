@@ -1,7 +1,6 @@
 "use client";
 
 import InfoSection from "./InfoSection";
-import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import FadeUp from "../utilities/FadeUp";
 
@@ -19,7 +18,7 @@ export default function AboutComponent() {
             <div className="space-y-6 text-lg leading-relaxed text-gray-800">
               <p>
                 <span className="text-2xl font-extrabold text-gray-900 tracking-tight">
-                  Hello, I'm Brett Hixon!
+                  Hello, I&apos;m Brett Hixon!
                 </span>
                 <br />
                 <span className="block mt-2">
@@ -28,7 +27,7 @@ export default function AboutComponent() {
                   more!
                 </span>
                 <span className="block mt-2">
-                  My interest in the field wasn't always self-derived though! I
+                  My interest in the field wasn&apos;t always self-derived though! I
                   was{" "}
                   <span className="italic text-gray-600">
                     forced into a coding club
@@ -39,12 +38,12 @@ export default function AboutComponent() {
                   for life. I began exploring career paths related to software
                   development and began digging into early programming concepts
                   through the platform ROBLOX. Through making games and
-                  realizing the process's potential impact on my future, my
+                  realizing the process&apos;s potential impact on my future, my
                   passion grew evemore more fervent.
                 </span>
                 <span className="block mt-2">
-                  Now I am a part of Rose-Hulman's class of 2027 pursuing my
-                  Bachelor's degree in Computer Science and hope to enter the
+                  Now I am a part of Rose-Hulman&apos;s class of 2027 pursuing my
+                  Bachelor&apos;s degree in Computer Science and hope to enter the
                   workforce as a desktop application engineer.
                 </span>
               </p>
@@ -55,14 +54,14 @@ export default function AboutComponent() {
                 </span>
                 <br />
                 <span className="block mt-2">
-                  If it's possible, I love to dig into games to understand how
+                  If it&apos;s possible, I love to dig into games to understand how
                   they were made and how modern ones are able to program such
                   complex interactions. My passion for programming ramped up
                   exponentially by trying to figure out how video game cheaters
                   and script injectors were able to accomplish such feats.
                 </span>
                 <span className="block mt-2">
-                  Through my studies at Rose-Hulman, I've discovered a passion
+                  Through my studies at Rose-Hulman, I&apos;ve discovered a passion
                   for low-level concurrency problems and systems programming. In
                   my Operating Systems class, I loved producer-consumer
                   scenarios, threading, and thinking like an operating system. I
@@ -83,7 +82,7 @@ export default function AboutComponent() {
               </p>
               <p>
                 <span className="font-bold text-gray-900">
-                  There's more to me than the programming!
+                  There&apos;s more to me than the programming!
                 </span>
                 <br />
                 <span className="block mt-2">
@@ -91,9 +90,9 @@ export default function AboutComponent() {
                   steps daily, rain or shine.
                 </span>
                 <span className="block mt-2">
-                  In addition, I like all things Japanese media. I've been a fan
+                  In addition, I like all things Japanese media. I&apos;ve been a fan
                   of anime and manga since middle school. At the end of freshman
-                  year I decided I'd like to take on the language to better
+                  year I decided I&apos;d like to take on the language to better
                   understand the cultural artifacts I was consuming.
                 </span>
                 <span className="block mt-2">
@@ -212,7 +211,7 @@ export default function AboutComponent() {
                   <span role="img" aria-label="star">
                     🏆
                   </span>{" "}
-                  Dean's List
+                  Dean&apos;s List
                 </h4>
                 <p className="text-gray-800 mt-1">
                   Recognized for academic excellence every term at Rose-Hulman
@@ -267,12 +266,12 @@ export default function AboutComponent() {
               <li className="flex items-start gap-3 bg-gradient-to-r from-blue-50 via-white to-yellow-50 rounded-xl p-4 shadow-md border-l-4 border-blue-400">
                 <span className="text-2xl">🌏</span>
                 <span className="text-lg text-gray-800">
-                  I've visited{" "}
+                  I&apos;ve visited{" "}
                   <span className="font-semibold text-blue-700">
                     Japan, Aruba, The Cayman Islands, Costa Rica
                   </span>{" "}
                   and been to{" "}
-                  <span className="font-semibold text-blue-700">Hawai'i</span>.
+                  <span className="font-semibold text-blue-700">Hawai&apos;i</span>.
                 </span>
               </li>
               <li className="flex items-start gap-3 bg-gradient-to-r from-yellow-50 via-white to-green-50 rounded-xl p-4 shadow-md border-l-4 border-yellow-400">
@@ -311,13 +310,13 @@ export default function AboutComponent() {
                   <span className="font-semibold text-orange-400">
                     親子丼 (oyakodon)
                   </span>
-                  , which means "chicken and egg rice bowl."
+                  , which means &quot;chicken and egg rice bowl.&quot;
                 </span>
               </li>
               <li className="flex items-start gap-3 bg-gradient-to-r from-red-50 via-white to-blue-50 rounded-xl p-4 shadow-md border-l-4 border-red-500">
                 <span className="text-2xl">💃</span>
                 <span className="text-lg text-gray-800">
-                  I've{" "}
+                  I&apos;ve{" "}
                   <span className="font-semibold text-red-500">
                     hula-hooped
                   </span>{" "}
