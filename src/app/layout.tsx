@@ -38,7 +38,6 @@ declare global {
   }
 }
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -56,8 +55,10 @@ export default function RootLayout({
   children: React.ReactNode;
   backgroundColor?: string;
 }>) {
+  //Stuff based on pathname
   const pathname = usePathname();
   const particlesEnabled = pathname === "/";
+  const isProjectRelated = /\/projects(\/|$)/.test(pathname);
 
   //Stop Next.js from throwing an error about window.ethereum being undefined on Brave browser
   useEffect(() => {
@@ -71,13 +72,22 @@ export default function RootLayout({
         on: () => {},
         removeListener: () => {},
         isConnected: () => false,
-      }; 
+      };
     }
 
     if (!window.ethereum.selectedAddress) {
       window.ethereum.selectedAddress = null;
     }
   }, []);
+
+  //Clear the session storage for project page navigation when the user moves off
+  useEffect(() => {
+    if (!isProjectRelated) {
+      if (sessionStorage.getItem("currentPage")) {
+        sessionStorage.removeItem("currentPage");
+      }
+    }
+  }, [isProjectRelated]);
 
   // Initialize particles
   const [init, setInit] = useState(false);

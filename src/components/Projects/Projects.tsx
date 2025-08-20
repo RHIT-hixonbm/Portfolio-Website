@@ -3,14 +3,16 @@
 import SimpleProjectCard from "../shared/SimpleProjectCard";
 import { Project } from "@/data/types";
 import { getProjects } from "@/data/data";
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import FadeUp from "../utilities/FadeUp";
 import usePerformTransition from "@/hooks/usePerformTransition";
 
 export default function ProjectsComponent() {
   const projects: Project[] = useMemo(() => getProjects(), []);
   const performTransition = usePerformTransition();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(
+    parseInt(sessionStorage.getItem("currentPage") || "1")
+  );
 
   const projectsPerPage = 5;
   const totalPages = Math.ceil(projects.length / projectsPerPage);
@@ -43,7 +45,10 @@ export default function ProjectsComponent() {
         <button
           className="cursor-pointer border-2 rounded-md disabled:opacity-50 disabled:cursor-default px-3 py-1"
           onClick={() => {
-            setCurrentPage((prevIndex) => prevIndex - 1);
+            setCurrentPage((prevIndex) => {
+              sessionStorage.setItem("currentPage", (prevIndex - 1).toString());
+              return prevIndex - 1;
+            });
             window.scrollTo({
               top: 0,
             });
@@ -60,6 +65,7 @@ export default function ProjectsComponent() {
             }`}
             onClick={() => {
               setCurrentPage(index + 1);
+              sessionStorage.setItem("currentPage", (index + 1).toString());
               window.scrollTo({
                 top: 0,
               });
@@ -71,7 +77,10 @@ export default function ProjectsComponent() {
         <button
           className="cursor-pointer border-2 rounded-md disabled:opacity-50 disabled:cursor-default px-3 py-1"
           onClick={() => {
-            setCurrentPage((prevIndex) => prevIndex + 1);
+            setCurrentPage((prevIndex) => {
+              sessionStorage.setItem("currentPage", (prevIndex + 1).toString());
+              return prevIndex + 1;
+            });
             window.scrollTo({
               top: 0,
             });
