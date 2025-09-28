@@ -150,12 +150,16 @@ export default function AboutComponent() {
             <div className="flex flex-col justify-center w-full max-w-2xl">
               {[
                 {
-                  code: "CSSE 280",
-                  name: "Introduction to Web Programming",
+                  code: "CSSE 374",
+                  name: "Software Design",
                 },
                 {
-                  code: "CSSE 230",
-                  name: "Data Structures and Algorithm Analysis",
+                  code: "CSSE 371",
+                  name: "Software Requirements Engineering",
+                },
+                {
+                  code: "CSSE 304",
+                  name: "Programming Language Concepts",
                 },
                 {
                   code: "CSSE 332",
@@ -166,20 +170,44 @@ export default function AboutComponent() {
                   name: "Introduction to Database Systems",
                 },
                 {
-                  code: "CSSE 232",
-                  name: "Computer Architecture I",
+                  code: "CSSE 352",
+                  name: "Computer Game Development",
+                },
+                {
+                  code: "CSSE 315",
+                  name: "Natural Language Processing",
+                },
+                {
+                  code: "CSSE 280",
+                  name: "Introduction to Web Programming",
+                },
+                {
+                  code: "CSSE 474",
+                  name: "Theory of Computation",
+                },
+                {
+                  code: "CSSE 473",
+                  name: "Design & Analysis of Algorithms",
+                },
+                {
+                  code: "ECE 332",
+                  name: "Computer Architecture II",
                 },
                 {
                   code: "ECE 232",
                   name: "Introduction to Digital Systems",
                 },
                 {
+                  code: "MA 381",
+                  name: "Probability and Statistics",
+                },
+                {
                   code: "MA 374",
                   name: "Combinatorics",
                 },
                 {
-                  code: "JP 113",
-                  name: "Japanese III",
+                  code: "JP 213",
+                  name: "Japanese VI",
                 },
               ].map((course) => (
                 <div
