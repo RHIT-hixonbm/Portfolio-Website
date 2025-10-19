@@ -39,7 +39,7 @@ export default function AboutComponent() {
                   development and began digging into early programming concepts
                   through the platform ROBLOX. Through making games and
                   realizing the process&apos;s potential impact on my future, my
-                  passion grew evemore more fervent.
+                  passion grew even more fervent.
                 </span>
                 <span className="block mt-2">
                   Now I am a part of Rose-Hulman&apos;s class of 2027 pursuing my
