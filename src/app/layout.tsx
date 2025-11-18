@@ -21,6 +21,7 @@ import {
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { ViewTransitions } from "next-view-transitions";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -167,6 +168,13 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en">
+        <head>
+          <Script 
+            defer src='https://static.cloudflareinsights.com/beacon.min.js' 
+            data-cf-beacon='{"token": "df4cc44008f749849ce73c39e3f3d143"}'
+            strategy="afterInteractive"
+           />
+        </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
