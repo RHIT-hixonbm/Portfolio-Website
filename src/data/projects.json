@@ -17,7 +17,7 @@
       "Closures",
       "Macros and macro expansion",
       "Let and let*",
-      "Primative procedure definitions",
+      "Primitive procedure definitions",
       "Conversion of application procedures and others to CPS style"
     ]
   },
