@@ -3,7 +3,7 @@
     "id": "schemeinterpreter",
     "title": "Scheme Interpreter",
     "shortDescription": "An intepreter for a subset of scheme.",
-    "longDescription": "This interpreter for a subset of scheme was a team project built alongside XinRui She. Our interpreter implemented standard features such as basic primative procedures like +, -, etc., and included more sophisticated ones like apply and map. Additionally, we provide many standard syntaxes like lambda, let, and letrec. Some highlights of the program are the inclusion of user-defined macros that expand at runtime, quasi-quoting including splicing, and call/cc achieved through converting essential functions to continuation passing style. The interpreter was built using Racket Scheme which provided the necessary underlying implementation for most basic primative procedures.",
+    "longDescription": "This interpreter for a subset of Scheme was a team project built alongside XinRui She. Our interpreter implemented standard features such as basic primitive procedures like +, -, etc., and included more sophisticated ones like apply and map. Additionally, we provide many standard syntaxes like lambda, let, and letrec. Some highlights of the program are the inclusion of user-defined macros that expand at runtime, quasi-quoting including splicing, and call/cc achieved through converting essential functions to continuation passing style. The interpreter was built using Racket Scheme, which provided the necessary underlying implementation for most basic primitive procedures.",
     "technologies": ["Racket Scheme"],
     "image": { "url": "/images/Racket-logo.svg", "aspect": "aspect-[1]" },
     "startYearAndMonth": "2025-09",
