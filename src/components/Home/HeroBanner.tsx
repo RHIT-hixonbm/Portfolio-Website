@@ -17,7 +17,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
       {/* Name and description */}
       <div>
         <h1 className="text-4xl md:text-7xl font-bold mb-4"><AnimatedText setFinishedAnimating={setNameFinishedAnimating} textSpeed={0.06}>Brett M. Hixon</AnimatedText></h1>
-        <p className="text-lg md:text-3xl mb-8 max-w-6xl whitespace-nowrap">
+        <p className="text-lg md:text-3xl mb-8 max-w-6xl">
           <AnimatedText setFinishedAnimating={setTitleOneFinishedAnimating} textSpeed={0.01}>Junior Computer Science student at</AnimatedText>{" "}
           <a
             href="https://www.rose-hulman.edu"
