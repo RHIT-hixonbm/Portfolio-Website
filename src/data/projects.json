@@ -69,7 +69,7 @@
     "technologies": ["Verilog", "ModelSim"],
     "image": { "url": "/images/riscv_logo.png", "aspect": "aspect-[1]" },
     "startYearAndMonth": "2025-04",
-    "endYearAndMonth": "2023-05",
+    "endYearAndMonth": "2025-05",
     "isFeatured": false,
     "additionalInformation": "Source code unavailable due to academic integrity policies as well as the collaborative nature of the project.",
     "myContributions": [
