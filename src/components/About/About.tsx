@@ -58,7 +58,8 @@ export default function AboutComponent() {
                   they were made and how modern ones are able to program such
                   complex interactions. My passion for programming ramped up
                   exponentially by trying to figure out how video game cheaters
-                  and script injectors were able to accomplish such feats.
+                  and script injectors were able to accomplish such feats. This grew into
+                  my interest in cybersecurity which I am now pursuing as a minor.
                 </span>
                 <span className="block mt-2">
                   Through my studies at Rose-Hulman, I&apos;ve discovered a passion
@@ -68,7 +69,8 @@ export default function AboutComponent() {
                   was also a teaching assistant for our introductory systems
                   programming course at Rose-Hulman for the entirety of my
                   Sophomore year where I thoroughly enjoyed teaching others
-                  these concepts.
+                  these concepts. Furthermore, my experience in computer architecture
+                  has only emboldened this passion.
                 </span>
                 <span className="block mt-2">
                   During my internship and Rose-Ventures I learned about various
@@ -78,6 +80,30 @@ export default function AboutComponent() {
                   practical application. My time spent in industry has made
                   realize all the more that this field offers limitless possibly
                   and incessantly reinvigorates by curiousity.
+                </span>
+              </p>
+              <p>
+                <span className="font-bold text-gray-900">
+                  Why cybersecurity and AI?
+                </span>
+                <br />
+                <span className="block mt-2">
+                  As I mentioned previously, one of my first motivations for
+                  learning how to program was understanding how cheaters
+                  reverse engineer applications to develop script injectors.
+                  This was my introduction to cybersecurity concepts, and I saw
+                  it fit to formally supplement my CS major with this minor to
+                  satiate my initial curiosity.
+                </span>
+                <span className="block mt-2">
+                  As for artificial intelligence, I began to observe its influence
+                  grow ever more as I navigated my degree and noted how courses
+                  were evolving to intelligently make use of these new tools.
+                  Being the curious person I am and understanding the growing
+                  reach of new artificial intelligence technologies, I decided
+                  to formally dig deeper to understand these concepts and &quot;pop 
+                  the hood&quot; of the black box that has become so prominent not
+                  just in my major but in nearly all aspects of modern life.
                 </span>
               </p>
               <p>
@@ -130,8 +156,7 @@ export default function AboutComponent() {
                     <span className="font-semibold">Class Year:</span> 2027
                   </p>
                   <p className="text-lg md:text-3xl text-gray-800 mb-2">
-                    <span className="font-semibold">Minor:</span> Japanese (in
-                    progress)
+                    <span className="font-semibold">Minors:</span> Japanese, Cybersecurity, Artificial Intelligence
                   </p>
                   <p className="text-lg md:text-3xl text-gray-800 mb-4">
                     <span className="font-semibold">GPA:</span> 3.97
@@ -158,10 +183,6 @@ export default function AboutComponent() {
                   name: "Software Requirements Engineering",
                 },
                 {
-                  code: "CSSE 304",
-                  name: "Programming Language Concepts",
-                },
-                {
                   code: "CSSE 332",
                   name: "Operating Systems",
                 },
@@ -170,12 +191,12 @@ export default function AboutComponent() {
                   name: "Introduction to Database Systems",
                 },
                 {
-                  code: "CSSE 352",
-                  name: "Computer Game Development",
+                  code: "CSSE 432",
+                  name: "Computer Networks",
                 },
                 {
-                  code: "CSSE 315",
-                  name: "Natural Language Processing",
+                  code: "CSSE 415",
+                  name: "Machine Learning",
                 },
                 {
                   code: "CSSE 280",
@@ -190,12 +211,12 @@ export default function AboutComponent() {
                   name: "Design & Analysis of Algorithms",
                 },
                 {
-                  code: "ECE 332",
-                  name: "Computer Architecture II",
+                  code: "CSSE 304",
+                  name: "Programming Language Concepts",
                 },
                 {
-                  code: "ECE 232",
-                  name: "Introduction to Digital Systems",
+                  code: "ECE 332",
+                  name: "Computer Architecture II",
                 },
                 {
                   code: "MA 381",
@@ -204,6 +225,10 @@ export default function AboutComponent() {
                 {
                   code: "MA 374",
                   name: "Combinatorics",
+                },
+                {
+                  code: "MA 378",
+                  name: "Number Theory",
                 },
                 {
                   code: "JP 213",
