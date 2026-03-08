@@ -15,11 +15,6 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <!--
-      Cup walls: top y=140, x=85 (left) to x=315 (right)
-                 bottom y=290, x=108 (left) to x=292 (right)
-      Taper: 23px each side over 150px height = 0.153px/py
-    -->
     <clipPath id="cupClip">
       <path d="M85 140 L108 290 L292 290 L315 140 Z"/>
     </clipPath>
@@ -31,26 +26,22 @@
   <path d="M85 140 L108 290 L292 290 L315 140 Z"
         fill="none" stroke="#e8903a" stroke-width="2.5" stroke-linejoin="round"/>
 
-  <!-- Rim: exactly matches cup wall top corners x=85 and x=315 -->
+  <!-- Rim -->
   <line x1="85" y1="140" x2="315" y2="140" stroke="#e8903a" stroke-width="2.5"/>
 
-  <!-- Coffee pool: walls follow taper at y=258
-       dy=118, left=85+(118/150)*23=103.1, right=315-18.1=296.9 -->
+  <!-- Coffee pool -->
   <path d="M103 258 L108 290 L292 290 L297 258 Z"
         fill="#c87941" opacity="0.4" clip-path="url(#cupClip)"/>
   <line x1="103" y1="258" x2="297" y2="258" stroke="#d4944a" stroke-width="1" opacity="0.5"/>
 
-  <!-- Saucer: wider than cup bottom, centered at x=200 -->
+  <!-- Saucer -->
   <line x1="72" y1="297" x2="328" y2="297" stroke="#e8903a" stroke-width="2.5"/>
 
-  <!-- Handle: attaches to right wall
-       top: y=175, x=315-(35/150)*23=309.6≈310
-       bot: y=255, x=315-(115/150)*23=297.4≈297
-       ctrl x: 352 -->
+  <!-- Handle -->
   <path d="M310 175 C352 175 352 255 297 255"
         fill="none" stroke="#e8903a" stroke-width="2.5" stroke-linecap="round"/>
 
-  <!-- Steam wisps: double-bend S-curves, spaced at x=155,200,245 -->
+  <!-- Steam wisps -->
   <g stroke="#8ab4d4" stroke-width="2.2" fill="none" stroke-linecap="round">
     <path d="M155 133 Q147 112 155 101 Q163 90 155 70">
       <animate attributeName="d" dur="3s" repeatCount="indefinite"
@@ -78,34 +69,17 @@
     </path>
   </g>
 
-  <!--
-    Code: font-size=13, charwidth=7.8px, x_start=116
-    Rim at y=140, first line baseline y=178 (38px gap — clean)
-    line-height=22px
-    All lines verified within tapered walls.
-
-    Squiggle under "==":
-      "  if (c.temp " = 13 chars × 7.8 = 101.4 → x_start=217.4
-      "==" = 2 chars × 7.8 = 15.6px → x_end=233
-      line y=222, squiggle y=226
-  -->
+  <!-- Code: no xml:space, no whitespace inside text elements -->
   <g font-family="'Courier New', monospace" font-size="13" clip-path="url(#cupClip)">
-    <text x="116" y="178">
-      <tspan fill="#c87941">String</tspan><tspan fill="#8ab4d4"> brew</tspan><tspan fill="#5a7a9f">() {</tspan>
-    </text>
-    <text x="116" y="200">
-      <tspan fill="#5a7a9f">  </tspan><tspan fill="#c87941">Cup</tspan><tspan fill="#c8c8c8"> c</tspan><tspan fill="#5a7a9f"> = new </tspan><tspan fill="#c87941">Cup</tspan><tspan fill="#5a7a9f">();</tspan>
-    </text>
-    <text x="116" y="222">
-      <tspan fill="#5a7a9f">  </tspan><tspan fill="#7a9abf">if </tspan><tspan fill="#5a7a9f">(</tspan><tspan fill="#c8c8c8">c.temp</tspan><tspan fill="#e05a5a"> ==</tspan><tspan fill="#98c87a"> "hot"</tspan><tspan fill="#5a7a9f">)</tspan>
-    </text>
-    <text x="116" y="244">
-      <tspan fill="#5a7a9f">    </tspan><tspan fill="#7a9abf">return</tspan><tspan fill="#c8c8c8"> c</tspan><tspan fill="#5a7a9f">.</tspan><tspan fill="#8ab4d4">drink</tspan><tspan fill="#5a7a9f">();</tspan>
-    </text>
+    <text x="116" y="178"><tspan fill="#c87941">String</tspan><tspan fill="#8ab4d4"> brew</tspan><tspan fill="#5a7a9f">() {</tspan></text>
+    <text x="116" y="197"><tspan fill="#c87941" dx="15.6">Cup</tspan><tspan fill="#c8c8c8"> c</tspan><tspan fill="#5a7a9f"> = new </tspan><tspan fill="#c87941">Cup</tspan><tspan fill="#5a7a9f">();</tspan></text>
+    <text x="116" y="216"><tspan fill="#7a9abf" dx="15.6">if </tspan><tspan fill="#5a7a9f">(</tspan><tspan fill="#c8c8c8">c.temp</tspan><tspan fill="#e05a5a"> ==</tspan><tspan fill="#98c87a"> "hot"</tspan><tspan fill="#5a7a9f">) {</tspan></text>
+    <text x="116" y="235"><tspan fill="#7a9abf" dx="31.2">return</tspan><tspan fill="#c8c8c8"> c</tspan><tspan fill="#5a7a9f">.</tspan><tspan fill="#8ab4d4">drink</tspan><tspan fill="#5a7a9f">();</tspan></text>
+    <text x="116" y="254"><tspan fill="#5a7a9f" dx="15.6">}</tspan></text>
   </g>
 
-  <!-- Squiggle under == -->
-  <path d="M217 226 Q221 230 225 226 Q229 222 233 226 Q237 230 241 226"
+  <!-- Squiggle under c.temp == "hot" (contents of if parens) -->
+  <path d="M163 219 Q167 215 171 219 Q175 223 179 219 Q183 215 187 219 Q191 223 195 219 Q199 215 203 219 Q207 223 211 219 Q215 215 219 219 Q223 223 227 219 Q231 215 235 219 Q239 223 243 219 Q247 215 251 219 Q255 223 259 219 Q263 215 267 219 Q271 223 275 219 Q279 215 280 219"
         stroke="#e8c84b" stroke-width="2" fill="none" opacity="0.95"/>
 
   <!-- JAVALINT -->
