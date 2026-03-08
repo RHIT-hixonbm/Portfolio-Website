@@ -1,5 +1,36 @@
 [
   {
+    "id": "linter",
+    "title": "Java Linter",
+    "shortDescription": "A static analysis tool for Java code and bytecode.",
+    "longDescription": "The Java Linter project was a team project built alongside Ethan Wilson and Emmet Southfield. The linter tool performs static analysis on compiled Java bytecode and source code based on the implemented rules based on CSSE 374's principles for designing \"Great Software.\" We each implemented three rules for a total of nine including style violations, design principle violations, and design pattern detection. For instance, one of our style rules was to check for the presence of Javadoc comments for all methods; one of our design principle rules was to ensure adherence to the principle of least knowledge by checking for chained method calls; and one of our design pattern rules was to check for the presence of observer interfaces. The complete list of rules can be found in the README in the additional documents section. To ensure the project was \"great\" itself, we designed the linter system to be easily extendable in adding new linters with a plethora of template methods, ensured input and output type flexibility via the strategy pattern, designed the system to use ASM and JavaParser indirectly via adapters of a more general interface, and adhered to the three layers pattern overall.",
+    "technologies": ["Java", "ASM", "JavaParser", "Jackson"],
+    "image": { "url": "/images/java-linter-logo.svg", "aspect": "aspect-[1]" },
+    "startYearAndMonth": "2026-02",
+    "endYearAndMonth": "2026-02",
+    "isFeatured": true,
+    "additionalInformation": "Source code is not available due to academic integrity policies.",
+    "myContributions": [
+      "Template Method Detector",
+      "Method Javadoc Rule",
+      "Hollywood Principle Rule",
+      "Multi-adapter design to allow for flexibility in parsing both source code and bytecode",
+      "JavaParser source parsing adapter implementation",
+      "Strategy pattern proposal for flexible input and output types",
+      "JSON input and output implementation",
+      "Aided algorithm design for detecting observer pattern",
+      "CLI presentation layer",
+      "Dual file hierarchy walker to consolidate parsed directories' source code and bytecode objects into a common object representation for analysis"
+    ],
+    "additionalDocuments": [
+      {
+        "title": "README.md",
+        "url": "https://docs.google.com/document/d/1KJ6sLYfgnrRzsa6A9lOy110iIl-T-I0lOVG085XtR7w/edit?usp=sharing",
+        "description": "The project's README file with detailed information. This includes my engineering notebook explaining my take on our design process as well as the document detailing my source code parsing feature. My teammates' personal links are ommitted for privacy and integrity."
+      }
+    ]
+  },
+  {
     "id": "schemeinterpreter",
     "title": "Scheme Interpreter",
     "shortDescription": "An intepreter for a subset of scheme.",
@@ -90,7 +121,7 @@
     "startYearAndMonth": "2024-06",
     "endYearAndMonth": "2024-08",
     "demoVideoUrl": "https://www.youtube.com/embed/eOllsMQuKxw",
-    "isFeatured": true,
+    "isFeatured": false,
     "additionalDocuments": [
       {
         "title": "Overview and Planning",
