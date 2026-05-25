@@ -1,5 +1,39 @@
 [
   {
+    "id": "gamepredict",
+    "title": "CS2 Match Outcome Prediction",
+    "shortDescription": "A machine learning match outcome prediction project.",
+    "longDescription": "This project was a machine learning driven project where the goal was to predict the outcome of a professional Counter-Strike: Global Offensive 2 matchup between two teams utilizing several Python data-processing libraries like Pandas and numpy. I worked alongside my two teammates Borui Liu and Alexei Novojilov. We utilized a historical account dataset from Kaggle to train a variety of machine learning models to predict who in a given encounter would win the match. This dataset included predictive post-match information like the player's average damage per round, kills, deaths, etc and team map score. From the historical account, we engineered a new temporally-based rolling average feature set based on the previous 10 matches in order to create machine-learning-ready features for our predictions. Much finer details on the work accomplished are given in the linked presentation we gave to the class on our findings.",
+    "technologies": ["Python", "Jupyter Notebook", "scikit-learn", "numpy", "Pandas"],
+    "image": { "url": "/images/cs2_ml_project_icon.svg", "aspect": "aspect-[1]" },
+    "startYearAndMonth": "2026-04",
+    "endYearAndMonth": "2026-05",
+    "isFeatured": true,
+    "additionalInformation": "Source code is not available due to academic integrity policies.",
+    "myContributions": [
+      "Engineering the rolling feature team and player datasets",
+      "Trained and analyzed logistic regressor on the team and player set",
+      "Trained and analyzed L1 regularized regressor on the team and player set",
+      "Trained and analyzed Support Vector Machine (SVM) on the team set",
+      "Trained and analyzed Gradient Boosted Tree on the team set",
+      "Trained and analyzed Random Forest on the player set",
+      "Performed polynomial feature engineering",
+      "Performed principal component analysis for L1 regularized regressor and SVM"
+    ],
+    "additionalDocuments": [
+      {
+        "title": "Final Presentation",
+        "url": "https://rosehulman-my.sharepoint.com/:p:/g/personal/hixonbm_rose-hulman_edu/IQC5c6YY_GYrRJ_2l4CbqYsrATQyFjwpy573HCwhItE-5gY?e=WAWNEq",
+        "description": "The project's conclusory presentation given in front of the class. Contains many fine details on the domain, our approach to the problem, methods, and analysis."
+      },
+      {
+        "title": "Kaggle Dataset",
+        "url": "https://www.kaggle.com/datasets/ektarr/counter-strike-pro-matches",
+        "description": "The original dataset used in our project."
+      }
+    ]
+  },
+  {
     "id": "linter",
     "title": "Java Linter",
     "shortDescription": "A static analysis tool for Java code and bytecode.",
@@ -62,7 +96,7 @@
     "startYearAndMonth": "2025-04",
     "endYearAndMonth": "2025-05",
     "demoVideoUrl": "https://www.youtube.com/embed/2_3E-MDyN8I",
-    "isFeatured": true,
+    "isFeatured": false,
     "additionalDocuments": [
       {
         "title": "Conceptual ER Diagram",
