@@ -1,10 +1,38 @@
 [
   {
+    "id": "raftdronemesh",
+    "title": "RAFT Consensus over Drone Mesh Network",
+    "shortDescription": "A distributed consensus system implemented using RAFT protocol over a mobile drone network.",
+    "longDescription": "This project implemented RAFT consensus nodes communicating over a network of mobile drones acting as routers. Alongside teammates John Tansey and Ethan Schurr, we designed a two-part system: a router drone mesh that forwards object-detection messages to RAFT nodes for replication, and the RAFT cluster itself. While the two components were developed independently and not fully unified by project completion, both subsystems functioned correctly on their own. The RAFT implementation includes leader election, log replication, and containerized nodes with comprehensive test suites to validate consensus behavior. The drone mesh simulates object detection — drones identify objects, create small metadata messages, and route those messages to the RAFT cluster for replication and logging.",
+    "technologies": ["Docker", "Python", "Shell Scripting", "Curses", "threading"],
+    "image": { "url": "/images/raftdronemesh.svg", "aspect": "aspect-[1]" },
+    "startYearAndMonth": "2026-05",
+    "endYearAndMonth": "2026-05",
+    "isFeatured": true,
+    "additionalInformation": "The drone mesh and RAFT subsystems were developed in parallel but integration was not completed in the available timeframe. Source code is not available due to academic integrity policies.",
+    "myContributions": [
+      "RAFT consensus protocol implementation",
+      "Help with docker containerization for RAFT nodes",
+      "Multithreading infrastructure for leader and election timeouts and follower log catchup",
+      "Help with leader election mechanism",
+      "Log replication and synchronization",
+      "Test suite development for consensus verification",
+      "Logging and debugging infrastructure"
+    ],
+    "additionalDocuments": [
+      {
+        "title": "Project Presentation",
+        "url": "https://rosehulman-my.sharepoint.com/:p:/g/personal/hixonbm_rose-hulman_edu/IQBVpxaoh-wNTYbIamHbnZyyAWvs2iTvVy3k95O_L5x5Tqg?e=Lt0G9l",
+        "description": "Slideshow presented in class covering both the drone mesh network architecture and RAFT consensus implementation."
+      }
+    ]
+  },
+  {
     "id": "gamepredict",
     "title": "CS2 Match Outcome Prediction",
     "shortDescription": "A machine learning match outcome prediction project.",
-    "longDescription": "This project was a machine learning driven project where the goal was to predict the outcome of a professional Counter-Strike: Global Offensive 2 matchup between two teams utilizing several Python data-processing libraries like Pandas and numpy. I worked alongside my two teammates Borui Liu and Alexei Novojilov. We utilized a historical account dataset from Kaggle to train a variety of machine learning models to predict who in a given encounter would win the match. This dataset included predictive post-match information like the player's average damage per round, kills, deaths, etc and team map score. From the historical account, we engineered a new temporally-based rolling average feature set based on the previous 10 matches in order to create machine-learning-ready features for our predictions. Much finer details on the work accomplished are given in the linked presentation we gave to the class on our findings.",
-    "technologies": ["Python", "Jupyter Notebook", "scikit-learn", "numpy", "Pandas"],
+    "longDescription": "Alongside teammates Borui Liu and Alexei Novojilov, I developed machine learning models to predict professional Counter-Strike 2 match outcomes. Using a Kaggle dataset of historical player performance metrics (kills, deaths, damage per round, etc.) and team information like game score, we engineered temporal features based on 10-match rolling averages to create machine-learning-ready inputs. We trained and evaluated multiple models including logistic regression, SVM, gradient boosted trees, and random forests. The linked presentation details our methodology and findings.",
+    "technologies": ["Python", "Jupyter Notebook", "scikit-learn", "NumPy", "pandas"],
     "image": { "url": "/images/cs2_ml_project_icon.svg", "aspect": "aspect-[1]" },
     "startYearAndMonth": "2026-04",
     "endYearAndMonth": "2026-05",
