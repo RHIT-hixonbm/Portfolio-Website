@@ -34,21 +34,23 @@ export default function ExperienceNode({
       } cursor-pointer`}
       onClick={(e) => performTransition(e, `/experience/${experience.id}`)}
     >
-      <CardHeader className="mt-6 lg:mt-10 xl:mt-14 2xl:mt-16 px-8 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
-        <CardTitle className="text-center text-[1.25rem] lg:text-[1.5rem] xl:text-[1.875rem] 2xl:text-[2.25rem] font-bold">
-          {experience.title}
-        </CardTitle>
-        <CardDescription className="text-center flex flex-col items-center">
-          <div className="text-[0.875rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.5rem] font-medium mt-2 text-gray-700">
-            {experience.company} - {experience.location}
-          </div>
-          <p className="mt-2 text-[0.75rem] text-gray-500 text-center lg:text-[1rem] xl:text-[1.125rem] 2xl:text-[1.25rem]">
-            {formatDate(experience.startYearAndMonth)} -{" "}
-            {experience.endYearAndMonth
-              ? formatDate(experience.endYearAndMonth)
-              : "Present"}
-          </p>
-        </CardDescription>
+      <CardHeader className="mt-6 lg:mt-10 xl:mt-14 2xl:mt-16 w-full">
+        <div className="w-[85%] mx-auto flex flex-col items-center gap-1">
+          <CardTitle className="text-center text-[1.25rem] lg:text-[1.5rem] xl:text-[1.875rem] 2xl:text-[2.25rem] font-bold">
+            {experience.title}
+          </CardTitle>
+          <CardDescription className="text-center flex flex-col items-center">
+            <div className="text-[0.875rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.5rem] font-medium mt-1 text-gray-700">
+              {experience.company} - {experience.location}
+            </div>
+            <p className="mt-1 text-[0.75rem] text-gray-500 text-center lg:text-[1rem] xl:text-[1.125rem] 2xl:text-[1.25rem]">
+              {formatDate(experience.startYearAndMonth)} -{" "}
+              {experience.endYearAndMonth
+                ? formatDate(experience.endYearAndMonth)
+                : "Present"}
+            </p>
+          </CardDescription>
+        </div>
       </CardHeader>
       <CardContent className="flex flex-col flex-wrap justify-between items-center">
         <p className="max-w-3xs lg:max-w-md xl:max-w-xl 2xl:max-w-2xl text-[0.875rem] text-center lg:text-[1.125rem] xl:text-[1.5rem] 2xl:text-[1.875rem] lg:px-5">
