@@ -18,7 +18,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
       <div>
         <h1 className="text-4xl md:text-7xl font-bold mb-4"><AnimatedText setFinishedAnimating={setNameFinishedAnimating} textSpeed={0.06}>Brett M. Hixon</AnimatedText></h1>
         <p className="text-lg md:text-3xl mb-8 max-w-6xl">
-          <AnimatedText setFinishedAnimating={setTitleOneFinishedAnimating} textSpeed={0.01}>Junior Computer Science student at</AnimatedText>{" "}
+          <AnimatedText setFinishedAnimating={setTitleOneFinishedAnimating} textSpeed={0.01}>Senior Computer Science student at</AnimatedText>{" "}
           <a
             href="https://www.rose-hulman.edu"
             target="_blank"
@@ -27,7 +27,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
           >
             <AnimatedText setFinishedAnimating={setTitleTwoFinishedAnimating} previousDone={titleOneFinishedAnimating} textSpeed={0.01}>Rose-Hulman</AnimatedText>
           </a>{" "}
-          <AnimatedText setFinishedAnimating={setTitleThreeFinishedAnimating} previousDone={titleTwoFinishedAnimating} textSpeed={0.01}>with specializations in AI and Cybersecurity</AnimatedText>
+          <AnimatedText setFinishedAnimating={setTitleThreeFinishedAnimating} previousDone={titleTwoFinishedAnimating} textSpeed={0.01}>with specializations in AI and Cybersecurity, and Co-Founder of Fafnir Aerospace</AnimatedText>
         </p>
       </div>
       {/* Profile picture */}

@@ -1,5 +1,24 @@
 [
     {
+        "id": "fafniraerospace",
+        "title": "Co-Founder",
+        "company": "Fafnir Aerospace",
+        "location": "Terre Haute, Indiana, United States · Remote",
+        "startYearAndMonth": "2026-04",
+        "shortDescription": "Co-founder of a senior capstone LLC developing a proof-of-concept autonomous drone system powered by a proprietary UV light communication module.",
+        "longDescription": "Co-founder of Fafnir Aerospace, an LLC originating as my senior capstone project at Rose-Hulman Institute of Technology. We are building a proof of concept demonstrating our proprietary UV light communication module integrated onto an autonomous drone for routing and object detection. In my role, I lead the development of the drone's routing algorithms and Simultaneous Localization and Mapping (SLAM) architecture to enable full autonomy. We plan to continue operating and scaling the company beyond graduation.",
+        "skills": [
+            "Artificial Intelligence (AI)",
+            "Robotics",
+            "Drones",
+            "Computer Vision",
+            "Routing Protocols"
+        ],
+        "icon": "Plane",
+        "featured": true,
+        "image": { "url": "/images/Fafnir-Aerospace-Icon-REFRESHED.png", "aspect": "aspect-[1]" }
+    },
+    {
         "id": "roseventures",
         "title": "Software Engineer Intern",
         "company": "Rose-Hulman Ventures",

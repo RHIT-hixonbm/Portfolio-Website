@@ -105,6 +105,9 @@ export default function AboutComponent() {
                   the hood&quot; of the black box that has become so prominent not
                   just in my major but in nearly all aspects of modern life.
                 </span>
+                <span className="block mt-2">
+                  This curiosity has recently culminated in the founding of my senior capstone company, <span className="font-semibold">Fafnir Aerospace!</span> As a co-founder and Lead AI Developer, I am currently working on a proof-of-concept autonomous drone system that uses a proprietary UV light communication module. I am specifically in charge of drone routing and building out the Simultaneous Localization and Mapping (SLAM) architecture. This is a real LLC that we intend to continue growing even after our capstone concludes.
+                </span>
               </p>
               <p>
                 <span className="font-bold text-gray-900">
