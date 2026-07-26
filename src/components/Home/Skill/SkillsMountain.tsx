@@ -6,65 +6,56 @@ import SkillCard from "./SkillCard";
 export default function SkillsMountain() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.9,
+    threshold: 0.1,
   });
 
   const skills = getSkills();
-  const num_base_skills = 3;
-  const num_mid_skills = 4;
-  const num_top_skills = 4;
-  const base_skills = skills.slice(0, num_base_skills);
-  const mid_skills = skills.slice(
-    num_base_skills,
-    num_mid_skills + num_base_skills
-  );
-  const top_skills = skills.slice(
-    num_base_skills + num_mid_skills,
-    num_top_skills + num_base_skills + num_mid_skills
-  );
+  
+  const groupedSkills = skills.reduce((acc, skill) => {
+    const category = skill.category || "Other";
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(skill);
+    return acc;
+  }, {} as Record<string, Skill[]>);
+
+  // Define the order we want to display categories
+  const categoryOrder = ["Languages", "Frameworks", "Technical Skills", "Workplace & Tooling", "Other"];
+  const categories = Object.keys(groupedSkills).sort((a, b) => {
+    const indexA = categoryOrder.indexOf(a);
+    const indexB = categoryOrder.indexOf(b);
+    return (indexA === -1 ? 99 : indexA) - (indexB === -1 ? 99 : indexB);
+  });
 
   return (
-    //TODO: RENDER THESE DYNAMICALLY AT SOME POINT
-    <div ref={ref} className="hidden md:flex flex-col items-center">
-      {/* Top */}
-      <div
-        className={`grid ${"grid-cols-4"} gap-1 justify-center opacity-0 ${
-          inView && "animate-fade-down"
-        }`}
-        style={inView ? { animationDelay: "0s" } : {}}
-      >
-        {top_skills.map((skill: Skill, index: number) => {
-          return (
-            <SkillCard key={index} skill={skill} textSize="text-md" largeTextSize="xl:text-[1.8rem]" />
-          );
-        })}
-      </div>
-      {/* Middle */}
-      <div
-        className={`grid ${"grid-cols-4"} gap-3 justify-center py-2 opacity-0 ${
-          inView && "animate-fade-down"
-        }`}
-        style={inView ? { animationDelay: "0.4s" } : {}}
-      >
-        {mid_skills.map((skill: Skill, index: number) => {
-          return (
-            <SkillCard key={index} skill={skill} textSize="text-2xl" largeTextSize="xl:text-[2.5rem]" />
-          );
-        })}
-      </div>
-      {/* Base */}
-      <div
-        className={`grid ${"grid-cols-3"} gap-2 justify-center py-2 opacity-0 ${
-          inView && "animate-fade-down"
-        }`}
-        style={inView ? { animationDelay: "0.8s" } : {}}
-      >
-        {base_skills.map((skill: Skill, index: number) => {
-          return (
-            <SkillCard key={index} skill={skill} textSize="text-5xl" largeTextSize="xl:text-[6rem]" px={"px-12"} />
-          );
-        })}
-      </div>
+    <div ref={ref} className="hidden md:flex flex-col items-center w-full gap-10 mt-8">
+      {categories.map((category, index) => (
+        <div key={category} className="w-full flex flex-col items-center">
+          <h3 
+            className={`text-3xl font-bold mb-4 text-gray-800 opacity-0 ${inView && "animate-fade-down"}`}
+            style={inView ? { animationDelay: `${index * 0.2}s` } : {}}
+          >
+            {category}
+          </h3>
+          <div
+            className={`flex flex-wrap gap-4 justify-center opacity-0 ${
+              inView && "animate-fade-down"
+            }`}
+            style={inView ? { animationDelay: `${(index * 0.2) + 0.1}s` } : {}}
+          >
+            {groupedSkills[category].map((skill: Skill, sIndex: number) => (
+              <SkillCard 
+                key={sIndex} 
+                skill={skill} 
+                textSize="text-2xl" 
+                largeTextSize="xl:text-3xl" 
+                px="px-8 py-2"
+              />
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

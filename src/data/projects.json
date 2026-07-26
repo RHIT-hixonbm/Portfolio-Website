@@ -4,7 +4,7 @@
     "title": "RAFT Consensus over Drone Mesh Network",
     "shortDescription": "A distributed consensus system implemented using RAFT protocol over a mobile drone network.",
     "longDescription": "This project implemented RAFT consensus nodes communicating over a network of mobile drones acting as routers. Alongside teammates John Tansey and Ethan Schurr, we designed a two-part system: a router drone mesh that forwards object-detection messages to RAFT nodes for replication, and the RAFT cluster itself. While the two components were developed independently and not fully unified by project completion, both subsystems functioned correctly on their own. The RAFT implementation includes leader election, log replication, and containerized nodes with comprehensive test suites to validate consensus behavior. The drone mesh simulates object detection — drones identify objects, create small metadata messages, and route those messages to the RAFT cluster for replication and logging.",
-    "technologies": ["Docker", "Python", "Shell Scripting", "Curses", "threading"],
+    "technologies": ["Docker", "Python", "Shell Scripting", "threading"],
     "image": { "url": "/images/raftdronemesh.svg", "aspect": "aspect-[1]" },
     "startYearAndMonth": "2026-05",
     "endYearAndMonth": "2026-05",
