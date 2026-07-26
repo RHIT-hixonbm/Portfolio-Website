@@ -13,7 +13,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
   const [titleThreeFinishedAnimating, setTitleThreeFinishedAnimating] = useState(false);
 
   return (
-    <section className="h-screen w-full py-0 md:py-10 flex flex-col justify-between items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-200 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-15.5 mb-5 border-2">
+    <section className="min-h-[100svh] w-full py-6 md:py-10 flex flex-col justify-center md:justify-between gap-6 md:gap-10 items-center text-center px-6 md:px-12 bg-gradient-to-b from-zinc-200 to-zinc-100 text-neutral-900 shadow-lg rounded-lg mt-15.5 mb-5 border-2">
       {/* Name and description */}
       <div>
         <h1 className="text-4xl md:text-7xl font-bold mb-4"><AnimatedText setFinishedAnimating={setNameFinishedAnimating} textSpeed={0.06}>Brett M. Hixon</AnimatedText></h1>
@@ -31,7 +31,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
         </p>
       </div>
       {/* Profile picture */}
-      <motion.div className="relative opacity-0 mb-8 rounded-full overflow-hidden w-full max-w-[9rem] md:max-w-[13rem] aspect-[1] mx-auto shadow-lg border-4 border-white" initial={{ scale: 0, opacity: 0 }} animate={{scale: nameFinishedAnimating ? 1 : 0, opacity: nameFinishedAnimating ? 1 : 0}} transition={{duration: 0.2, ease: easeOut}}>
+      <motion.div className="relative shrink-0 opacity-0 mb-8 rounded-full overflow-hidden w-full max-w-[9rem] md:max-w-[13rem] lg:max-w-[16rem] xl:max-w-[18rem] 2xl:max-w-[20rem] aspect-[1] mx-auto shadow-lg border-4 border-white" initial={{ scale: 0, opacity: 0 }} animate={{scale: nameFinishedAnimating ? 1 : 0, opacity: nameFinishedAnimating ? 1 : 0}} transition={{duration: 0.2, ease: easeOut}}>
         <Image
           src="/images/bust.png"
           alt="Brett M. Hixon"
@@ -57,7 +57,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
           <Button
             size="lg"
             variant="outline"
-            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer"
+            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer md:h-12 md:px-8 md:text-base lg:h-14 lg:px-10 lg:text-lg xl:h-16 xl:px-12 xl:text-xl"
             onClick={handleScrollToProjects}
           >
             View My Work
@@ -69,7 +69,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
           <Button
             size="lg"
             variant="outline"
-            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer"
+            className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white transition cursor-pointer md:h-12 md:px-8 md:text-base lg:h-14 lg:px-10 lg:text-lg xl:h-16 xl:px-12 xl:text-xl"
           >
             View Resume
           </Button>
