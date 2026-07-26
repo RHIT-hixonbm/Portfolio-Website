@@ -38,6 +38,7 @@ export default function SimpleProjectCard({
                 formatDate(project.endYearAndMonth)
               : formatDate(project.startYearAndMonth)}
             </span>
+          </CardDescription>
         </div>
         {showLink && (
           <div
