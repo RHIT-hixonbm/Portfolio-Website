@@ -1,9 +1,9 @@
 [
     { "name": "React", "category": "Frameworks", "description": "A JavaScript library for building web-application user interfaces, especially single-page applications. This website is built on it." },
-    { "name": "Vue", "category": "Frameworks", "description": "A JavaScript library for building web-application user interfaces, especially single-page applications much like React. See Steel Dynamics entry for an example."},
+    { "name": "Vue.js", "category": "Frameworks", "description": "A JavaScript library for building web-application user interfaces, especially single-page applications much like React. See Steel Dynamics entry for an example."},
     { "name": "Java", "category": "Languages", "description": "A versatile, object-oriented programming language used for web, desktop, and mobile applications. See Game Sniper project entry for an example." },
-    { "name": ".NET Core", "category": "Frameworks", "description": "A cross-platform, open-source framework for building modern web, desktop, and cloud applications. Researched this a lot in my internship at Rose-Hulman Ventures." },
-    { "name": "SQL", "category": "Languages", "description": "A domain-specific language for managing and querying relational databases. See Game Sniper project entry for an example." },
+    { "name": "ASP.NET Core", "category": "Frameworks", "description": "A cross-platform, open-source framework for building modern web, desktop, and cloud applications. Researched this a lot in my internship at Rose-Hulman Ventures." },
+    { "name": "Microsoft SQL Server", "category": "Languages", "description": "A domain-specific language and relational database management system for managing and querying relational databases. See Game Sniper project entry for an example." },
     { "name": "Artificial Intelligence (AI)", "category": "Technical Skills", "description": "Creating intelligent systems capable of autonomous routing, decision-making, and object recognition. See Fafnir Aerospace entry for an example." },
     { "name": "Robotics", "category": "Technical Skills", "description": "Integrating hardware and software for autonomous operation and control. See Fafnir Aerospace entry for an example." },
     { "name": "Drones", "category": "Technical Skills", "description": "Developing and managing autonomous flight systems and coordination. See Fafnir Aerospace entry for an example." },
@@ -42,5 +42,6 @@
     { "name": "CSS", "category": "Languages", "description": "A style sheet language used for describing the presentation of a document written in HTML." },
     { "name": "Swing", "category": "Frameworks", "description": "A GUI widget toolkit for Java. See Propulsion Pack Happy Cruise for an example." },
     { "name": "Matplotlib", "category": "Frameworks", "description": "A comprehensive library for creating static, animated, and interactive visualizations in Python. See superhero data analysis project." },
-    { "name": "Flask", "category": "Frameworks", "description": "A lightweight WSGI web application framework in Python. See superhero data analysis project." }
+    { "name": "Flask", "category": "Frameworks", "description": "A lightweight WSGI web application framework in Python. See superhero data analysis project." },
+    { "name": "Microsoft Entra ID", "category": "Workplace & Tooling", "description": "A cloud-based identity and access management service by Microsoft." }
 ]

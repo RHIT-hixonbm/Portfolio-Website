@@ -56,7 +56,7 @@ export default function HomeComponent() {
         {/*Experience*/}
         <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center my-8">Experience</h1>
-          <ExperienceLinks featured={true} />
+          <ExperienceLinks featured={true} limit={3} />
           <div
             className="text-lg text-blue-600 hover:underline cursor-pointer select-none mb-10"
             role="button"

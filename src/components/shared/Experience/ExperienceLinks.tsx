@@ -3,10 +3,15 @@ import { Experience } from "@/data/types";
 import ExperienceNode from "./ExperienceNode";
 import ExperienceNodeWithLink from "./ExperienceNodeWithLink";
 
-export default function ExperienceLinks({ featured }: { featured: boolean }) {
-  const experiences: Experience[] = getExperiences().filter(
+export default function ExperienceLinks({ featured, limit }: { featured: boolean; limit?: number }) {
+  let experiences: Experience[] = getExperiences().filter(
     (experience: Experience) => featured === false || experience.featured
   );
+  
+  if (limit) {
+    experiences = experiences.slice(0, limit);
+  }
+
   return (
     <div className="mb-10 flex flex-col items-start relative">
       {experiences.map((experience: Experience, idx: number) => (
