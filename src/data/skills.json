@@ -19,7 +19,7 @@
     { "name": "Leadership", "category": "Workplace & Tooling", "description": "The ability to guide teams, manage projects, and drive successful outcomes in collaborative environments. I was the coordinator for many of my group projects including xv6 threads and Game Sniper." },
     { "name": "JavaScript", "category": "Languages", "description": "A core language for web development, utilized extensively during my time at Steel Dynamics." },
     { "name": "C++", "category": "Languages", "description": "A high-performance systems programming language used in Robotics." },
-    { "name": "C#", "category": "Languages", "description": "A powerful object-oriented language for building .NET applications. Used during my internships at Steel Dynamics and Rose-Hulman Ventires." },
+    { "name": "C#", "category": "Languages", "description": "A powerful object-oriented language for building .NET applications. Used during my internships at Steel Dynamics and Rose-Hulman Ventures." },
     { "name": "Shell Scripting", "category": "Languages", "description": "Writing scripts for Unix/Linux shells to automate tasks and manage systems." },
     { "name": "Scikit-Learn", "category": "Frameworks", "description": "A machine learning library for Python, used heavily in predictive modeling and analysis. See CS2 Predict for an example." },
     { "name": "NumPy", "category": "Frameworks", "description": "A core library for scientific computing in Python, used alongside Pandas and Scikit-Learn." },
