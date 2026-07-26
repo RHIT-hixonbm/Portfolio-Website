@@ -35,14 +35,14 @@ export default function ExperienceNode({
       onClick={(e) => performTransition(e, `/experience/${experience.id}`)}
     >
       <CardHeader className="mt-6 lg:mt-10 xl:mt-14 2xl:mt-16 px-8 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
-        <CardTitle className="text-center text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold">
+        <CardTitle className="text-center text-[1.25rem] lg:text-[1.5rem] xl:text-[1.875rem] 2xl:text-[2.25rem] font-bold">
           {experience.title}
         </CardTitle>
         <CardDescription className="text-center flex flex-col items-center">
-          <div className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl font-medium mt-2 text-gray-700">
+          <div className="text-[0.875rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.5rem] font-medium mt-2 text-gray-700">
             {experience.company} - {experience.location}
           </div>
-          <p className="mt-2 text-xs text-gray-500 text-center lg:text-base xl:text-lg 2xl:text-xl">
+          <p className="mt-2 text-[0.75rem] text-gray-500 text-center lg:text-[1rem] xl:text-[1.125rem] 2xl:text-[1.25rem]">
             {formatDate(experience.startYearAndMonth)} -{" "}
             {experience.endYearAndMonth
               ? formatDate(experience.endYearAndMonth)
@@ -51,7 +51,7 @@ export default function ExperienceNode({
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col flex-wrap justify-between items-center">
-        <p className="max-w-3xs lg:max-w-md xl:max-w-xl 2xl:max-w-2xl text-sm text-center lg:text-lg xl:text-2xl 2xl:text-3xl lg:px-5">
+        <p className="max-w-3xs lg:max-w-md xl:max-w-xl 2xl:max-w-2xl text-[0.875rem] text-center lg:text-[1.125rem] xl:text-[1.5rem] 2xl:text-[1.875rem] lg:px-5">
           {experience.shortDescription}
         </p>
       </CardContent>
