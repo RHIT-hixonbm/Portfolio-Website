@@ -17,7 +17,7 @@
         ],
         "icon": "Briefcase",
         "featured": true,
-        "image": { "url": "/images/SDI.jpg", "aspect": "aspect-[1]" }
+        "image": { "url": "/images/SDI.svg", "aspect": "aspect-[1]" }
     },
     {
         "id": "fafniraerospace",
