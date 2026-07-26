@@ -35,7 +35,7 @@ export default function ExperienceNode({
       onClick={(e) => performTransition(e, `/experience/${experience.id}`)}
     >
       <CardHeader className="mt-6 lg:mt-10 xl:mt-14 2xl:mt-16 px-8 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
-        <CardTitle className="text-center text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-bold">
+        <CardTitle className="text-center text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold">
           {experience.title}
         </CardTitle>
         <CardDescription className="text-center flex flex-col items-center">
