@@ -1,4 +1,7 @@
+packages:
+  - '.'
+
 allowBuilds:
-  - '@tsparticles/engine'
-  - sharp
-  - unrs-resolver
+  '@tsparticles/engine': true
+  sharp: true
+  unrs-resolver: true
