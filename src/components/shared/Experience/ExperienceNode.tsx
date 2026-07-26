@@ -34,15 +34,15 @@ export default function ExperienceNode({
       } cursor-pointer`}
       onClick={(e) => performTransition(e, `/experience/${experience.id}`)}
     >
-      <CardHeader className="mt-6 px-8 md:px-10 lg:px-16 xl:px-20">
-        <CardTitle className="text-center text-md lg:text-2xl xl:text-3xl">
+      <CardHeader className="mt-6 lg:mt-10 xl:mt-14 px-8 md:px-10 lg:px-16 xl:px-20">
+        <CardTitle className="text-center text-md lg:text-2xl xl:text-4xl">
           {experience.title}
         </CardTitle>
         <CardDescription className="text-center flex flex-col items-center">
           <div className="text-xs lg:text-lg xl:text-xl">
             {experience.company} - {experience.location}
           </div>
-          <p className="mt-2 text-sm text-gray-800 text-center lg:text-xl xl:text-2xl 2xl:text-3xl">
+          <p className="mt-2 text-sm text-gray-800 text-center lg:text-xl xl:text-2xl 2xl:text-4xl">
             {formatDate(experience.startYearAndMonth)} -{" "}
             {experience.endYearAndMonth
               ? formatDate(experience.endYearAndMonth)
