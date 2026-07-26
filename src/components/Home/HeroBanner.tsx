@@ -27,7 +27,7 @@ export default function HeroBanner({ handleScrollToProjects }: { handleScrollToP
           >
             <AnimatedText setFinishedAnimating={setTitleTwoFinishedAnimating} previousDone={titleOneFinishedAnimating} textSpeed={0.01}>Rose-Hulman</AnimatedText>
           </a>{" "}
-          <AnimatedText setFinishedAnimating={setTitleThreeFinishedAnimating} previousDone={titleTwoFinishedAnimating} textSpeed={0.01}>with specializations in AI and Cybersecurity, and Co-Founder of Fafnir Aerospace</AnimatedText>
+          <AnimatedText setFinishedAnimating={setTitleThreeFinishedAnimating} previousDone={titleTwoFinishedAnimating} textSpeed={0.01}>with specializations in AI and Cybersecurity, and Co-Founder & Lead AI Developer of Fafnir Aerospace</AnimatedText>
         </p>
       </div>
       {/* Profile picture */}
