@@ -34,15 +34,15 @@ export default function ExperienceNode({
       } cursor-pointer`}
       onClick={(e) => performTransition(e, `/experience/${experience.id}`)}
     >
-      <CardHeader className="mt-6 lg:mt-10 xl:mt-14 px-8 md:px-10 lg:px-16 xl:px-20">
-        <CardTitle className="text-center text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold">
+      <CardHeader className="mt-6 lg:mt-10 xl:mt-14 2xl:mt-16 px-8 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
+        <CardTitle className="text-center text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-bold">
           {experience.title}
         </CardTitle>
         <CardDescription className="text-center flex flex-col items-center">
-          <div className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl font-medium mt-1 text-gray-700">
+          <div className="text-sm lg:text-lg xl:text-2xl 2xl:text-3xl font-medium mt-2 text-gray-700">
             {experience.company} - {experience.location}
           </div>
-          <p className="mt-1 text-xs text-gray-500 text-center lg:text-base xl:text-lg 2xl:text-xl">
+          <p className="mt-2 text-xs text-gray-500 text-center lg:text-base xl:text-lg 2xl:text-xl">
             {formatDate(experience.startYearAndMonth)} -{" "}
             {experience.endYearAndMonth
               ? formatDate(experience.endYearAndMonth)
@@ -51,7 +51,7 @@ export default function ExperienceNode({
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col flex-wrap justify-between items-center pt-4">
-        <p className="mt-2 max-w-3xs lg:max-w-md xl:max-w-lg 2xl:max-w-xl text-sm text-center lg:text-lg xl:text-xl 2xl:text-2xl lg:px-5">
+        <p className="mt-2 max-w-3xs lg:max-w-md xl:max-w-xl 2xl:max-w-2xl text-sm text-center lg:text-lg xl:text-2xl 2xl:text-3xl lg:px-5">
           {experience.shortDescription}
         </p>
       </CardContent>
