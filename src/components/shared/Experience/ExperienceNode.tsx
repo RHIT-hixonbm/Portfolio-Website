@@ -50,12 +50,12 @@ export default function ExperienceNode({
           </p>
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col flex-wrap justify-between items-center pt-4">
-        <p className="mt-2 max-w-3xs lg:max-w-md xl:max-w-xl 2xl:max-w-2xl text-sm text-center lg:text-lg xl:text-2xl 2xl:text-3xl lg:px-5">
+      <CardContent className="flex flex-col flex-wrap justify-between items-center">
+        <p className="max-w-3xs lg:max-w-md xl:max-w-xl 2xl:max-w-2xl text-sm text-center lg:text-lg xl:text-2xl 2xl:text-3xl lg:px-5">
           {experience.shortDescription}
         </p>
       </CardContent>
-      <CardFooter className="flex flex-col flex-wrap justify-between items-center pt-4">
+      <CardFooter className="mb-8 lg:mb-12 xl:mb-16 2xl:mb-20 flex flex-col flex-wrap justify-between items-center">
         <IconComponent className="text-gray-500 lg:w-10 lg:h-10 xl:w-12 xl:h-12 2xl:w-16 2xl:h-16" />
       </CardFooter>
     </Card>
