@@ -9,9 +9,7 @@ export default function SkillsMountain() {
     threshold: 0.9,
   });
 
-  const skills = getSkills().sort(
-    (a: Skill, b: Skill) => a.priority - b.priority
-  );
+  const skills = getSkills();
   const num_base_skills = 3;
   const num_mid_skills = 4;
   const num_top_skills = 4;
@@ -35,9 +33,9 @@ export default function SkillsMountain() {
         }`}
         style={inView ? { animationDelay: "0s" } : {}}
       >
-        {top_skills.map((skill: Skill) => {
+        {top_skills.map((skill: Skill, index: number) => {
           return (
-            <SkillCard key={skill.priority} skill={skill} textSize="text-md" largeTextSize="xl:text-[1.8rem]" />
+            <SkillCard key={index} skill={skill} textSize="text-md" largeTextSize="xl:text-[1.8rem]" />
           );
         })}
       </div>
@@ -48,9 +46,9 @@ export default function SkillsMountain() {
         }`}
         style={inView ? { animationDelay: "0.4s" } : {}}
       >
-        {mid_skills.map((skill: Skill) => {
+        {mid_skills.map((skill: Skill, index: number) => {
           return (
-            <SkillCard key={skill.priority} skill={skill} textSize="text-2xl" largeTextSize="xl:text-[2.5rem]" />
+            <SkillCard key={index} skill={skill} textSize="text-2xl" largeTextSize="xl:text-[2.5rem]" />
           );
         })}
       </div>
@@ -61,9 +59,9 @@ export default function SkillsMountain() {
         }`}
         style={inView ? { animationDelay: "0.8s" } : {}}
       >
-        {base_skills.map((skill: Skill) => {
+        {base_skills.map((skill: Skill, index: number) => {
           return (
-            <SkillCard key={skill.priority} skill={skill} textSize="text-5xl" largeTextSize="xl:text-[6rem]" px={"px-12"} />
+            <SkillCard key={index} skill={skill} textSize="text-5xl" largeTextSize="xl:text-[6rem]" px={"px-12"} />
           );
         })}
       </div>
