@@ -38,8 +38,8 @@ export default function ExperienceNode({
         <CardTitle className="text-center text-md lg:text-2xl xl:text-3xl 2xl:text-4xl">
           {experience.title}
         </CardTitle>
-        <CardDescription className="text-center">
-          <div className="text-xs px-3 lg:px-5 lg:text-lg xl:text-xl 2xl:text-2xl">
+        <CardDescription className="text-center flex flex-col items-center">
+          <div className="text-xs px-3 lg:px-5 lg:text-lg xl:text-xl 2xl:text-2xl max-w-[80%] mx-auto">
             {experience.company} - {experience.location}
           </div>
           <p className="mt-2 text-sm text-gray-800 text-center lg:text-xl xl:text-2xl 2xl:text-3xl">
