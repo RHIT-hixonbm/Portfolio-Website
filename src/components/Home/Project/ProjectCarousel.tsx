@@ -36,7 +36,7 @@ export default function ProjectCarousel() {
 
   const projects: Project[] = useMemo(() => getProjects(), []);
   return (
-    <Carousel className="w-full max-w-2xs xl:max-w-6xl lg:max-w-3xl md:max-w-3xl mb-6">
+    <Carousel className="w-full max-w-2xs md:max-w-3xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[90rem] mb-6">
       <CarouselContent
         ref={ref}
         onMouseEnter={handleMouseEnter}

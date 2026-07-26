@@ -32,7 +32,7 @@ export default function HomeComponent() {
         {/*Projects*/}
         <div
           id="projects"
-          className={`max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2 ${
+          className={`max-w-4xl lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[100rem] w-full mt-12 flex flex-col items-center bg-zinc-100 shadow-lg rounded-lg border-2 ${
             pulse ? "animate-[pulse_1s_ease-in-out_1]" : ""
           }`}
           ref={projectsRef}
@@ -54,7 +54,7 @@ export default function HomeComponent() {
           </div>
         </div>
         {/*Experience*/}
-        <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center">
+        <div className="max-w-4xl lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[100rem] w-full mt-12 flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center my-8">Experience</h1>
           <ExperienceLinks featured={true} limit={3} />
           <div
@@ -67,7 +67,7 @@ export default function HomeComponent() {
           </div>
         </div>
         {/* Skills */}
-        <div className="max-w-4xl xl:max-w-7xl lg:max-w-4xl w-full mt-12 flex flex-col items-center mb-8">
+        <div className="max-w-4xl lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[100rem] w-full mt-12 flex flex-col items-center mb-8">
           <h1 className="text-3xl font-bold text-center my-8">
             Skills & Frameworks
           </h1>

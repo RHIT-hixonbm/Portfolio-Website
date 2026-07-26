@@ -29,14 +29,15 @@ export default function SimpleProjectCard({
     >
       <CardHeader className="flex justify-between">
         <div className="flex flex-col gap-2">
-          <CardTitle>{project.title}</CardTitle>
+          <CardTitle className="text-xl md:text-2xl 2xl:text-4xl">{project.title}</CardTitle>
           <CardDescription>
+            <span className="text-sm md:text-base 2xl:text-xl">
             {project.startYearAndMonth !== project.endYearAndMonth
               ? formatDate(project.startYearAndMonth) +
                 " - " +
                 formatDate(project.endYearAndMonth)
               : formatDate(project.startYearAndMonth)}
-          </CardDescription>
+            </span>
         </div>
         {showLink && (
           <div
@@ -53,17 +54,17 @@ export default function SimpleProjectCard({
           <Image
             src={project.image.url}
             alt={project.title}
-            width={200}
-            height={200}
-            className="rounded-lg mb-4"
+            width={600}
+            height={600}
+            className="rounded-lg mb-4 w-48 h-48 md:w-64 md:h-64 xl:w-96 xl:h-96 2xl:w-[32rem] 2xl:h-[32rem] object-cover"
           />
         </div>
-        <p>{project.shortDescription}</p>
+        <p className="text-base md:text-lg 2xl:text-2xl">{project.shortDescription}</p>
       </CardContent>
       <CardFooter className="flex flex-col md:flex-row flex-wrap justify-between items-center pt-4">
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, index) => (
-            <Badge key={index} className="mb-2">
+            <Badge key={index} className="mb-2 text-xs 2xl:text-lg 2xl:px-4 2xl:py-2">
               {tech}
             </Badge>
           ))}
