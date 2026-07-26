@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 
 export default function AnimatedText({
@@ -15,7 +15,7 @@ export default function AnimatedText({
   textSpeed?: number;
 }) {
   const words = children.split(" ");
-  const container = {
+  const container: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -23,7 +23,7 @@ export default function AnimatedText({
       },
     },
   };
-  const child = {
+  const child: Variants = {
     hidden: {
       opacity: 0,
       y: `0.25em`,
