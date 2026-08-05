@@ -1,5 +1,39 @@
 [
   {
+    "id": "recognizing-human-activity-radar",
+    "title": "Recognizing Human Activity From Radar",
+    "shortDescription": "A deep learning pipeline classifying human activities from FMCW radar data.",
+    "longDescription": "This project aimed to classify human activity from micro-Doppler spectrograms recorded by Frequency Modulated Continuous Wave (FMCW) radar using a proposed novel CNN architecture, the CRCNN by Nguyen et. al. Working alongside teammates Manning Norris, Hollin Glaze, and JP Vestjins, we focused on preprocessing noisy radar data and improving classification accuracy. The dataset consisted of 11 classes of human activities generated via Simhumalator, to which we added varying levels of White Gaussian Noise to simulate real-world hardware thermal noise. From here, we applied Short Time Fourier Transforms to create spectrograms for input to the CNN classifiers. We implemented a denoising algorithm in the preprocessing stage, established an 88% accurate baseline using a PyTorch CNN, and collaborated on integrating a novel CRCNN architecture. Our project was based off research from Nguyen et. al.'s paper linked in the additional documents section.",
+    "technologies": [
+      "Python",
+      "PyTorch",
+      "scikit-learn",
+      "CNN",
+      "Deep Learning"
+    ],
+    "image": {
+      "url": "/images/radar-human-activity.svg",
+      "aspect": "aspect-[1]"
+    },
+    "startYearAndMonth": "2026-07",
+    "endYearAndMonth": "2026-08",
+    "isFeatured": true,
+    "additionalInformation": "Developed as a project for CSSE463. Utilized artificially generated data from the Simhumalator and Gemini Flash for dataset generation scripts and syntax help.",
+    "myContributions": [
+      "Generated noised data, corresponding spectrograms, and stratified train/test/validation splits",
+      "Implemented a denoising algorithm for micro-Doppler spectrograms to reduce White Gaussian thermal noise",
+      "Engineered and evaluated the baseline PyTorch CNN model achieving 88% classification accuracy across 11 activity classes",
+      "Collaborated to dissect and integrate a novel CRCNN architecture to further enhance spectrogram classification performance"
+    ],
+    "additionalDocuments": [
+      {
+        "title": "Reference paper",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308045#sec005",
+        "description": "Work by Nguyen et. al. that we based our work on and attempted to emulate."
+      }
+    ]
+  },
+  {
     "id": "raftdronemesh",
     "title": "RAFT Consensus over Drone Mesh Network",
     "shortDescription": "A distributed consensus system implemented using RAFT protocol over a mobile drone network.",

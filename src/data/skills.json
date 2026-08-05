@@ -44,4 +44,7 @@
     { "name": "Matplotlib", "category": "Frameworks", "description": "A comprehensive library for creating static, animated, and interactive visualizations in Python. See superhero data analysis project." },
     { "name": "Flask", "category": "Frameworks", "description": "A lightweight WSGI web application framework in Python. See superhero data analysis project." },
     { "name": "Microsoft Entra ID", "category": "Workplace & Tooling", "description": "A cloud-based identity and access management service by Microsoft. Used extensively during my Steel Dynamics, Inc. internship." }
+    ,{ "name": "PyTorch", "category": "Frameworks", "description": "A deep learning library for building and training neural networks; used for model development and experimentation." },
+    { "name": "Deep Learning", "category": "Technical Skills", "description": "Techniques and methods for training neural networks (CNNs, RNNs) for representation learning and classification tasks." },
+    { "name": "Convolutional Neural Networks (CNN)", "category": "Technical Skills", "description": "A class of deep neural networks specialized for grid-like data such as images and spectrograms; used for classification." }
 ]
