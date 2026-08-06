@@ -26,6 +26,7 @@
     { "name": "Entity Framework", "category": "Frameworks", "description": "An object-relational mapper for .NET. Used extensively for database operations and researched heavily at Rose-Hulman Ventures." },
     { "name": "Firebase", "category": "Frameworks", "description": "A platform developed by Google for creating mobile and web applications. Used for real-time databases and authentication. See Bulletin Board project entry." },
     { "name": "Multithreading", "category": "Technical Skills", "description": "Designing concurrent applications and managing complex system resources efficiently. See xv6 threads project for an example." },
+    { "name": "Parallel Computing", "category": "Technical Skills", "description": "Designing and implementing parallel and distributed systems using multithreading, multiprocessing, and CUDA GPU programming to scale compute-intensive applications." },
     { "name": "Computer Architecture", "category": "Technical Skills", "description": "Deep understanding of how computer systems operate at the hardware level. See RISC-V processor project." },
     { "name": "Cybersecurity", "category": "Technical Skills", "description": "Understanding of systems vulnerabilities, script injection, and robust architectural defense. Pursuing a minor in this field." },
     { "name": "Docker", "category": "Workplace & Tooling", "description": "A platform for developing, shipping, and running applications in isolated containers. See RAFT project." },
