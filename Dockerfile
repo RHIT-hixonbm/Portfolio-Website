@@ -8,6 +8,8 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json pnpm-lock.yaml* pnpm-workspace.yaml* ./
+# Ensure preinstall helper scripts are available during install step
+COPY scripts/check-pm.js ./scripts/check-pm.js
 RUN corepack enable pnpm && pnpm i --frozen-lockfile
 
 # Rebuild the source code only when needed
