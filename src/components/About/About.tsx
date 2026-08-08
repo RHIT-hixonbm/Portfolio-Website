@@ -16,122 +16,56 @@ export default function AboutComponent() {
           imageWidth="w-32"
           cardContent={
             <div className="space-y-6 text-lg leading-relaxed text-gray-800">
+              <h2 className="text-2xl font-extrabold text-gray-900 tracking-tight">Hello, I&apos;m Brett Hixon!</h2>
+              <p className="mt-2">
+                I am a Senior Computer Science major at Rose-Hulman Institute of Technology (Class of 2027) with minors in Cybersecurity, AI, and Japanese. I have a passion for designing scalable software systems, full-stack application development, artificial intelligence, and cybersecurity. Through both industry experience and academic coursework, I have built a strong track record of translating complex computer science theory into reliable, scalable full-stack applications.
+              </p>
+
+              <hr className="my-6" />
+
+              <h3 className="text-xl font-semibold">How It Started</h3>
               <p>
-                <span className="text-2xl font-extrabold text-gray-900 tracking-tight">
-                  Hello, I&apos;m Brett Hixon!
-                </span>
-                <br />
-                <span className="block mt-2">
-                  I have always been fond of all kinds of technology including
-                  computers, gaming consoles, robots, cryptocurrency, AI and
-                  more!
-                </span>
-                <span className="block mt-2">
-                  My interest in the field wasn&apos;t always self-derived though! I
-                  was{" "}
-                  <span className="italic text-gray-600">
-                    forced into a coding club
-                  </span>{" "}
-                  by my mom in 5th grade and thought moving Angry Birds was kind
-                  of cool. Then, my 8th grade STEM teacher Mrs. Sellers made me
-                  realize this could be more than just a passion but a career
-                  for life. I began exploring career paths related to software
-                  development and began digging into early programming concepts
-                  through the platform ROBLOX. Through making games and
-                  realizing the process&apos;s potential impact on my future, my
-                  passion grew even more fervent.
-                </span>
-                <span className="block mt-2">
-                  Now I am a part of Rose-Hulman&apos;s class of 2027 pursuing my
-                  Bachelor&apos;s degree in Computer Science and hope to enter the
-                  workforce as a desktop application engineer.
-                </span>
+                My journey into software engineering didn&apos;t start as a solo endeavor—I was first pushed into a coding club by my mom in 5th grade, where I realized how cool it was to make Angry Birds move across a screen! In 8th grade, my STEM teacher, Mrs. Sellers, helped me see that this curiosity could become a lifelong career.
               </p>
               <p>
-                <span className="font-bold text-gray-900">
-                  Passionate about software applications, especially video
-                  games!
-                </span>
-                <br />
-                <span className="block mt-2">
-                  If it&apos;s possible, I love to dig into games to understand how
-                  they were made and how modern ones are able to program such
-                  complex interactions. My passion for programming ramped up
-                  exponentially by trying to figure out how video game cheaters
-                  and script injectors were able to accomplish such feats. This grew into
-                  my interest in cybersecurity which I am now pursuing as a minor.
-                </span>
-                <span className="block mt-2">
-                  Through my studies at Rose-Hulman, I&apos;ve discovered a passion
-                  for low-level concurrency problems and systems programming. In
-                  my Operating Systems class, I loved producer-consumer
-                  scenarios, threading, and thinking like an operating system. I
-                  was also a teaching assistant for our introductory systems
-                  programming course at Rose-Hulman for the entirety of my
-                  Sophomore year where I thoroughly enjoyed teaching others
-                  these concepts. Furthermore, my experience in computer architecture
-                  has only emboldened this passion.
-                </span>
-                <span className="block mt-2">
-                  During my internship and Rose-Ventures I learned about various
-                  frameworks such as ASP.NET Core, Entity Framework Core, and
-                  React. I used this as an opportunity to apply my robust
-                  understanding of programming concepts to something that had a
-                  practical application. My time spent in industry has made
-                  realize all the more that this field offers limitless possibly
-                  and incessantly reinvigorates by curiousity.
-                </span>
+                I began exploring early programming concepts on ROBLOX, creating games and experiencing firsthand the impact of building software for real users. Trying to understand how video game cheaters and script injectors manipulated applications on this same platform ignited my curiosity for reverse engineering and cybersecurity—a curiosity that now forms my academic minor.
+              </p>
+
+              <hr className="my-6" />
+
+              <h3 className="text-xl font-semibold">Technical Breadth & Teaching</h3>
+              <p>
+                Through my studies at Rose-Hulman and Industry, I’ve explored many domains across the computing spectrum, including distributed systems, operating systems, robotics, parallel computing, netowrking, web application architecture, background services, desktop applications, and more. To reinforce my understanding and give back to the campus community, I served as a course assistant for multiple computer science courses throughout my sophomore and junior years.
               </p>
               <p>
-                <span className="font-bold text-gray-900">
-                  Why cybersecurity and AI?
-                </span>
-                <br />
-                <span className="block mt-2">
-                  As I mentioned previously, one of my first motivations for
-                  learning how to program was understanding how cheaters
-                  reverse engineer applications to develop script injectors.
-                  This was my introduction to cybersecurity concepts, and I saw
-                  it fit to formally supplement my CS major with this minor to
-                  satiate my initial curiosity.
-                </span>
-                <span className="block mt-2">
-                  As for artificial intelligence, I began to observe its influence
-                  grow ever more as I navigated my degree and noted how courses
-                  were evolving to intelligently make use of these new tools.
-                  Being the curious person I am and understanding the growing
-                  reach of new artificial intelligence technologies, I decided
-                  to formally dig deeper to understand these concepts and &quot;pop 
-                  the hood&quot; of the black box that has become so prominent not
-                  just in my major but in nearly all aspects of modern life.
-                </span>
-                <span className="block mt-2">
-                  This curiosity has recently culminated in the founding of my senior capstone company, <span className="font-semibold">Fafnir Aerospace!</span> As a co-founder and Lead AI Developer, I am currently working on a proof-of-concept autonomous drone system that uses a proprietary UV light communication module. I am specifically in charge of drone routing and building out the Simultaneous Localization and Mapping (SLAM) architecture. This is a real LLC that we intend to continue growing even after our capstone concludes.
-                </span>
+                In industry, I&apos;ve had the opportunity to build software that scales to tangible business needs using modern enterprise tools—ranging from web frameworks like <span className="font-semibold">Vue</span> and <span className="font-semibold">React</span> to robust backend ecosystems like <span className="font-semibold">.NET</span>. I've also gained extensive experience with industrial middleware technologies like <span className="font-semibold">Microsoft Entra ID</span>, <span className="font-semibold">IIS web hosting and internal DNS management</span>, and more. Industry experience continues to stretch my problem-solving capabilities beyond what traditional classroom settings can emulate.
               </p>
+
+              <hr className="my-6" />
+
+              <h3 className="text-xl font-semibold">Why Cybersecurity & Artificial Intelligence?</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li><span className="font-semibold">Cybersecurity:</span> My early fascination with reverse engineering led me to formally pursue a cybersecurity minor to master defensive and offensive security principles.</li>
+                <li><span className="font-semibold">Artificial Intelligence:</span> As AI tools became increasingly prominent across software engineering, I wanted to &quot;pop the hood&quot; and truly understand the underlying algorithms and architectures rather than treat them as black boxes.</li>
+              </ul>
+
+              <hr className="my-6" />
+
+              <h3 className="text-xl font-semibold">Co-Founding Fafnir Aerospace</h3>
               <p>
-                <span className="font-bold text-gray-900">
-                  There&apos;s more to me than the programming!
-                </span>
-                <br />
-                <span className="block mt-2">
-                  I love walking! I make sure to get the recommended 10,000
-                  steps daily, rain or shine.
-                </span>
-                <span className="block mt-2">
-                  In addition, I like all things Japanese media. I&apos;ve been a fan
-                  of anime and manga since middle school. At the end of freshman
-                  year I decided I&apos;d like to take on the language to better
-                  understand the cultural artifacts I was consuming.
-                </span>
-                <span className="block mt-2">
-                  I am now halfway finished with my Japanese minor and did study
-                  abroad in Japan in the summer of 2025.
-                </span>
+                My work in AI culminated in co-founding <span className="font-semibold">Fafnir Aerospace</span>, my senior capstone project and registered LLC. As Lead AI Developer, I am designing the Autonomous Navigation, Drone Routing, and Simultaneous Localization and Mapping (SLAM) architecture for a proof-of-concept autonomous drone system powered by a proprietary UV light communication module. Our team intends to continue scaling the company beyond graduation.
               </p>
+
+              <hr className="my-6" />
+
+              <h3 className="text-xl font-semibold">Beyond the Code</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li><span className="font-semibold">Daily Hikes & Health:</span> Rain or shine, I hit my target of 10,000 steps every single day.</li>
+                <li><span className="font-semibold">Japanese Language & Culture:</span> I have been a fan of anime and manga since middle school. To better engage with Japanese media and culture, I completed a Japanese minor and studied abroad in Japan during the summer of 2025.</li>
+              </ul>
+
               <p className="text-xl font-semibold text-gray-700 italic">
-                Thank you for taking time to view this website, I put a lot of
-                work into it and I look forward to hearing from you soon!
+                Thank you for visiting my portfolio! Feel free to explore my <span className="font-semibold">Projects</span> and <span className="font-semibold">Experience</span> pages, or reach out directly if you&apos;d like to connect.
               </p>
             </div>
           }
@@ -162,7 +96,7 @@ export default function AboutComponent() {
                     <span className="font-semibold">Minors:</span> Japanese, Cybersecurity, Artificial Intelligence
                   </p>
                   <p className="text-lg md:text-3xl text-gray-800 mb-4">
-                    <span className="font-semibold">GPA:</span> 3.97
+                    <span className="font-semibold">GPA:</span> 3.98
                   </p>
                 </div>
               </div>
@@ -197,9 +131,27 @@ export default function AboutComponent() {
                   code: "CSSE 432",
                   name: "Computer Networks",
                 },
+                { code: "CSSE 335", 
+                  name: "Parallel Computing" },
                 {
                   code: "CSSE 415",
                   name: "Machine Learning",
+                },
+                { 
+                  code: "CSSE 463",
+                  name: "Image Recognition"
+                },
+                { 
+                  code: "CSSE 340",
+                  name: "Foundations of Cybersecurity"
+                },
+                { 
+                  code: "CSSE 479",
+                  name: "Cryptography"
+                },
+                { 
+                  code: "CSSE 490",
+                  name: "Malware Analysis"
                 },
                 {
                   code: "CSSE 280",
