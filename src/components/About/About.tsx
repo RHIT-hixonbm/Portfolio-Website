@@ -35,19 +35,11 @@ export default function AboutComponent() {
 
               <h3 className="text-xl font-semibold">Technical Breadth & Teaching</h3>
               <p>
-                Through my studies at Rose-Hulman and Industry, I’ve explored many domains across the computing spectrum, including distributed systems, operating systems, robotics, parallel computing, netowrking, web application architecture, background services, desktop applications, and more. To reinforce my understanding and give back to the campus community, I served as a course assistant for multiple computer science courses throughout my sophomore and junior years.
+               Through my studies at Rose-Hulman and my industry experience, I&apos;ve developed a broad understanding of systems and application development, including operating systems, distributed systems, networking, parallel computing, robotics, and full-stack web architecture. To reinforce my understanding and give back to the campus community, I served as a course assistant for multiple computer science courses throughout my sophomore and junior years.
               </p>
               <p>
-                In industry, I&apos;ve had the opportunity to build software that scales to tangible business needs using modern enterprise tools—ranging from web frameworks like <span className="font-semibold">Vue</span> and <span className="font-semibold">React</span> to robust backend ecosystems like <span className="font-semibold">.NET</span>. I've also gained extensive experience with industrial middleware technologies like <span className="font-semibold">Microsoft Entra ID</span>, <span className="font-semibold">IIS web hosting and internal DNS management</span>, and more. Industry experience continues to stretch my problem-solving capabilities beyond what traditional classroom settings can emulate.
+                In industry, I&apos;ve had the opportunity to build software that scales to tangible business needs using modern enterprise tools—ranging from web frameworks like <span className="font-semibold">Vue</span> and <span className="font-semibold">React</span> to robust backend ecosystems like <span className="font-semibold">.NET</span>. I&apos;ve also gained hands-on experience with enterprise infrastructure technologies like <span className="font-semibold">Microsoft Entra ID</span>, <span className="font-semibold">IIS web hosting and internal DNS management</span>, and more. Industry experience continues to stretch my problem-solving capabilities beyond what traditional classroom settings can emulate.
               </p>
-
-              <hr className="my-6" />
-
-              <h3 className="text-xl font-semibold">Why Cybersecurity & Artificial Intelligence?</h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li><span className="font-semibold">Cybersecurity:</span> My early fascination with reverse engineering led me to formally pursue a cybersecurity minor to master defensive and offensive security principles.</li>
-                <li><span className="font-semibold">Artificial Intelligence:</span> As AI tools became increasingly prominent across software engineering, I wanted to &quot;pop the hood&quot; and truly understand the underlying algorithms and architectures rather than treat them as black boxes.</li>
-              </ul>
 
               <hr className="my-6" />
 
@@ -57,6 +49,12 @@ export default function AboutComponent() {
               </p>
 
               <hr className="my-6" />
+
+              <h3 className="text-xl font-semibold">Why Cybersecurity & Artificial Intelligence?</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li><span className="font-semibold">Cybersecurity:</span> My early fascination with reverse engineering led me to formally pursue a cybersecurity minor to master defensive and offensive security principles.</li>
+                <li><span className="font-semibold">Artificial Intelligence:</span> As AI tools became increasingly prominent across software engineering, I wanted to &quot;pop the hood&quot; and truly understand the underlying algorithms and architectures rather than treat them as black boxes.</li>
+              </ul>
 
               <h3 className="text-xl font-semibold">Beyond the Code</h3>
               <ul className="list-disc list-inside space-y-2">

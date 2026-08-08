@@ -2,7 +2,9 @@
   "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.20.0",
   "scripts": {
+    "preinstall": "node ./scripts/check-pm.js",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start -p $PORT -H 0.0.0.0",
