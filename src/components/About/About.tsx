@@ -18,7 +18,7 @@ export default function AboutComponent() {
             <div className="space-y-6 text-lg leading-relaxed text-gray-800">
               <h2 className="text-2xl font-extrabold text-gray-900 tracking-tight">Hello, I&apos;m Brett Hixon!</h2>
               <p className="mt-2">
-                I am a Senior Computer Science major at Rose-Hulman Institute of Technology (Class of 2027) with minors in Cybersecurity, AI, and Japanese. I have a passion for designing scalable software systems, full-stack application development, artificial intelligence, and cybersecurity. Through both industry experience and academic coursework, I have built a strong track record of translating complex computer science theory into reliable, scalable full-stack applications.
+                I am a Senior Computer Science major at Rose-Hulman Institute of Technology (Class of 2027) with minors in Artificial Intelligence and Japanese. I have a passion for designing scalable software systems, full-stack application development, artificial intelligence, and an interest in cybersecurity. Through both industry experience and academic coursework, I have built a strong track record of translating complex computer science theory into reliable, scalable full-stack applications.
               </p>
 
               <hr className="my-6" />
@@ -28,7 +28,7 @@ export default function AboutComponent() {
                 My journey into software engineering didn&apos;t start as a solo endeavor—I was first pushed into a coding club by my mom in 5th grade, where I realized how cool it was to make Angry Birds move across a screen! In 8th grade, my STEM teacher, Mrs. Sellers, helped me see that this curiosity could become a lifelong career.
               </p>
               <p>
-                I began exploring early programming concepts on ROBLOX, creating games and experiencing firsthand the impact of building software for real users. Trying to understand how video game cheaters and script injectors manipulated applications on this same platform ignited my curiosity for reverse engineering and cybersecurity—a curiosity that now forms my academic minor.
+                I began exploring early programming concepts on ROBLOX, creating games and experiencing firsthand the impact of building software for real users. Trying to understand how video game cheaters and script injectors manipulated applications on this same platform ignited my curiosity for reverse engineering and cybersecurity—an interest I continue to explore.
               </p>
 
               <hr className="my-6" />
@@ -50,9 +50,9 @@ export default function AboutComponent() {
 
               <hr className="my-6" />
 
-              <h3 className="text-xl font-semibold">Why Cybersecurity & Artificial Intelligence?</h3>
+              <h3 className="text-xl font-semibold">Why Artificial Intelligence & Security?</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><span className="font-semibold">Cybersecurity:</span> My early fascination with reverse engineering led me to formally pursue a cybersecurity minor to master defensive and offensive security principles.</li>
+                <li><span className="font-semibold">Cybersecurity:</span> My early fascination with reverse engineering led me to explore cybersecurity topics to understand defensive and offensive security principles.</li>
                 <li><span className="font-semibold">Artificial Intelligence:</span> As AI tools became increasingly prominent across software engineering, I wanted to &quot;pop the hood&quot; and truly understand the underlying algorithms and architectures rather than treat them as black boxes.</li>
               </ul>
 
@@ -91,7 +91,7 @@ export default function AboutComponent() {
                     <span className="font-semibold">Class Year:</span> 2027
                   </p>
                   <p className="text-lg md:text-3xl text-gray-800 mb-2">
-                    <span className="font-semibold">Minors:</span> Japanese, Cybersecurity, Artificial Intelligence
+                    <span className="font-semibold">Minors:</span> Japanese, Artificial Intelligence
                   </p>
                   <p className="text-lg md:text-3xl text-gray-800 mb-4">
                     <span className="font-semibold">GPA:</span> 3.98

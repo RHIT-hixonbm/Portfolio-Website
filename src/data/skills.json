@@ -28,7 +28,7 @@
     { "name": "Multithreading", "category": "Technical Skills", "description": "Designing concurrent applications and managing complex system resources efficiently. See xv6 threads project for an example." },
     { "name": "Parallel Computing", "category": "Technical Skills", "description": "Designing and implementing parallel and distributed systems using multithreading, multiprocessing, and CUDA GPU programming to scale compute-intensive applications." },
     { "name": "Computer Architecture", "category": "Technical Skills", "description": "Deep understanding of how computer systems operate at the hardware level. See RISC-V processor project." },
-    { "name": "Cybersecurity", "category": "Technical Skills", "description": "Understanding of systems vulnerabilities, script injection, and robust architectural defense. Pursuing a minor in this field." },
+    { "name": "Cybersecurity", "category": "Technical Skills", "description": "Understanding of systems vulnerabilities, script injection, and robust architectural defense." },
     { "name": "Docker", "category": "Workplace & Tooling", "description": "A platform for developing, shipping, and running applications in isolated containers. See RAFT project." },
     { "name": "Linux", "category": "Workplace & Tooling", "description": "An open-source operating system widely used for systems programming and server deployment. Used extensively in low-level systems projects like xv6." },
     { "name": "Jupyter Notebook", "category": "Workplace & Tooling", "description": "An open-source web application for creating and sharing documents that contain live code, equations, and visualizations. Used in my machine learning projects." },
