@@ -45,7 +45,7 @@ export default function AboutComponent() {
 
               <h3 className="text-xl font-semibold">Co-Founding Fafnir Aerospace</h3>
               <p>
-                My work in AI culminated in co-founding <span className="font-semibold">Fafnir Aerospace</span>, my senior capstone project and registered LLC. As Lead AI Developer, I am designing the Autonomous Navigation, Drone Routing, and Simultaneous Localization and Mapping (SLAM) architecture for a proof-of-concept autonomous drone system powered by a proprietary UV light communication module. Our team intends to continue scaling the company beyond graduation.
+                My work in AI culminated in co-founding <span className="font-semibold">Fafnir Aerospace</span>, my senior capstone project and registered LLC. As Lead AI Developer, I am designing the Autonomous Navigation, Drone Routing, and Simultaneous Localization and Mapping (SLAM) architecture for a proof-of-concept autonomous drone system powered by a proprietary RF-alternative communication module. Our team intends to continue scaling the company beyond graduation.
               </p>
 
               <hr className="my-6" />
@@ -140,12 +140,12 @@ export default function AboutComponent() {
                   name: "Image Recognition"
                 },
                 { 
-                  code: "CSSE 340",
-                  name: "Foundations of Cybersecurity"
+                  code: "CSSE 461",
+                  name: "Computer Vision"
                 },
-                { 
-                  code: "CSSE 479",
-                  name: "Cryptography"
+                {
+                  code: "MA 373",
+                  name: "Applied Linear Algebra"
                 },
                 { 
                   code: "CSSE 490",
